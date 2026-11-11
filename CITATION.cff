@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite this software and the mathematical paper."
+type: software
+title: "DLQG1: Lean formalization of directed distances in bipolar-oriented triangulations"
+authors:
+  - family-names: Borga
+    given-names: Jacopo
+    affiliation: "Massachusetts Institute of Technology"
+license: Apache-2.0
+version: 0.1.0
+repository-code: "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean"
+keywords: [Lean, Mathlib, probability, planar maps, bipolar triangulations]
+references:
+  - type: article
+    title: "Directed distances in bipolar-oriented triangulations: exact exponents and scaling limits"
+    authors:
+      - family-names: Borga
+        given-names: Jacopo
+      - family-names: Gwynne
+        given-names: Ewain
+    year: 2025
+    url: "https://arxiv.org/abs/2510.26123"
+    notes: "The author-supplied manuscript revision is identified in CORRESPONDENCE.json; it is not included."

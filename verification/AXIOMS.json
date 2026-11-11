@@ -1,0 +1,1347 @@
+{
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "probes": {
+    "Axioms": {
+      "DirectedDistances.Paper.AppendixA.abel": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.AppendixA.riemann": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.AppendixA.positive_sine": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.AppendixA.holomorphic_asymptotic": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.AppendixA.tauberian": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.AppendixA.tauberian_above_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.tauberian_characteristic": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.AppendixA.real_tauberian_below_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.AppendixA.real_tauberian_above_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.pitman_transform_conditioned_prefix_law": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.conditioned_walk_barrier_probability": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.cone_prob_lower_corrected": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.disk_walk_conv_corrected": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.kmsw": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.kmsw_boltzmann": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.lr_ind": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.cond_walk_rn_law": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.walk_bdy_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.boltzmann_finite": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.existsUnique_renewalTime": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.renewalTime": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.renewalTime_characterization": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.renewal": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.bdy_reverse": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.kmsw_left": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.filtration_mono": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.kmsw_bdy": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.quadrant_walk_corrected": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.cutVertex_characterization": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.cut_vertex_infinite": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.cut_equiv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.renewalTime_cutVertex_rank": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.uiqbot_boltzmann": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.geo_exist": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.past_map": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.infinite_geo": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.thin_ind": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.def_kmsw": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.thm_cell_ldp": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.thm_cell_sdp": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.cell_ldp_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.cell_ldp_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.cell_sdp_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.cell_sdp_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.boltzmann_ldp_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.boltzmann_sdp_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.boltzmann_sdp_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.finite_ind": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.flow_line_times": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.lem_uibot_bdy": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.thm_busemann": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.lem_sdp_tri": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.lem_ldp_fluctuation": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.lem_long_path": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.lem_sdp_fluctuation": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.lem_infty_cut": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.thm_busemann_conv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section7.boltzmann_ldp_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.thm_boltzmann_ldp": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.defn_future_map": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.def_boltzmann_right": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.def_boltzmann_lr": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.geo_infty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.busemann_cls": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.prop_busemann_uihbot": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.directed_contain": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.quad_kmsw": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.future_map_law": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.thm_busemann_property": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.thm_busemann_tail": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.defn_kmsw_inv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.def_ldp": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.def_reverse_map": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.lem_ldp_relating": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.lem_sdp_relating": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.prop_asympt_exp2": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.prop_ldp_recursive_equation": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.lem_y_not_const": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.lem_nonreal2": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.prop_asympt_exp": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.prop_sdp_recursive_equation": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section6.lem_y_not_const2": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.def_bipolar_bdy": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.def_geodesic": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.defn_planar_map_with_missing_edges": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.def_uihbot": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.def_uiqbot": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.lem_uihbot_future": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section1.def_bipolar": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.def_bs_topology": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.lem_geo_infty_ind": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.lem_geo_slice": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.lem_cond_walk_bm": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.prop_disk_bs_conv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.prop_kmsw_uibot": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section5.prop_uihbot_sym": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section3.def_bound_edges": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Paper.Section4.geo_exist_both_modes": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_unique_cut": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.uibotClassSeparation6_ae_unique_intrinsic_cut": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_cut_sequences": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_sequence_spec": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_convergence": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_scaling_law_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_increment_law": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_tail": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_sdp_mean": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_boundary_cut_vertices": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.IntrinsicConsumer51Assembly.ae_proposition51_assembly": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.ShiftedStartClosedRegionRoute4.ae_lemma52_assembly": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE_cut_vertices": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE4_lem54": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE4_lem55_lem56_geometry": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE4_lem55": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE4_lem56": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE4_lem57": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE2_lem71": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE2_lem73": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE2_lem75": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.intrinsicConsumersMuAE2_lem77": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Probability.ldpStableHalfLaw_ae_antitone": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.Probability.sdpBusemannPositiveHalfLimit_ae_no_negative_jumps": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.kmswLeftClass_interior_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.kmswLeftClass_eq_zeroStep_of_lt_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.leftVertexMark": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.leftVertexMarkEquiv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.leftVertexMark_map": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.leftBoundaryDart_eq_of_baseIso": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "Providers": {
+      "DirectedDistances.Paper.Section4.renewalTime": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.AppendixA.abel": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.AppendixA.holomorphic_asymptotic": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.AppendixA.positive_sine": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.AppendixA.real_tauberian_above_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.AppendixA.real_tauberian_below_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.AppendixA.riemann": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.AppendixA.tauberian": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.AppendixA.tauberian_above_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.bdy_reverse": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.boltzmann_ldp_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.boltzmann_ldp_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.boltzmann_sdp_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.boltzmann_sdp_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.busemann_cls_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.cell_ldp_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.cell_ldp_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.cell_sdp_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.cell_sdp_upper": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.cutVertex_characterization": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.cut_equiv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.cut_vertex_infinite": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_bipolar_bdy_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_bipolar_triangulation_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_boltzmann_lr_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_boltzmann_right_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_bound_edges_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_bs_topology_source_provider_v2": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_geodesic_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_kmsw": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_ldp_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_missing_edges_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_reverse_map_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_uibhbot_provider_v2": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.def_uiqbot_provider_v2": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.defn_future_map_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.defn_kmsw_inv_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.directed_contain_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.finite_ind": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.flow_line_times_face": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.future_map_law_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.geo_exist": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.geo_exist_both_modes_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.geo_infty_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.infinite_geo": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.kmsw": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.kmsw_boltzmann": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.kmsw_left": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_cond_walk_bm_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_geo_infty_ind_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_geo_slice_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_infty_cut_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_ldp_fluctuation_linked_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_ldp_relating_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_long_path_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_nonreal2_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_sdp_fluctuation_linked_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_sdp_relating_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_sdp_tri_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_uibot_bdy": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_uihbot_future_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_y_not_const2_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.lem_y_not_const_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.past_map": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.prop_asympt_exp2_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.prop_asympt_exp_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.prop_busemann_uihbot_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.prop_disk_bs_conv_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.prop_kmsw_uibot_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.prop_ldp_recursive_equation_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.prop_sdp_recursive_equation_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.prop_uihbot_sym_source_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.quad_kmsw_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.quadrant_walk_corrected": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.renewalTime_cutVertex_rank": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.thin_ind": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.thm_boltzmann_ldp_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.thm_busemann_conv_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.thm_busemann_paper_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.thm_busemann_property_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.thm_busemann_tail_provider": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.thm_cell_ldp": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.thm_cell_sdp": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.SourceResults.uiqbot_boltzmann": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.boltzmann_finite_vertex": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.kmsw_bdy_source": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section4.cond_walk_rn_law": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section4.conditioned_walk_barrier_probability": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section4.existsUnique_renewalTime": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section4.filtration_mono_source": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section4.renewal": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section4.renewalTime_characterization": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section4.walk_bdy_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section5.cone_prob_lower_corrected": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section5.disk_walk_conv_corrected": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section6.tauberian_characteristic": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.lem_lr_ind": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.RandomWalk.pitman_process_prefix_law": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "ConstantWindow": {
+      "DirectedDistances.RandomWalk.bridgeConstantWindow": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.RandomWalk.measurable_bridgeConstantWindow": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.RandomWalk.bridgeConstantWindow_eq_of_some": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "SourceDomains": {
+      "DirectedDistances.PlanarMap.DirectedPlaneMap.PolesOnExternalBoundary": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.SourceBoundaryDomain": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.SourceBipolarTriangulation": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.finiteWalkClassDirectedPlaneMap": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.DirectedPlaneMap.polesOnExternalBoundary_of_no_poles": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.PLDrawing.dartBorders_start_mem_frontier": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.PLDrawing.externalBoundary_of_dartBorders": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.uiqbot_ae_source_boundary_domain": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.uibotWholePlaneSourceDirectedMap_source_boundary_domain": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.MonotoneStageInvariant.allocated_poles_mem_frontier": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.finiteWalkClass_source_boundary_realization": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.finiteWalkClassDirectedPlaneMap_endpoints": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.finiteWalkClassDirectedPlaneMap_source_boundary_domain": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.finiteWalkClass_exists_source_boundary_domain": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.IsSingleEdgeClass": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.IsSourceBoundaryChanneled": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.isSimpleOuterBoundary_one_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.isSourceBoundaryChanneled_iff_right_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.isSourceBoundaryChanneled_iff_of_two_le_left": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.isSourceBoundaryChanneled_iff_of_two_le_right": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.filter_isSourceBoundaryChanneled_right_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.restrict_isSourceBoundaryChanneled_right_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.restrict_sourceView_eq_self_right_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.isSourceBoundaryChanneled_singleEdge": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.sourceBoundaryChanneledEquivRightOne": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.sourceBoundaryChanneledEquivRightOne_val": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.sum_filter_sourceView_right_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.uniform_sourceBoundaryChanneledEquivRightOne": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.map_restrict_sourceView_prod_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.kmsw_left_source_view": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.kmsw_left_zeroStep_source_view": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapIsoClass.sourceBoundaryRightPrefixReversalEquiv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapRep.IsSourceBoundaryChanneled": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapRep.isSourceBoundaryChanneled_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.KMSWMapRep.isSourceBoundaryChanneled_iff_right_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section5.Prop516ExteriorAssembly5.finiteGeometricLaw_sourceView_filter_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.finiteIsoClass_source_boundary_domain": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  }
+}

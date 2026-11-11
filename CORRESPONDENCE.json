@@ -1,0 +1,1689 @@
+{
+  "scope": "90 numbered definitions/results, required definitions and proof dependencies; documented rendering conventions and explicit current-source domain bindings.",
+  "paper": {
+    "title": "Directed distances in bipolar-oriented triangulations: exact exponents and scaling limits",
+    "authors": [
+      "Jacopo Borga",
+      "Ewain Gwynne"
+    ],
+    "arxiv": "2510.26123",
+    "manuscript_revision_sha256": "85306d3050f88727cbff01ea54ca3023f7c75a38ab770e49802108bf87ecc84b",
+    "manuscript_distributed": false
+  },
+  "entries": [
+    {
+      "number": "1.1",
+      "kind": "Definition",
+      "label": "def-bipolar",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.def_bipolar",
+          "file": "DirectedDistances/Paper/Section1/BipolarDefinition.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "051f83cf6d74cac6ac4eaada4c74571ea96bac9c2c69d97f95025754761c1640",
+      "source_comparison": "MATCH_CURRENT_SOURCE_STANDING_VIEW",
+      "notes": "The current-source pole-standing condition is explicit in PolesOnExternalBoundary and SourceBoundaryDomain. Actual ordinary finite classes, the same-event UIQBOT drawing/map, and the whole-plane no-pole case have proved bindings; the generic characterization remains broader.",
+      "remaining_correspondence_obligations": [],
+      "source_domain_bindings": [
+        {
+          "declaration": "DirectedDistances.PlanarMap.DirectedPlaneMap.PolesOnExternalBoundary",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "literal current-paper standing condition on each existing pole"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.SourceBoundaryDomain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "explicit standing-domain view; no generic carrier restriction"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.SourceBipolarTriangulation",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "literal intersection with the unchanged BySides predicate; no new degree equivalence or concrete inhabitance claim"
+        },
+        {
+          "declaration": "DirectedDistances.KMSW.finiteIsoClass_source_boundary_domain",
+          "file": "verification/SourceScopeCheck.lean",
+          "role": "actual ordinary finite class, unchanged KMSW walk realization, same drawing and poles"
+        },
+        {
+          "declaration": "DirectedDistances.KMSW.finiteWalkClass_exists_source_boundary_domain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "concrete finite walk drawing and directed endpoints; complete sample has no missing edges"
+        },
+        {
+          "declaration": "DirectedDistances.KMSW.uiqbot_ae_source_boundary_domain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "same original probability-one provider event and chosen drawing/map; unique source and no sinks"
+        },
+        {
+          "declaration": "DirectedDistances.PaperProofs.Section3.uibotWholePlaneSourceDirectedMap_source_boundary_domain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "actual whole-plane glue drawing; no finite poles, so no external face is invented"
+        }
+      ],
+      "source_domain_proof_evidence_gate": "PASS_COMPILED_STANDARD_AXIOMS_FRESH_KERNEL"
+    },
+    {
+      "number": "1.2",
+      "kind": "Definition",
+      "label": "def-ldp",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.def_ldp",
+          "file": "DirectedDistances/Paper/Section1/LdpSdp.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "7e13a066353d12b128cb6004c3df156229abb4c173556adb6b29d023a3a10579",
+      "source_comparison": "RULED_READING_NOT_PRINTED",
+      "notes": "Revised text still says longest path without defining unbounded supremum; formalized def_ldp uses extended supremum with +infinity for unbounded lengths.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.3",
+      "kind": "Definition",
+      "label": "defn-future-map",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.defn_future_map",
+          "file": "DirectedDistances/Paper/Section1/FutureMap.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "5f2bf8555da12863b2ff22e0443f4c47c611b20be61e43406d2fdf70adce1118",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.4",
+      "kind": "Theorem",
+      "label": "thm-busemann",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.thm_busemann",
+          "file": "DirectedDistances/Paper/Section1/BusemannM0.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "9fc8ec3578a9d2bb60546e76433a5f412bc8a1b313695d71d1e9d513b16ae585",
+      "source_comparison": "RULED_PROBABILITY_SCOPE",
+      "notes": "Formalized declaration makes the common probability-one scope explicit; revised statement body unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.6",
+      "kind": "Theorem",
+      "label": "thm-busemann-conv",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.thm_busemann_conv",
+          "file": "DirectedDistances/Paper/Section1/BusemannConvergence.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "f3b215a4cb4b07cd1a35ff4dc7f5e77b8a9f2671a68e2b07586c7a66d32b4138",
+      "source_comparison": "RULED_READING_NOT_PRINTED",
+      "notes": "Revised X(-t) still omits the right-continuous reversal X((-t)-) convention used by formalized local-Skorokhod statement.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.7",
+      "kind": "Theorem",
+      "label": "thm-busemann-property",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.thm_busemann_property",
+          "file": "DirectedDistances/Paper/Section1/BusemannProperty.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "060ddbba85ac72fc0990507647d2f677bda18e955bd89db1003cfe91e9954235",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.8",
+      "kind": "Theorem",
+      "label": "thm-busemann-tail",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.thm_busemann_tail",
+          "file": "DirectedDistances/Paper/Section1/BusemannTail.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "7fe6e9252072f1e73871c4220d562acd09f3eee8d9d4fc684bfbf102d22376aa",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.9",
+      "kind": "Definition",
+      "label": "def-bipolar-bdy",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.def_bipolar_bdy",
+          "file": "DirectedDistances/Paper/Section1/BipolarBoundary.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "2de5af4db037abfcfbca9ec3ff19f4f24edb321c6583ef50ede026b84a0f762d",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.10",
+      "kind": "Definition",
+      "label": "def-boltzmann-right",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.def_boltzmann_right",
+          "file": "DirectedDistances/Paper/Section1/BoltzmannLawDefinition.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "3ae9ec1f4a7467b32a478dac0bcab921c21adb9a6f501c83e5e06d547f3b0b8e",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.11",
+      "kind": "Theorem",
+      "label": "thm-boltzmann-ldp",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.thm_boltzmann_ldp",
+          "file": "DirectedDistances/Paper/Section1/BoltzmannLDP.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "6ef0da761c1f709d6e5b53cf5eab45acdbf22bf4aed4fc45a5753bcb19987bbd",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.12",
+      "kind": "Theorem",
+      "label": "thm-cell-ldp",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.thm_cell_ldp",
+          "file": "DirectedDistances/Paper/Section1/CellLDP.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "08c79e6e416aa28be4610d673f0312aed72cda3191f32976a8f5c68c7ac539cd",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "1.13",
+      "kind": "Theorem",
+      "label": "thm-cell-sdp",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section1.thm_cell_sdp",
+          "file": "DirectedDistances/Paper/Section1/CellSDP.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "6b0201e4dab0ccaf77ae13f2040ea4bd8319bd218100a9ada1ec3a67388ff048",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.1",
+      "kind": "Definition",
+      "label": "defn:planar-map-with-missing-edges",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.defn_planar_map_with_missing_edges",
+          "file": "DirectedDistances/Paper/Section3/MissingEdgesDefinition.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "fbad6e335a67120bec6421a3fd461e4a458eb417bc01ebd66410de3a6a78b35d",
+      "source_comparison": "RULED_GEOMETRIC_READING",
+      "notes": "External means all unbounded complementary components, possibly none or several; revised body unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.2",
+      "kind": "Definition",
+      "label": "defn:bound-edges",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.def_bound_edges",
+          "file": "DirectedDistances/Paper/Section3/BoundEdges.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "98f8f52e52b15c2cf254674214894b3a205e66693d2a4c0ae9d2965d63d25562",
+      "source_comparison": "RULED_BOUNDARY_READING",
+      "notes": "Formalized marked finite junction and supplied four-part boundary presentation apply; no invented marks at infinity.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.3",
+      "kind": "Definition",
+      "label": "def-kmsw",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.def_kmsw",
+          "file": "DirectedDistances/Paper/Section3/KMSWDefinition.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "f985da7fe8f8cee02efc3b0a54ddb81a53f97de6482dcc59595fbc4c844b15b9",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.5",
+      "kind": "Theorem",
+      "label": "thm-kmsw",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.kmsw",
+          "file": "DirectedDistances/Paper/Section3/KMSW.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "0a18eee7fc621fdfbca8c4144808e76bf515ae93b76c01b7ad2af4b8f84584d8",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "Step (1,0) replaced by (0,1).",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.6",
+      "kind": "Lemma",
+      "label": "lem-kmsw-bdy",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.kmsw_bdy",
+          "file": "DirectedDistances/Paper/Section3/KMSWBoundary.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "54137fd87e6db0574fb239dbcb22a4a046ef3253329d7938f7998464126222f2",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "Upper-left qualifying times now 0,...,n; upper-right times now 1,...,n.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.7",
+      "kind": "Definition",
+      "label": "defn:KMSW-inv",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.defn_kmsw_inv",
+          "file": "DirectedDistances/Paper/Section3/KMSWInverse.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "6f9a96087851ca4a4f8998ab58601a977d03e74f360922ab8306287645f9fa0c",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.8",
+      "kind": "Definition",
+      "label": "def-bs-topology",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.def_bs_topology",
+          "file": "DirectedDistances/Paper/Section3/BSTopologyDefinition.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "36150b303f3b0bfe045f781b8a74c2b77f9912ae16c650165abfd9c7210d6887",
+      "source_comparison": "RULED_TOPOLOGY_SCOPE",
+      "notes": "Formalized geometric balls preserve missing edges, root orientation and rotation/face incidence on connected locally finite rooted drawings; manuscript prose unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.9",
+      "kind": "Proposition",
+      "label": "prop-kmsw-uibot",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.prop_kmsw_uibot",
+          "file": "DirectedDistances/Paper/Section3/UIBOTLocalLimit.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "da7b92af5be1a7a8825a75c2f7b2f6d59818977c188b3a69e6a5e8e56254530e",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": [],
+      "source_domain_bindings": [
+        {
+          "declaration": "DirectedDistances.PaperProofs.Section3.uibotWholePlaneSourceDirectedMap_source_boundary_domain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "actual whole-plane glue drawing; no finite poles, so no external face is invented"
+        }
+      ]
+    },
+    {
+      "number": "3.10",
+      "kind": "Lemma",
+      "label": "lem-uibot-bdy",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.lem_uibot_bdy",
+          "file": "DirectedDistances/Paper/Section3/UIBOTBoundary.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "219d8c1b7ba56b4223fee2e0c8e95d01f202beb6a2212e05f215497997880720",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "Arbitrary deterministic bi-infinite walk replaced by iid uniform random walk; notation renamed to ambient UIBOT M.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.11",
+      "kind": "Lemma",
+      "label": "lem-kmsw-boltzmann",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.kmsw_boltzmann",
+          "file": "DirectedDistances/Paper/Section3/KMSWBoltzmann.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "e56dc5b22efa057bc97843a79ff4d57dd03299bc6267927bc0eabca21988cfdd",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "Step (1,0) replaced by (0,1).",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.12",
+      "kind": "Lemma",
+      "label": "lem-boltzmann-finite",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.boltzmann_finite",
+          "file": "DirectedDistances/Paper/Section3/BoltzmannFinite.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "14027c9ffc109e5673f3b0bf605c2bb47cd0fc762c0d03b082e412d36b869952",
+      "source_comparison": "RULED_READING_NOT_PRINTED",
+      "notes": "Revised in-particular sentence still says marked boundary edge; formalized boltzmann_finite proves marked LEFT-BOUNDARY VERTEX law. Revision proof itself says vertex.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.13",
+      "kind": "Definition",
+      "label": "def-geodesic",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.def_geodesic",
+          "file": "DirectedDistances/Paper/Section3/GeodesicDefinition.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "f89428ae63bb49cc7914af2d62a988d55cfb1cdbd79eb8a191a00a31a7a8b305",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "Ordinary geodesic remains finite acyclic; leftmost three-path clause restricted to finite bipolar maps.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.14",
+      "kind": "Definition",
+      "label": "def-boltzmann-lr",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.def_boltzmann_lr",
+          "file": "DirectedDistances/Paper/Section3/BoltzmannLRDefinition.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "471961b7dcb7b7b264d68202fcf71ad4d3f0302e0668c403dd17f7e82f561485",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.15",
+      "kind": "Lemma",
+      "label": "lem-lr-ind",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.lr_ind",
+          "file": "DirectedDistances/Paper/Section3/LRInd.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "67b1505189eeeb36dde682b74d6ec5f1b25be9655969ec36eb1bfd36492ab1e1",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "3.17",
+      "kind": "Definition",
+      "label": "def-reverse-map",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.def_reverse_map",
+          "file": "DirectedDistances/Paper/Section3/BoundaryChanneled.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "5dba4b68c70d745f62eddc1576770dda951bb30e31d89d07a84905329c572f45",
+      "source_comparison": "MATCH_CURRENT_SOURCE_CLASS_VIEW",
+      "notes": "The current-paper class is IsSourceBoundaryChanneled on the same raw/isoclass carriers: primary channeling AND (simple outer boundary OR the actual singleton m0). All positive-left, right-boundary-one classes have proved membership equivalence and law transport; no global equality with the broader generic IsChanneled is asserted.",
+      "remaining_correspondence_obligations": [],
+      "source_domain_bindings": [
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.IsSourceBoundaryChanneled",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "primary channeling and simple outer boundary or actual single-edge class"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapRep.IsSourceBoundaryChanneled",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "same raw representative carrier"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.isSourceBoundaryChanneled_iff_right_one",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "proved membership equivalence only for positive left length and right length one, including singleton"
+        },
+        {
+          "declaration": "DirectedDistances.PaperProofs.Section5.Prop516ExteriorAssembly5.finiteGeometricLaw_sourceView_filter_eq",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "exact existing uniform-map and independent-mark observable law; no conditioning or new normalizer"
+        }
+      ],
+      "source_domain_proof_evidence_gate": "PASS_COMPILED_STANDARD_AXIOMS_FRESH_KERNEL"
+    },
+    {
+      "number": "3.18",
+      "kind": "Lemma",
+      "label": "lem-bdy-reverse",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.bdy_reverse",
+          "file": "DirectedDistances/Paper/Section3/BdyReverse.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "78801481b0da63540d14665227f2aa3eb4293ea1fb3d435008faff93eb71c621",
+      "source_comparison": "MATCH_CURRENT_SOURCE_CLASS_VIEW",
+      "notes": "The existing reversal is transported to the current-paper view by sourceBoundaryRightPrefixReversalEquiv. The original range excludes the singleton on both applicable sides; grades and operation are unchanged.",
+      "remaining_correspondence_obligations": [],
+      "source_domain_bindings": [
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.sourceBoundaryRightPrefixReversalEquiv",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "same reversal between current-paper view classes; original range excludes singleton"
+        }
+      ],
+      "source_domain_proof_evidence_gate": "PASS_COMPILED_STANDARD_AXIOMS_FRESH_KERNEL"
+    },
+    {
+      "number": "3.19",
+      "kind": "Lemma",
+      "label": "lem-kmsw-left",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section3.kmsw_left",
+          "file": "DirectedDistances/Paper/Section3/KMSWLeft.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "a6c27843b510800e115a4190af44fd7f9050213041c29a6e8cee150c3ad36d5f",
+      "source_comparison": "MATCH_CURRENT_SOURCE_CLASS_VIEW",
+      "notes": "Legal steps and size correction retained. Positive-step procedure identification, uniqueness and edge count are transported to the current-paper view, with the complete separate zero-step/singleton clause.",
+      "remaining_correspondence_obligations": [],
+      "source_domain_bindings": [
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.isSourceBoundaryChanneled_iff_right_one",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "proved membership equivalence only for positive left length and right length one, including singleton"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.kmsw_left_source_view",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "positive-step bijection, procedure identification, uniqueness and non-boundary count"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.kmsw_left_zeroStep_source_view",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "complete separate zero-step/singleton correspondence"
+        }
+      ],
+      "source_domain_proof_evidence_gate": "PASS_COMPILED_STANDARD_AXIOMS_FRESH_KERNEL"
+    },
+    {
+      "number": "4.1",
+      "kind": "Definition",
+      "label": "def-uiqbot",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.def_uiqbot",
+          "file": "DirectedDistances/Paper/Section4/UIQBOTDefinition.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "bcdba519aaa2e14db0c8b5931b03d034707cbe7b225ba6463ce4f0e161a6233f",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": [],
+      "source_domain_bindings": [
+        {
+          "declaration": "DirectedDistances.KMSW.uiqbot_ae_source_boundary_domain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "same original probability-one provider event and chosen drawing/map; unique source and no sinks"
+        }
+      ]
+    },
+    {
+      "number": "4.2",
+      "kind": "Definition",
+      "label": "def-cut-vertex",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.cutVertex_characterization",
+          "file": "DirectedDistances/Paper/Section4/CutVertex.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "2e33c240fd8b06d64ed7d8879415c4cdf3c96a5c16d00983dbacffa090f0ae78",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.3",
+      "kind": "Proposition",
+      "label": "prop-cut-vertex",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.cut_vertex_infinite",
+          "file": "DirectedDistances/Paper/Section4/CutVertexInfinite.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "6d8fdfd394fa82da366c6b5afb2448dbeedb62fb48e888763d71af356a82248f",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.5",
+      "kind": "Definition",
+      "label": "def-infinite-geo",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.infinite_geo",
+          "file": "DirectedDistances/Paper/Section4/InfiniteGeo.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "b94f339680ff99f67c32d7002136e406ad9943211357104dc06e0b7e0b5256a7",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.6",
+      "kind": "Lemma",
+      "label": "lem-geo-exist",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.geo_exist_both_modes",
+          "file": "DirectedDistances/Paper/Section4/GeoExistBothModes.lean"
+        },
+        {
+          "declaration": "DirectedDistances.Paper.Section4.geo_exist",
+          "file": "DirectedDistances/Paper/Section4/GeoExist.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "07217af87130fd89236eef28eed59b3a2db5a7f441f4b4a47d03ed977130df45",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "Adds explicit almost surely and changes LDP to XDP in {LDP,SDP}.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.7",
+      "kind": "Proposition",
+      "label": "prop-thin-ind",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.thin_ind",
+          "file": "DirectedDistances/Paper/Section4/ThinIndependence.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "5b8bb98847d95f4931570bba9be00d46aa2c139cc00c580982f58e576f0e11c8",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.8",
+      "kind": "Lemma",
+      "label": "lem-cut-equiv",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.cut_equiv",
+          "file": "DirectedDistances/Paper/Section4/CutEquiv.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "57ec692968cb1a79adb17be17e0936fbdfa050130ef848020941d3d51ab8ef39",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.9",
+      "kind": "Lemma",
+      "label": "lem-renewal",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.renewal",
+          "file": "DirectedDistances/Paper/Section4/Renewal.lean"
+        },
+        {
+          "declaration": "DirectedDistances.Paper.Section4.existsUnique_renewalTime",
+          "file": "DirectedDistances/Paper/Section4/RenewalTimeExistsUnique.lean"
+        },
+        {
+          "declaration": "DirectedDistances.Paper.Section4.renewalTime",
+          "file": "DirectedDistances/Paper/Section4/RenewalTime.lean"
+        },
+        {
+          "declaration": "DirectedDistances.Paper.Section4.renewalTime_characterization",
+          "file": "DirectedDistances/Paper/Section4/RenewalTimeCharacterization.lean"
+        },
+        {
+          "declaration": "DirectedDistances.Paper.Section4.renewalTime_cutVertex_rank",
+          "file": "DirectedDistances/Paper/Section4/RenewalTimeCutVertexRank.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "65153468e4ebd95e1ca528ac96233c6205b9ebfd851f1bf83453efc5cfc33ba4",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.10",
+      "kind": "Lemma",
+      "label": "lem-walk-pos-prob",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.conditioned_walk_barrier_probability",
+          "file": "DirectedDistances/Paper/Section4/WalkPosProb.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "6e3213835ada0b1ca4f588cef59e19b89cf68aa106bfa2f33ae3a2b30092ba46",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.11",
+      "kind": "Lemma",
+      "label": "lem-cond-walk-bm",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.lem_cond_walk_bm",
+          "file": "DirectedDistances/Paper/Section4/CondWalkBM.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "2c18b37ed9486718ba0d5b4c8cd8a655e728a5e41a55132a860485006b77d842",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.12",
+      "kind": "Lemma",
+      "label": "lem-walk-bdy-sum",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.walk_bdy_sum",
+          "file": "DirectedDistances/Paper/Section4/WalkBdySum.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "cbbfcf5d3ba9d8af5e7c609aa0a6fe63669cbf666a8387869d140fb104f9f832",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.13",
+      "kind": "Lemma",
+      "label": "lem-past-map",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.past_map",
+          "file": "DirectedDistances/Paper/Section4/PastMap.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "508d3f5a216083fa3d64ea26364bd6e74c0554a29db506eace0c0a215f8d9a50",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "First-hit set corrected from half-plane to horizontal level; positive-cut branch stated; zero-cut walk and one-vertex map specified separately.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.14",
+      "kind": "Lemma",
+      "label": "lem-finite-ind",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.finite_ind",
+          "file": "DirectedDistances/Paper/Section4/FiniteInd.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "3e30102c267a4cf119ab6afedeea4172fc8573aef140e0f077701dc41fada2fe",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "4.15",
+      "kind": "Lemma",
+      "label": "lem-filtration-mono",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section4.filtration_mono",
+          "file": "DirectedDistances/Paper/Section4/FiltrationMono.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "935c908c127c8c64201c78dbec07f640d284238806e0424d84b7f7af3e22a8aa",
+      "source_comparison": "MATCH_ACCEPTED_POSITIVE_INDEX_SCOPE",
+      "notes": "Tail intersection now k>=1 instead of k>=0.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.1",
+      "kind": "Proposition",
+      "label": "prop-future-map-law",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.future_map_law",
+          "file": "DirectedDistances/Paper/Section5/FutureMapLaw.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "022eab330f82da5385d2c806a4db09bb6b80b16ce8e23f93675aef3e58a5ae7a",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.2",
+      "kind": "Lemma",
+      "label": "lem-directed-contain",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.directed_contain",
+          "file": "DirectedDistances/Paper/Section5/DirectedContain.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "c0ea8bcf10e2d66e2a470393c1d13ae967b5788afad9ac34bba178f7f36f04c4",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.3",
+      "kind": "Lemma",
+      "label": "lem-infty-cut",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.lem_infty_cut",
+          "file": "DirectedDistances/Paper/Section5/InftyCut.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "cb7fd5ab8474db15508f99d7f6a3b0d6ac2dc3c9c7a4483b52840d0169e81d2f",
+      "source_comparison": "RULED_PROBABILITY_SCOPE",
+      "notes": "Formalized simultaneous countable common-event scope; revised statement body unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.4",
+      "kind": "Lemma",
+      "label": "lem-geo-infty",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.geo_infty",
+          "file": "DirectedDistances/Paper/Section5/GeoInfty.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "a5a0d2129b4e80d6d3e708b49e21c4927738f90358d194184b64d51125045dcd",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.5",
+      "kind": "Lemma",
+      "label": "lem-geo-infty-ind",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.lem_geo_infty_ind",
+          "file": "DirectedDistances/Paper/Section5/GeoInftyInd.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "0db33fd09880201c2c0a41454ae290617411abe305745585fb41c8aef669249d",
+      "source_comparison": "RULED_ROOT_READING",
+      "notes": "Formalized independence is on ordinary unrooted class values, consistent with source; revised body unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.6",
+      "kind": "Lemma",
+      "label": "lem-geo-slice",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.lem_geo_slice",
+          "file": "DirectedDistances/Paper/Section5/GeoSlice.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "002f2b2df2fa6277a1c7de0737a069134c066f20ff75a465c797106aab23187d",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.7",
+      "kind": "Lemma",
+      "label": "lem-busemann-cls",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.busemann_cls",
+          "file": "DirectedDistances/Paper/Section5/BusemannCls.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "e7d50463fc1a2f334a79f1cca624bc1a3f2aa3abd60d3fd1e07747c784bf94b5",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.8",
+      "kind": "Definition",
+      "label": "def-uihbot",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.def_uihbot",
+          "file": "DirectedDistances/Paper/Section5/UIBHBOTDefinition.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "27d00e37ce14fa303cd72b5f8567b61aa264e479aa201ec5b6404d5b96452fea",
+      "source_comparison": "RULED_MISSING_EDGE_READING",
+      "notes": "All missing boundary edges remain unoriented geometry; no extra absence-of-source/sink premise.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.9",
+      "kind": "Proposition",
+      "label": "prop-uihbot-sym",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.prop_uihbot_sym",
+          "file": "DirectedDistances/Paper/Section5/UIHBOTSym.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "f8f962bd9cc0e8171fbc94df765d4d1dedf85111674109aa305b0625eb9ce581",
+      "source_comparison": "RULED_ROOT_READING",
+      "notes": "Reflection retains the same geometric missing root with reversed endpoint order. Its finite right-boundary-one samples and reversal inputs have explicit current-source-view membership and exact law transport; the infinite partial-map law is unchanged.",
+      "remaining_correspondence_obligations": [],
+      "source_domain_bindings": [
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.sourceBoundaryRightPrefixReversalEquiv",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "same reversal between current-paper view classes; original range excludes singleton"
+        },
+        {
+          "declaration": "DirectedDistances.PaperProofs.Section5.Prop516ExteriorAssembly5.finiteGeometricLaw_sourceView_filter_eq",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "exact existing uniform-map and independent-mark observable law; no conditioning or new normalizer"
+        }
+      ]
+    },
+    {
+      "number": "5.10",
+      "kind": "Lemma",
+      "label": "lem-uihbot-future",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.lem_uihbot_future",
+          "file": "DirectedDistances/Paper/Section5/UIBHBOTFuture.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "78859f90edb5ed9303e5e486862651e5d3bddde90a3b352ef638d753b2a4e03b",
+      "source_comparison": "RULED_READING_NOT_PRINTED",
+      "notes": "Revised conclusion/containment still drops bc on M_{tau^bc_k,infinity}; formalized DirectedDistances.Paper.Section5.lem_uihbot_future uses the constructed boundary-channeled future.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.11",
+      "kind": "Proposition",
+      "label": "prop-busemann-uihbot",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.prop_busemann_uihbot",
+          "file": "DirectedDistances/Paper/Section5/BusemannUIBHBOT.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "83d78413655c41fdef213eef1b8128c876f138b8e42344de6447df6d235abaf4",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.12",
+      "kind": "Lemma",
+      "label": "lem-flow-line-times",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.flow_line_times",
+          "file": "DirectedDistances/Paper/Section5/FlowLineTimes.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "325443cba3971fd2528ede2a0cfd45921884170067497871834e70cce8cd26a2",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION_WITH_ORDER_NOTE",
+      "notes": "Ordered triangle boundaries follow from the exact dart order, cap-side characterization, endpoint identities and retained primed-face identification.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.13",
+      "kind": "Lemma",
+      "label": "lem-quad-kmsw",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.quad_kmsw",
+          "file": "DirectedDistances/Paper/Section5/QuadKMSW.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "c4a9cee2fc608cbfd452c1f1a41575e723335f567763cd3a6d84f20c131403fb",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "Primed KMSW initial edge subsequently declared missing.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.14",
+      "kind": "Lemma",
+      "label": "lem-quadrant-walk",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.quadrant_walk_corrected",
+          "file": "DirectedDistances/Paper/Section5/QuadrantWalk.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "13411538640d0acbb5d563683fa5610e3ef36c863b913c3fcb36f35720b00d9d",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "First primed step changed from (1,0) to (0,1).",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.15",
+      "kind": "Lemma",
+      "label": "lem-lazy-walk-flip",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.pitman_transform_conditioned_prefix_law",
+          "file": "DirectedDistances/Paper/Section5/Pitman.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "fe947fc8487e9e061be397f09658d9ee6fdd42de6c12ee6ad1a8353ae790c1ec",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "Adds start at 0, includes time0, and says new running minimum.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.16",
+      "kind": "Proposition",
+      "label": "prop-disk-bs-conv",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.prop_disk_bs_conv",
+          "file": "DirectedDistances/Paper/Section5/DiskBSConv.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "4f1a4e571cad2aaf248ffe4e5705bb4246d26ac7fe48515c4e7691eaeb85c457",
+      "source_comparison": "MATCH_CURRENT_SOURCE_CLASS_VIEW",
+      "notes": "Admissibility and uniform square-root bounds are retained. finiteGeometricLaw_sourceView_filter_eq proves that filtering the actual preexisting map/independent-mark sample by the paper view leaves the exact existing finite geometric observable law unchanged.",
+      "remaining_correspondence_obligations": [],
+      "source_domain_bindings": [
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.isSourceBoundaryChanneled_iff_right_one",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "proved membership equivalence only for positive left length and right length one, including singleton"
+        },
+        {
+          "declaration": "DirectedDistances.PaperProofs.Section5.Prop516ExteriorAssembly5.finiteGeometricLaw_sourceView_filter_eq",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "exact existing uniform-map and independent-mark observable law; no conditioning or new normalizer"
+        }
+      ],
+      "source_domain_proof_evidence_gate": "PASS_COMPILED_STANDARD_AXIOMS_FRESH_KERNEL"
+    },
+    {
+      "number": "5.17",
+      "kind": "Lemma",
+      "label": "lem-cone-prob-lower",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.cone_prob_lower_corrected",
+          "file": "DirectedDistances/Paper/Section5/ConeProbLower.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "96fa3456d81a065c8c9e7b082b406d99afc81c4f2fcec1a7938524f571dc28fe",
+      "source_comparison": "MATCH_ADOPTED_CORRECTION",
+      "notes": "Restricts ONE c(A) lower bound to n-ell in 3N0.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "5.18",
+      "kind": "Lemma",
+      "label": "lem-disk-walk-conv",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section5.disk_walk_conv_corrected",
+          "file": "DirectedDistances/Paper/Section5/DiskWalkConv.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "2feb8223368680fe91b7e7e1ce26825daf9c740c91d0f83971acef986a506962",
+      "source_comparison": "MATCH_VIA_EXTENSION_INDEPENDENCE",
+      "notes": "The constant-clamped finite-window instance is proved in verification/ConstantWindow.lean and applied to the universal measurable-extension clause in ConstantWindowCheck.lean.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.1",
+      "kind": "Proposition",
+      "label": "prop:Tauberian",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.tauberian_characteristic",
+          "file": "DirectedDistances/Paper/Section6/Tauberian.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "3166bfe0a03ba6b58b5ff5d5f815b51ed6b1d6ce2a2295abd100faf3b0482be1",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.2",
+      "kind": "Proposition",
+      "label": "prop:asympt-exp2",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.prop_asympt_exp2",
+          "file": "DirectedDistances/Paper/Section6/AsymptExp2.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "952798f5bb0f6c88e6fd7f95c2186b13cc3a4fbd91d54a0ee31ba1a530c21413",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.4",
+      "kind": "Lemma",
+      "label": "lem:LDP-relating-X1-X",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.lem_ldp_relating",
+          "file": "DirectedDistances/Paper/Section6/LDPRelating.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "357acb19e2d2eb6c84188519530d60f8bdac287b763238ee9c72b21deeee3057",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.5",
+      "kind": "Proposition",
+      "label": "prop:LDP-recursive-equation",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.prop_ldp_recursive_equation",
+          "file": "DirectedDistances/Paper/Section6/LDPRecursiveEquation.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "366b54565deb0bcf0ac9bbd00addac772c45b000c147928357d87cb68ac8bac0",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.6",
+      "kind": "Lemma",
+      "label": "lem:Y-not-const",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.lem_y_not_const",
+          "file": "DirectedDistances/Paper/Section6/YNotConst.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "236a60be3366e30f950e5101b0c1b4213b34b31c19ad142e0c5e97bd883ab49c",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.7",
+      "kind": "Lemma",
+      "label": "lem:nonreal2",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.lem_nonreal2",
+          "file": "DirectedDistances/Paper/Section6/Nonreal2.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "13b9de3e665a3595bc0cdbdd4db84a52026782e1d9286a7300631677df5fe19f",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.8",
+      "kind": "Proposition",
+      "label": "prop:asympt-exp",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.prop_asympt_exp",
+          "file": "DirectedDistances/Paper/Section6/AsymptExp.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "f4fae38ecbfe9fdf15c210091026d3934f4fc85135c6931f921524b13e358162",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.10",
+      "kind": "Lemma",
+      "label": "lem:SDP-relating-X1-X",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.lem_sdp_relating",
+          "file": "DirectedDistances/Paper/Section6/SDPRelating.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "60ba51cda8019db7bf5d61cb1842b34caee8269174dbf1ebb698b205a896b147",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.11",
+      "kind": "Proposition",
+      "label": "prop:SDP-recursive-equation",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.prop_sdp_recursive_equation",
+          "file": "DirectedDistances/Paper/Section6/SDPRecursiveEquation.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "33243b77041895e67b53b861b3b6814f48bc75d4a45b2663bf061d1b005505ec",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "6.12",
+      "kind": "Lemma",
+      "label": "lem:Y-not-const2",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section6.lem_y_not_const2",
+          "file": "DirectedDistances/Paper/Section6/YNotConst2.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "b89ad6a3841f9679e55e37fcf194c0dce2bc6d6231dfdb5ecccf64129fd0c259",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.1",
+      "kind": "Lemma",
+      "label": "lem-long-path",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.lem_long_path",
+          "file": "DirectedDistances/Paper/Section7/LongPath.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "90f1f2566cd9a9301eac0c8e0a60531bbf02864b03b70ee84e290b48c7e8207b",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.2",
+      "kind": "Lemma",
+      "label": "lem-cell-ldp-lower",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.cell_ldp_lower",
+          "file": "DirectedDistances/Paper/Section7/CellLDPLower.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "6cd7f7284014497ed1829d3699797221fa8e147580e00baeac3266508d04f728",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.3",
+      "kind": "Lemma",
+      "label": "lem-ldp-fluctuation",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.lem_ldp_fluctuation",
+          "file": "DirectedDistances/Paper/Section7/LDPFluctuation.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "fb3aa1a60eeaad0f69ec4a17ab67ae1adc135a9670cda911fe418d7c5d53823e",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.4",
+      "kind": "Lemma",
+      "label": "lem-cell-ldp-upper",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.cell_ldp_upper",
+          "file": "DirectedDistances/Paper/Section7/CellLDPUpper.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "33b27a6fe7ff443eaa26cfee61265aeb9762298435d5a73fe505c54ce723e0ad",
+      "source_comparison": "MATCH_UNCHANGED_WITH_CONTEXT_CORRECTION",
+      "notes": "Cell is finite KMSW stage; revised proof removes false set-subtraction sentence. Formalized declaration uses the finite cell.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.5",
+      "kind": "Lemma",
+      "label": "lem-sdp-tri",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.lem_sdp_tri",
+          "file": "DirectedDistances/Paper/Section7/SDPTri.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "7ac70008f46813159e4167010742543406eb8e9a47b8c411f7d8b21cd36a59f9",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.6",
+      "kind": "Lemma",
+      "label": "lem-cell-sdp-lower",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.cell_sdp_lower",
+          "file": "DirectedDistances/Paper/Section7/CellSDPLower.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "6fc53fc263a436ac4e7249b19dad34818b695f852fc65255048ba9ff6c381eb8",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.7",
+      "kind": "Lemma",
+      "label": "lem-sdp-fluctuation",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.lem_sdp_fluctuation",
+          "file": "DirectedDistances/Paper/Section7/SDPFluctuation.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "f35ac58e0c53e7fde4e9151a7a23d4423f0c4b0b985c10cc3f854c98638d3e61",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.8",
+      "kind": "Lemma",
+      "label": "lem-cell-sdp-upper",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.cell_sdp_upper",
+          "file": "DirectedDistances/Paper/Section7/CellSDPUpper.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "c0630eb5a9807a3feff3deedd1b7f717d3fb859da15a0e46b686dd7d4fdf7e3b",
+      "source_comparison": "MATCH_UNCHANGED_WITH_CONTEXT_CORRECTION",
+      "notes": "Cell is finite KMSW stage; revised SDP proof now chooses compatible common geodesic target. Statement unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.9",
+      "kind": "Lemma",
+      "label": "lem-uiqbot-boltzmann",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.uiqbot_boltzmann",
+          "file": "DirectedDistances/Paper/Section7/UIQBOTBoltzmann.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "68d63e6e8b397c566800f8544dddc24612c27eeac4589735381dfd210036229a",
+      "source_comparison": "MATCH_UNCHANGED_WITH_CONTEXT_CORRECTION",
+      "notes": "Revised proof uses post-hit minimum, removes false pre/post equality; formalized law uses the post-hit convention.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.10",
+      "kind": "Lemma",
+      "label": "lem-boltzmann-ldp-upper",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.boltzmann_ldp_upper",
+          "file": "DirectedDistances/Paper/Section7/BoltzmannLDPUpper.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "1100c698c24c69c784010841cca904a5b62a20c79fe2da27023b8f887f9db39b",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.11",
+      "kind": "Lemma",
+      "label": "lem-boltzmann-ldp-lower",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.boltzmann_ldp_lower",
+          "file": "DirectedDistances/Paper/Section7/BoltzmannLDPLower.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "d9eef0e66197393de6c0cc9a36a04e69b88c2e0f4cae65d199321a7e80c8e050",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.12",
+      "kind": "Lemma",
+      "label": "lem-boltzmann-sdp-lower",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.boltzmann_sdp_lower",
+          "file": "DirectedDistances/Paper/Section7/BoltzmannSDPLower.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "bcffc984ce1c0d0aeb4a3a293cef2d8dc9fbf8895bced6b767ff1534861c2146",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "7.13",
+      "kind": "Lemma",
+      "label": "lem-boltzmann-sdp-upper",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.Section7.boltzmann_sdp_upper",
+          "file": "DirectedDistances/Paper/Section7/BoltzmannSDPUpper.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "791b6841a874776c112bbdbad6581d163404ffc5a44c8e34d59db3f185f9bcc7",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "A.1",
+      "kind": "Lemma",
+      "label": "lem-holo-asymp",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.AppendixA.holomorphic_asymptotic",
+          "file": "DirectedDistances/Paper/AppendixA/HolomorphicAsymptotics.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "91f8e67a27061ac91f9ba21dffc12940f2151d8d34f4894680a1d2092e7eea3b",
+      "source_comparison": "MATCH_UNCHANGED_PROOF_REPAIRED",
+      "notes": "Abstract holomorphic-function statement unchanged; revision repairs signed absolute-error estimate without changing conclusion.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "A.2",
+      "kind": "Lemma",
+      "label": "lem-tauberian",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.AppendixA.tauberian",
+          "file": "DirectedDistances/Paper/AppendixA/Tauberian.lean"
+        },
+        {
+          "declaration": "DirectedDistances.Paper.AppendixA.real_tauberian_below_one",
+          "file": "DirectedDistances/Paper/AppendixA/RealTauberianBelowOne.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "232abfb2633510899d3ea76f3804fcecf17e20fdd43e19618c7b1a6681025ff2",
+      "source_comparison": "MATCH_CHANGED_STANDING_SCOPE",
+      "notes": "Statement body unchanged; Appendix standing X changed from nonnegative real to integer. Formalized tauberian has X : Omega -> Nat.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "A.3",
+      "kind": "Lemma",
+      "label": "lem-tauberian'",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.AppendixA.tauberian_above_one",
+          "file": "DirectedDistances/Paper/AppendixA/TauberianAboveOne.lean"
+        },
+        {
+          "declaration": "DirectedDistances.Paper.AppendixA.real_tauberian_above_one",
+          "file": "DirectedDistances/Paper/AppendixA/RealTauberianAboveOne.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "50352f80d8f359c3aec89478b15de037015485c3ddfcff8665fa8db95cc50f22",
+      "source_comparison": "MATCH_CHANGED_STANDING_SCOPE",
+      "notes": "Statement body unchanged; Appendix standing X changed from nonnegative real to integer. Formalized DirectedDistances.Paper.AppendixA.tauberian_above_one has X : Omega -> Nat.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "A.4",
+      "kind": "Lemma",
+      "label": "lem:bound-im-part",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.AppendixA.positive_sine",
+          "file": "DirectedDistances/Paper/AppendixA/PositiveSine.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "d9ffe718bd7bcfed02cbc82bd8078c99895cd78979ad6e64d3e732129564fb41",
+      "source_comparison": "MATCH_UNCHANGED_PROOF_REPAIRED",
+      "notes": "Sequence/tail statement unchanged; revised split-and-summation-by-parts proof replaces divergent Cauchy-Schwarz estimate.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "A.5",
+      "kind": "Lemma",
+      "label": "lem:abel",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.AppendixA.abel",
+          "file": "DirectedDistances/Paper/AppendixA/Abel.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "3ec3e0f56503492c99423a51befb99e122841e30a0dcb793ee5d440dd554029c",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    },
+    {
+      "number": "A.6",
+      "kind": "Lemma",
+      "label": "lem:riemann",
+      "exports": [
+        {
+          "declaration": "DirectedDistances.Paper.AppendixA.riemann",
+          "file": "DirectedDistances/Paper/AppendixA/Riemann.lean"
+        }
+      ],
+      "manuscript_statement_sha256": "567fab5de402264d703b1fd05a7f6f732baa1fd89b5e1c185458426bdb8afcc4",
+      "source_comparison": "EXACT_UNCHANGED",
+      "notes": "Numbered statement bytes unchanged.",
+      "remaining_correspondence_obligations": []
+    }
+  ],
+  "entry_count": 90,
+  "source_fidelity_status": "SOURCE_DOMAIN_REVIEW_AND_FRESH_VALIDATION_PASS",
+  "source_fidelity_summary": "The two revised source domains are explicit views over unchanged generic carriers, with proved actual finite-class, UIQBOT same-event and whole-plane no-pole bindings and exact right-boundary-one sample/observable-law transport. Independent focused review covers all 90 entries/97 primary exports without added premises. The source-domain verification files compile and pass their axiom and fresh kernel checks; the four approved unprinted conventions remain disclosed.",
+  "primary_export_count": 97,
+  "source_domain_bindings": {
+    "definition_1_1": {
+      "status": "PROVED_ACTUAL_OBJECT_BINDINGS_SEMANTIC_REVIEW_PASS",
+      "references": [
+        {
+          "declaration": "DirectedDistances.PlanarMap.DirectedPlaneMap.PolesOnExternalBoundary",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "literal current-paper standing condition on each existing pole"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.SourceBoundaryDomain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "explicit standing-domain view; no generic carrier restriction"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.SourceBipolarTriangulation",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "literal intersection with the unchanged BySides predicate; no new degree equivalence or concrete inhabitance claim"
+        },
+        {
+          "declaration": "DirectedDistances.KMSW.finiteIsoClass_source_boundary_domain",
+          "file": "verification/SourceScopeCheck.lean",
+          "role": "actual ordinary finite class, unchanged KMSW walk realization, same drawing and poles"
+        },
+        {
+          "declaration": "DirectedDistances.KMSW.finiteWalkClass_exists_source_boundary_domain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "concrete finite walk drawing and directed endpoints; complete sample has no missing edges"
+        },
+        {
+          "declaration": "DirectedDistances.KMSW.uiqbot_ae_source_boundary_domain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "same original probability-one provider event and chosen drawing/map; unique source and no sinks"
+        },
+        {
+          "declaration": "DirectedDistances.PaperProofs.Section3.uibotWholePlaneSourceDirectedMap_source_boundary_domain",
+          "file": "verification/SourceBoundaryDomain.lean",
+          "role": "actual whole-plane glue drawing; no finite poles, so no external face is invented"
+        }
+      ]
+    },
+    "definition_3_17": {
+      "status": "PROVED_CURRENT_SOURCE_VIEW_AND_CONSUMER_TRANSPORT_SEMANTIC_REVIEW_PASS",
+      "references": [
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.IsSourceBoundaryChanneled",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "primary channeling and simple outer boundary or actual single-edge class"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapRep.IsSourceBoundaryChanneled",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "same raw representative carrier"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.isSourceBoundaryChanneled_iff_right_one",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "proved membership equivalence only for positive left length and right length one, including singleton"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.sourceBoundaryRightPrefixReversalEquiv",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "same reversal between current-paper view classes; original range excludes singleton"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.kmsw_left_source_view",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "positive-step bijection, procedure identification, uniqueness and non-boundary count"
+        },
+        {
+          "declaration": "DirectedDistances.PlanarMap.KMSWMapIsoClass.kmsw_left_zeroStep_source_view",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "complete separate zero-step/singleton correspondence"
+        },
+        {
+          "declaration": "DirectedDistances.PaperProofs.Section5.Prop516ExteriorAssembly5.finiteGeometricLaw_sourceView_filter_eq",
+          "file": "verification/SourceBoundaryChanneled.lean",
+          "role": "exact existing uniform-map and independent-mark observable law; no conditioning or new normalizer"
+        }
+      ]
+    },
+    "independent_review": {
+      "status": "PASS",
+      "scope": "focused new-source-domain consumption; unchanged core proof audits reused",
+      "numbered_entries": 90,
+      "primary_exports": 97,
+      "binder_counts": {
+        "SOURCE": 18,
+        "STANDING": 4,
+        "TYPING": 8,
+        "RULED": 0,
+        "EXCESS": 0
+      },
+      "new_mathematical_author_decision_required": false
+    },
+    "proof_evidence_final_gate": {
+      "status": "PASS",
+      "required": "Final renamed source-domain verification file checks, all-new-export axiom probes, concrete finite-class consumption check and fresh kernel replay of the added closure.",
+      "kind": "Compilation, 37 standard-axiom probes and fresh transitive kernel replay passed.",
+      "completed_utc": "2026-11-11T08:26:57.330726Z"
+    },
+    "modules": [
+      {
+        "file": "verification/SourceBoundaryChanneled.lean",
+        "sha256": "5a894b5df971eeea7723f1f736898f01e14b49b08b56e8e047ffd885a7797bd2"
+      },
+      {
+        "file": "verification/SourceBoundaryDomain.lean",
+        "sha256": "0b8bf8e4da7f471a3185a150e3f4886119d6670a191115cf674013430015e276"
+      },
+      {
+        "file": "verification/SourceScopeCheck.lean",
+        "sha256": "da4047d9a5977ba33b1c2cd7a62236429a707686d25a2929ec7b6f631b0e33cf"
+      }
+    ],
+    "limits": [
+      "Generic IsChanneled and generic bipolar/triangulation predicates remain broader.",
+      "No global class identity is asserted.",
+      "SourceBipolarTriangulation is a literal intersection with the existing BySides predicate; no new concrete inhabitance or faceDegree/sideDegree equivalence is asserted.",
+      "Complete finite source realization is not substituted for a partial-map distance graph or the Proposition5.16 observable.",
+      "Missing-edge partial maps retain their existing source conventions; no unique-pole condition is added."
+    ]
+  },
+  "rendering_scope_note_counts": {
+    "numbered_entries_with_designated_notes": 17,
+    "by_source": {
+      "Introduction": 4,
+      "Section 3": 6,
+      "Section 5": 7
+    },
+    "designated_numbered_entries": {
+      "Introduction": [
+        "1.1",
+        "1.2",
+        "1.4",
+        "1.6"
+      ],
+      "Section 3": [
+        "3.1",
+        "3.2",
+        "3.8",
+        "3.12",
+        "3.13",
+        "3.17"
+      ],
+      "Section 5": [
+        "5.3",
+        "5.5",
+        "5.8",
+        "5.9",
+        "5.10",
+        "5.12",
+        "5.18"
+      ]
+    },
+    "approved_unprinted_convention_count": 4,
+    "approved_unprinted_convention_entries": [
+      "1.2",
+      "1.6",
+      "3.12",
+      "5.10"
+    ],
+    "unresolved_source_domain_mathematical_issues": 0,
+    "supplemental_proof_evidence_final_gate": "PASS",
+    "note": "Supporting consumer-reference keys do not add entries to the designated17 rendering/scope notes."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "publication_authorized": false,
+  "manuscript_alignment": "90 current labels and numbers; explicit source-domain views and proved bindings; rendering conventions in docs/ERRATA-AND-DEVIATIONS.md.",
+  "completed_utc": "2026-11-11T08:26:57.330726Z",
+  "compiler_input_digest_sha256": "476f882559c35f8d001ec2cdbd79689b1923fd24450961150513f39134d07a8d",
+  "compiler_input_files": 2778,
+  "isolated_core_compiler_input_digest_sha256": "8325013aa514c12697f97ead520bddbc920762538780daa3cf484104c2a483b7",
+  "isolated_core_source_tree_sha256": "3ca01b74615b562ff1239f5d67f80b48273a06c4ba386c36cde671c0fd86dcfd",
+  "source_domain_validation_tree_sha256": "6e7c4af6fdb27b5495b76e7d9838b00a25c1fa7df51dcfab9d80f522ef3d6d02",
+  "pinned_configuration_sha256": {
+    "lean-toolchain": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+    "lakefile.toml": "b9d5771511cc181b6d0e7d423ff63eb1a1a5bae2aa66bfed28de89c290074952",
+    "lake-manifest.json": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
+  },
+  "toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "compiler_commit": "b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a",
+  "mathlib_revision": "9d581dfff2e41de989072ea63abf3daf69311520",
+  "empty_project_artifacts_before_core_build": true,
+  "verified_dependency_regular_files": 69475,
+  "pinned_dependencies_unchanged_after_both_runs": true,
+  "paper_entries": 90,
+  "paper_exports": 97,
+  "semantic_roots": 107,
+  "axiom_probe_counts": {
+    "Axioms": 128,
+    "Providers": 98,
+    "ConstantWindow": 3,
+    "SourceDomains": 37
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lexer_regression_tests": 6,
+  "verification_script": "scripts/verify.sh",
+  "isolated_core_verification_exit": 0,
+  "isolated_core_wall_seconds": 8058.393227547407,
+  "isolated_core_completed_utc": "2026-11-11T06:48:44.102466Z",
+  "isolated_core_log_sha256": "525f3c1c901081e9a1c0a17847400c1fc4c9167738220751182df11b65a48ceb",
+  "source_domain_checks": {
+    "SourceBoundaryDomain": {
+      "exit": 0,
+      "seconds": 1.8454381830524653,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "SourceBoundaryChanneled": {
+      "exit": 0,
+      "seconds": 1.6054998820181936,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "SourceScopeCheck": {
+      "exit": 0,
+      "seconds": 1.162638394976966,
+      "log_sha256": "6c2d57ce3a8b479b81d2ec7be2191a142b59bce40af7126d7e6d9f0bd2bbb591"
+    },
+    "axiom-guard": {
+      "exit": 0,
+      "seconds": 0.03271973005030304,
+      "log_sha256": "f1cd2b634d343074e3d603dafcd98fd09fdc25d1738c3109a1d2f4a32abfd701"
+    },
+    "source-domains-kernel": {
+      "exit": 0,
+      "seconds": 620.0749286590144,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source-integrity": {
+      "exit": 0,
+      "seconds": 19.817262712982483,
+      "log_sha256": "459c828aaecc5b708f3ce8c7edf289ef1f936c7732633806d6a104b16557f88d"
+    },
+    "lexer-tests": {
+      "exit": 0,
+      "seconds": 0.03971582802478224,
+      "log_sha256": "dcd2147edfda2291b456dfb6d9f3021f0fed07760d5a1c8869fc5446f30e28fe"
+    },
+    "final-source-integrity": {
+      "exit": 0,
+      "seconds": 19.88794392393902,
+      "log_sha256": "459c828aaecc5b708f3ce8c7edf289ef1f936c7732633806d6a104b16557f88d"
+    }
+  },
+  "fresh_kernel_replays": [
+    {
+      "module": "DirectedDistances.DeliveryVerificationRoot",
+      "exit": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "verification.ConstantWindowCheck",
+      "exit": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "verification.SourceScopeCheck",
+      "exit": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence_reuse": "The isolated clean core build covers the same 2772 Lean files and three pins byte-for-byte. Three additional source-domain verification modules were compiled against the 41530 individually hash-verified artifacts produced by that run, with a fresh kernel replay of their transitive closure. Both stages hash-verified all 69475 dependency files before and after. The current checker and added script commands were exercised in the delta run; unchanged core commands retain their successful evidence. Final documentation is separately hash-bound in SOURCE-MANIFEST.json.",
+  "independent_release_review": "verification/REVIEW.md"
+}

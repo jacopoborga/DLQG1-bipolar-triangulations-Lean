@@ -1,0 +1,69 @@
+{
+  "version": "v0.4",
+  "project": {
+    "name": "DLQG1-bipolar-triangulations-Lean",
+    "description": "Lean formalization of 90 numbered definitions/results and their required proof dependencies for directed distances on bipolar-oriented triangulations, with explicit source-domain bindings and rendering conventions.",
+    "authors": [
+      "Jacopo Borga"
+    ],
+    "responsible_maintainers": [
+      "Jacopo Borga"
+    ],
+    "license": "Apache-2.0"
+  },
+  "sources": [
+    {
+      "title": "Directed distances in bipolar-oriented triangulations: exact exponents and scaling limits",
+      "authors": [
+        "Jacopo Borga",
+        "Ewain Gwynne"
+      ],
+      "type": "paper",
+      "id": "arxiv:2510.26123",
+      "relationship": "formalizes",
+      "author_endorsement": "other",
+      "note": "Jacopo Borga supervised development and accepted the 90-item private formalization. Current revised-manuscript correspondence is recorded separately; no endorsement by other paper authors is asserted."
+    }
+  ],
+  "status": {
+    "scope": "90 numbered entries, required definitions and proof dependencies, with the source-domain views and explicit conventions in ERRATA-AND-DEVIATIONS.md.",
+    "sorry_count": 0,
+    "sorry_in_definitions": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "automation": {
+    "methods": [
+      {
+        "method": "agent",
+        "models": [
+          "OpenAI Codex Sol",
+          "OpenAI Codex Luna",
+          "OpenAI Codex Astra",
+          "Anthropic Claude"
+        ],
+        "framework": "Codex and Claude coding agents; Sol agents prepare and independently review this export.",
+        "tool_setup": "Pinned Lean 4.36.0-rc2 / Mathlib, isolated source compilation, axiom probes and fresh Lean kernel replay.",
+        "cost": {
+          "spend_usd": "not separately tracked (existing subscriptions and infrastructure)"
+        },
+        "prompting_notes": "Human supervision covered mathematical interpretation and corrections; separate agent reviews checked correspondence and integrity."
+      }
+    ],
+    "notes": "AI-assisted proof development and agent review do not replace Lean kernel checks or independent human mathematical review. Model names are family-level disclosures; this snapshot does not assert a complete per-run model ledger or exact spending totals."
+  },
+  "review": {
+    "status": "agent-reviewed; author-approved for public release",
+    "reviewers": [
+      "Independent coding-agent reviewers"
+    ],
+    "notes": "Accepted statements retain their source and proof reviews. Explicit source-domain views account for revised standing conventions. Technical verification is recorded in VERIFICATION.md; the author completed final release review and approved publication."
+  },
+  "fidelity": {
+    "divergences": "See ERRATA-AND-DEVIATIONS.md and CORRESPONDENCE.json for precise rendering conventions, broader implementation carriers and proved source-domain bindings."
+  },
+  "acknowledgements": "Lean 4, Mathlib, Lake, elan; release workflow adapted from Scott Armstrong."
+}

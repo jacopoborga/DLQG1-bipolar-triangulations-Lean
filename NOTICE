@@ -1,0 +1,11 @@
+DLQG1-bipolar-triangulations-Lean
+Copyright 2026 Jacopo Borga.
+
+Mathematical source: Directed distances in bipolar-oriented triangulations:
+exact exponents and scaling limits, by Jacopo Borga and Ewain Gwynne.
+
+Built using Lean 4, Mathlib, Lake and elan. Individual source notices and
+third-party dependency licenses retain their effect.
+
+Release workflow and documentation structure adapted from Scott Armstrong's
+lean-public-release workflow and HighContrastHomogenization.
