@@ -286,12 +286,24 @@
     "probe_sha256": "5cc18e83dfbd63df92c228d066a4b82afd124ca1df3f9f6a2016365ba4ad84ac",
     "log_sha256": "fae37c1fe968c421c777f685c4f5fdf613e59c7b5c0c4532271c2e802794d4ee"
   },
-  "official_preflight": "PENDING_ONE_EXACT_FINAL_COMMIT",
-  "historical_official_receipts": "Eight prior configurations cover thirteen distinct results at their listed earlier commits; they do not certify this later snapshot.",
+  "official_preflight": "PASS_FOR_THIS_ENTRY_AT_HISTORICAL_COMMIT; ALL_TEN_FINAL_COMMIT_PENDING",
+  "historical_official_receipts": "A historical official PASS for Proposition 5.9 is recorded at commit 4a320e391d34654b5e276b684e7ac40e3dc45031; nine total historical configurations cover fourteen distinct results. This receipt does not certify the current final candidate.",
   "intake_initiated": false,
   "registration_performed": false,
   "notes": [
     "The normal source Comparator used the exact frozen Challenge, Solution, support module, and configuration hashes listed above; the integrated Lakefile adds only the three Palomar roots needed to include those modules.",
     "This portable receipt records result metadata and hashes; raw run logs and private process paths are not included."
-  ]
+  ],
+  "historical_official_pass": {
+    "configuration": "palomar/principal/half-plane-reflection.json",
+    "paper_results": [
+      "5.9"
+    ],
+    "exact_commit": "4a320e391d34654b5e276b684e7ac40e3dc45031",
+    "status": "pass",
+    "run_id": 43228396515,
+    "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43228396515",
+    "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43228396515/artifacts/13950414658",
+    "mechanical_report_sha256": "77e9f0aaed27b8e14c19c4aa953259a07e0137de2d58c209c96ce82eb603cead"
+  }
 }

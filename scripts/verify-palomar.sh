@@ -55,3 +55,7 @@ python3 -B scripts/check_release.py --axioms PalomarBusemannTails --log "$eviden
 lake "${lake_args[@]}" comparator --config palomar/principal/half-plane-reflection.json > "$evidence_dir/half-plane-reflection-comparator.log" 2>&1
 lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarHalfPlaneReflectionAxioms.lean > "$evidence_dir/half-plane-reflection-axioms.log" 2>&1
 python3 -B scripts/check_release.py --axioms PalomarHalfPlaneReflection --log "$evidence_dir/half-plane-reflection-axioms.log"
+# Proposition 5.16: disk local limit, complete construction and all 55 selected targets.
+lake "${lake_args[@]}" comparator --config palomar/principal/disk-local-limit.json > "$evidence_dir/disk-limit-comparator.log" 2>&1
+lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarDiskLocalLimitAxioms.lean > "$evidence_dir/disk-limit-axioms.log" 2>&1
+python3 -B scripts/check_release.py --axioms PalomarDiskLocalLimit --log "$evidence_dir/disk-limit-axioms.log"

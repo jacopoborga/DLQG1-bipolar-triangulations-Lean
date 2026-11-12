@@ -8,4 +8,4 @@ The Challenge selects 41 theorem targets: 23 explicit proof holes and 18 complet
 
 The local normal source Comparator passed with NanoDa and the Lean default kernel. A fresh axiom probe covered all 41 targets and reported only `propext`, `Classical.choice` and `Quot.sound`. The exact file hashes, target list, run metrics, kernel acceptance messages and axiom outputs are in the [portable local receipt](../verification/PALOMAR-HALF-PLANE-RESULTS.json).
 
-These are local checks. The official workflow must still pass all ten intended configurations at one exact final commit. The eight historical official passes are bound to earlier commits. Proposition 5.16 remains pending. No Palomar intake or registration has occurred.
+These are local checks. The official workflow must still pass all ten intended configurations at one exact final commit. Nine historical official configurations cover fourteen results, including this entry at commit 4a320e3; all are bound to their listed commits. Proposition 5.16 also passed local checks, while the final all-ten exact-commit official gate remains pending. No Palomar intake or registration has occurred.

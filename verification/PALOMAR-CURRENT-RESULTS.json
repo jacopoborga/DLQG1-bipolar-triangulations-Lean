@@ -1,7 +1,7 @@
 {
-  "status": "PASS_LOCAL_NINE_INTENDED_CONFIGS; ONE_PROPOSITION_PENDING; FINAL_OFFICIAL_PREFLIGHT_PENDING",
-  "scope": "Current local Palomar campaign summary. The 90-entry correspondence and 97 primary exports are unchanged. Nine intended local configurations have local Comparator and kernel evidence; Proposition 5.16 remains pending. Eight historical official configurations cover thirteen distinct results at their listed earlier commits. The final all-ten exact-commit official preflight remains pending. No intake or registration.",
-  "intended_local_configuration_count": 9,
+  "status": "PASS_LOCAL_TEN_INTENDED_CONFIGS; FINAL_OFFICIAL_PREFLIGHT_PENDING",
+  "scope": "Current local Palomar campaign summary. The 90-entry correspondence and 97 primary exports are unchanged. All ten intended local configurations have normal Comparator and kernel evidence; Proposition 5.16 also has fresh 55-target axiom evidence. Nine historical official configurations cover fourteen distinct results at their listed earlier commits, including Proposition 5.9 at 4a320e3. The final all-ten exact-commit official preflight remains pending. No intake or registration.",
+  "intended_local_configuration_count": 10,
   "intended_local_configurations": [
     {
       "configuration": "comparator.json",
@@ -137,6 +137,34 @@
       "normal_source_comparator": true,
       "from_export": false,
       "sandbox_bypass": false
+    },
+    {
+      "configuration": "palomar/principal/disk-local-limit.json",
+      "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_NANODA_LEAN_AND_AXIOMS",
+      "paper_results": [
+        "5.16"
+      ],
+      "receipt": "verification/PALOMAR-DISK-LOCAL-LIMIT-RESULTS.json",
+      "main_declaration": "DLQG1.Palomar.Principal.disk_local_limit",
+      "theorem_target_count": 55,
+      "challenge_holes": 36,
+      "proved_certificates": 19,
+      "definition_names": [],
+      "strict_source_comparator": true,
+      "normal_source_comparator": true,
+      "fresh_source_build": true,
+      "from_export": false,
+      "sandbox_bypass": false,
+      "nanoda": "accepted",
+      "lean_default_kernel": "accepted",
+      "fresh_axiom_targets": 55,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "challenge_lines": 999,
+      "challenge_bytes": 69229
     }
   ],
   "optional_pilot": {
@@ -146,18 +174,11 @@
     "counted_as_intended_config": false,
     "reason": "Optional pilot overlaps the numbered Appendix configuration."
   },
-  "pending_propositions": [
-    {
-      "paper_result": "5.16",
-      "source_declaration": "DirectedDistances.Paper.Section5.prop_disk_bs_conv",
-      "proposed_configuration": "palomar/principal/disk-local-limit.json",
-      "status": "PENDING_STANDALONE_CHALLENGE_AND_LOCAL_CHECKS"
-    }
-  ],
+  "pending_propositions": [],
   "historical_official_preflight": {
     "status": "PASS_AT_THEIR_LISTED_EXACT_COMMITS",
-    "configuration_count": 8,
-    "distinct_paper_result_count": 13,
+    "configuration_count": 9,
+    "distinct_paper_result_count": 14,
     "configurations": [
       {
         "configuration": "palomar/principal/cell-sdp.json",
@@ -230,9 +251,21 @@
         "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218309346",
         "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218309346/artifacts/13944999029",
         "mechanical_report_sha256": "0c1c91f1df203638def15a64df8240fdfba408c8346e6920e6859f6ba5f516c1"
+      },
+      {
+        "configuration": "palomar/principal/half-plane-reflection.json",
+        "paper_results": [
+          "5.9"
+        ],
+        "exact_commit": "4a320e391d34654b5e276b684e7ac40e3dc45031",
+        "status": "pass",
+        "run_id": 43228396515,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43228396515",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43228396515/artifacts/13950414658",
+        "mechanical_report_sha256": "77e9f0aaed27b8e14c19c4aa953259a07e0137de2d58c209c96ce82eb603cead"
       }
     ],
-    "source_receipts": "Official workflow/report hashes and URLs from the corresponding exact-commit live status records."
+    "source_receipts": "Nine historical configuration/report receipts verified at their listed exact commits; these do not satisfy the all-ten current-commit gate."
   },
   "final_official_preflight": {
     "status": "PENDING",
@@ -250,14 +283,15 @@
       "palomar/principal/half-plane-reflection.json",
       "palomar/principal/disk-local-limit.json"
     ],
-    "reason": "The eight historical official passes bind earlier commits. All ten intended configurations must pass on one exact final integration commit."
+    "reason": "The nine historical official passes bind their listed earlier commits. All ten intended configurations must pass on one exact final integration commit."
   },
   "challenge_holes": {
     "production": 0,
     "solutions": 0,
     "definitions": 0,
-    "explicit_challenge_theorem_holes": 105,
-    "manifest": "verification/expected-challenge-holes.json"
+    "explicit_challenge_theorem_holes": 141,
+    "manifest": "verification/expected-challenge-holes.json",
+    "challenge_file_count": 11
   },
   "source_correspondence": {
     "numbered_entries": 90,
@@ -267,5 +301,6 @@
   "intake_initiated": false,
   "registration_performed": false,
   "publication_authorized_for_this_preparation_snapshot": true,
-  "publication_authorization_scope": "Reviewed public preparation branch changes under the standing 12 November authorization; no intake or registration authorization."
+  "publication_authorization_scope": "Reviewed public preparation branch changes under the standing 12 November authorization; no intake or registration authorization.",
+  "intended_selected_target_total": 243
 }

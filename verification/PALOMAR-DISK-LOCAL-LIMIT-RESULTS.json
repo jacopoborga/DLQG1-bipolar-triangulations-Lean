@@ -1,0 +1,93 @@
+{
+  "format_version": 1,
+  "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_NANODA_LEAN_AND_55_AXIOMS",
+  "paper_result": "5.16",
+  "source_label": "Proposition 5.16",
+  "source_declaration": "DirectedDistances.Paper.Section5.prop_disk_bs_conv",
+  "configuration": "palomar/principal/disk-local-limit.json",
+  "challenge_module": "Palomar.Principal.DiskLocalLimit.Challenge",
+  "solution_module": "Palomar.Principal.DiskLocalLimit.Solution",
+  "main_declaration": "DLQG1.Palomar.Principal.disk_local_limit",
+  "source_file_sha256": {
+    "Palomar/Principal/DiskLocalLimit/Challenge.lean": "945d1f78890d203707c61e43445afe5d0db02b15abdf0cb2a442aed07192e1fa",
+    "Palomar/Principal/Support/DiskLocalLimitSource.lean": "a1a61a0e50354ba0381f19fce43fc268df265b5a535034e48d03f51854fe8943",
+    "Palomar/Principal/DiskLocalLimit/Solution.lean": "8f55460e278087bef9c11b2ad0b986840473f3dd0a70029139da6f07e0ae05f4",
+    "palomar/principal/disk-local-limit.json": "8ea2410096311d014f855f3af01aac61836e765634806bc31a22ec128bd61622"
+  },
+  "target_set": {
+    "theorem_targets": 55,
+    "explicit_challenge_holes": 36,
+    "proved_typing_certificates": 19,
+    "definition_names": [],
+    "ordered_target_names_sha256": "4904f31b95cd24119573fd1e3ffd5be6635905a051cad5fb7cacd46ab2dda049",
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "challenge": {
+    "physical_lines": 999,
+    "bytes": 69229,
+    "hard_limit": "<=1000 physical lines and <=100 KiB",
+    "within_hard_limit": true,
+    "preferred_advisory": "<=300 physical lines and <=32 KiB",
+    "exceeds_preferred_advisory": true,
+    "imports": "Mathlib plus the single public meta import Lean.Elab.PreDefinition.Basic"
+  },
+  "strict_diagnostic": {
+    "status": "PASS",
+    "scope": "All 55 declarations, exact data/type/body comparison, NanoDa and Lean default kernel",
+    "from_existing_exports": true,
+    "normal_source_build": false,
+    "elapsed_seconds": 176.8483194739092,
+    "kernel_log_sha256": "5b304adfe00c8107856812ee5184f11fcb2582fe7931ce1f2038375a4cce8171",
+    "owner_receipt_sha256": "5b3b204d335e86f75b918b46a529a0689976636e8a23104002af3d40c36bcd62"
+  },
+  "normal_source_comparator": {
+    "status": "PASS",
+    "fresh_source_build": true,
+    "from_export": false,
+    "sandbox_bypass": false,
+    "nanoda": "accepted",
+    "lean_default_kernel": "accepted",
+    "literal_log_acceptance_markers": [
+      "nanoda kernel accepts the solution",
+      "Lean default kernel accepts the solution",
+      "Your solution is okay!"
+    ],
+    "elapsed_seconds": 227.28163001104258,
+    "peak_tree_rss_kib": 5375528,
+    "log_sha256": "5ec0efc76c9387016c9f1335ee4c8e4717366e39458b98ae016a51c3db32573d",
+    "owner_receipt_sha256": "16e48fc7c64583ee2b7df762a07d22c1e6b1cfcb2d9b736ea5024d3e463cbaef"
+  },
+  "axiom_audit": {
+    "status": "PASS",
+    "fresh_normal_artifacts": true,
+    "target_count": 55,
+    "observed_axiom_union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "all_proved_typing_certificate_targets_use_only": [
+      "propext",
+      "Quot.sound"
+    ],
+    "elapsed_seconds": 1.5093480549985543,
+    "log_sha256": "15d914180cb7304ba22372cd580fc5e39322199eef0bb95ace05af552ef986af",
+    "portable_probe_sha256": "2e215e8b0ad435fdccfb94c08c85a94c791b3d25f30d53b2ca7bdaf1110bd399",
+    "owner_receipt_sha256": "49de10d9a1c8e31729a7d0c743a1ea8dacc1eea8bac426ce148b9f2b94e8c3a6"
+  },
+  "data_and_type_audit": {
+    "all238_source_data_constants_equal": true,
+    "all55_actual_types_and_kinds_equal": true,
+    "all19_proved_certificate_axioms_within_Std3": true,
+    "two_unselected_finite_proof_pairs_type_and_value_exact": true,
+    "source_support_solution_placeholders": 0,
+    "generated_proof_sentinel_note": "Any generated sorryAx attached to a deliberate theorem proof remains within the exact 36-declaration Challenge quarantine and is not counted as a proved certificate."
+  },
+  "official_preflight": "PENDING_ALL_TEN_AT_ONE_EXACT_FINAL_COMMIT",
+  "intake_initiated": false,
+  "registration_performed": false
+}

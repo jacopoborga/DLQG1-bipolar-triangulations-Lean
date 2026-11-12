@@ -1,6 +1,6 @@
 # Release verification
 
-**The v0.1.0 core technical checks passed, and the author approved that reviewed archive.** This evidence is bound to that snapshot. The later Palomar integration has nine intended local configurations complete, Proposition 5.16 pending, and still requires all ten intended configurations to pass the official workflow at one exact final commit. Proposition 5.9 passed its normal source Comparator and both kernel checks; its portable receipt is included. Local and historical official results are summarized in [the current Palomar results](verification/PALOMAR-CURRENT-RESULTS.json). Source-domain bindings and rendering conventions are documented in [the deviations record](docs/ERRATA-AND-DEVIATIONS.md).
+**The v0.1.0 core technical checks passed, and the author approved that reviewed archive.** This evidence is bound to that snapshot. The later Palomar integration has all ten intended local configurations complete, including Proposition 5.16 with a fresh normal source Comparator, both kernels and 55 axiom probes. The final official workflow still must pass all ten configurations at one exact final commit. Proposition 5.9 also has a historical individual official PASS at its listed earlier commit; neither fact replaces the final all-ten gate. Local and historical official results are summarized in [the current Palomar results](verification/PALOMAR-CURRENT-RESULTS.json). Source-domain bindings and rendering conventions are documented in [the deviations record](docs/ERRATA-AND-DEVIATIONS.md).
 
 ## Isolation and evidence reuse
 

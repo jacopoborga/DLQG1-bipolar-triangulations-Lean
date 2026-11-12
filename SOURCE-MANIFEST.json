@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "scope": "Accepted 90-entry public formalization with the Appendix selection, optional A.2 pilot, and nine locally validated intended configurations: the Appendix plus eight principal entries (Theorems 1.4, 1.6, 1.7, 1.8, 1.11, 1.12, 1.13 and Proposition 5.9). Proposition 5.16 remains pending. Eight historical official configurations cover thirteen numbered results at prior exact commits; the final all-ten exact-commit preflight remains pending. No intake or registration. Baseline production sources, pins and correspondence are preserved; publication exclusions are enforced.",
+  "scope": "Accepted 90-entry public formalization with the Appendix selection, optional A.2 pilot, and ten locally validated intended configurations: the six-lemma Appendix plus nine principal entries (Theorems 1.4, 1.6, 1.7, 1.8, 1.11, 1.12, 1.13 and Propositions 5.9 and 5.16). The eleven Challenge files contain 141 deliberate theorem holes; proved certificates are separately compared. Nine historical official configurations cover fourteen distinct paper results at earlier exact commits. The final all-ten exact-commit official preflight remains pending. No intake or registration. Baseline production sources, pins and 90-entry correspondence are preserved; publication exclusions are enforced.",
   "files": {
     ".github/workflows/comparator.yml": {
       "bytes": 1487,
@@ -11186,6 +11186,14 @@
       "bytes": 2105,
       "sha256": "7ea771a5fbe9d80872a57935c692e10e209661b189bc9c96cf367bc0df03fcf5"
     },
+    "Palomar/Principal/DiskLocalLimit/Challenge.lean": {
+      "bytes": 69229,
+      "sha256": "945d1f78890d203707c61e43445afe5d0db02b15abdf0cb2a442aed07192e1fa"
+    },
+    "Palomar/Principal/DiskLocalLimit/Solution.lean": {
+      "bytes": 1069,
+      "sha256": "8f55460e278087bef9c11b2ad0b986840473f3dd0a70029139da6f07e0ae05f4"
+    },
     "Palomar/Principal/HalfPlaneReflection/Challenge.lean": {
       "bytes": 58107,
       "sha256": "8d1b1fb38e945daefddc0c6729c8319c5a66fd9265078df89e37fe9e3b420ad3"
@@ -11206,17 +11214,21 @@
       "bytes": 7943,
       "sha256": "6dabde0811997934b8ba60eef1f67324d2884104fedca4a270952badf45caa51"
     },
+    "Palomar/Principal/Support/DiskLocalLimitSource.lean": {
+      "bytes": 27780,
+      "sha256": "a1a61a0e50354ba0381f19fce43fc268df265b5a535034e48d03f51854fe8943"
+    },
     "Palomar/Principal/Support/HalfPlaneSource.lean": {
       "bytes": 16361,
       "sha256": "575a59d3eeb54e8fe87d753b8a27e23a02d1617c7098bf92cd2319868a4b98a1"
     },
     "README.md": {
-      "bytes": 10711,
-      "sha256": "f3e314aac3e95dac753a8379c2b0a0becc79b11af91b3d4278348176774214da"
+      "bytes": 11092,
+      "sha256": "ca58321551365a652dc19a75778a29170a199bbbf4c44d62fb72c15c77ea4b3a"
     },
     "VERIFICATION.md": {
-      "bytes": 5042,
-      "sha256": "36e52bc62b5a8c1bb6482b838de676acab41ed69d7ddb156cd5308c8a139686f"
+      "bytes": 5134,
+      "sha256": "17d3883576122842b2b33511481ab6e336a7106300c4fdb724bdb931622308b6"
     },
     "comparator.json": {
       "bytes": 534,
@@ -11231,8 +11243,8 @@
       "sha256": "51739e2ed779bf6ca8a5bf74d5d0eef91448b3ffb807f01d646e8bd36a8036c4"
     },
     "docs/PALOMAR-BUSEMANN-PROPERTIES.md": {
-      "bytes": 3230,
-      "sha256": "63e1815e14fa723a29d3732179d1c5acde727ccdeb52e2a66d5f5bc64c2f316a"
+      "bytes": 3367,
+      "sha256": "967fc8315b02a0c4de6801d058e5cb47a4a8c4329931c35b1442493565001b6c"
     },
     "docs/PALOMAR-BUSEMANN.md": {
       "bytes": 5837,
@@ -11250,25 +11262,29 @@
       "bytes": 7961,
       "sha256": "453330104435dc4d458c25d5efa342fc99196b294e8c7273e4e6a33b4121bf2f"
     },
+    "docs/PALOMAR-DISK-LOCAL-LIMIT.md": {
+      "bytes": 2842,
+      "sha256": "527c09644289c6da77c3808b06311d449f7ae4984b9ccd943047dae337bd1cea"
+    },
     "docs/PALOMAR-HALF-PLANE-REFLECTION.md": {
-      "bytes": 1944,
-      "sha256": "7796b9d4d380ae379e88a856ace4bb0d4ff1c4a1f8e28f156f789e7be138ff38"
+      "bytes": 2097,
+      "sha256": "f5f6565870a931c5cd3092df4116259578c260cad1f9bbf4fb22d742721d0179"
     },
     "docs/PALOMAR-PREPARATION.md": {
-      "bytes": 18027,
-      "sha256": "bfa1221c64bc97b918a29d50110ab4c5d4f3aa7cacdccc054de9070fa6121487"
+      "bytes": 18354,
+      "sha256": "5be378f3b1f07fbf3e8bea880d85e17d064ae9a7c62ed5f0f972336ad7057904"
     },
     "formalization.yaml": {
-      "bytes": 33135,
-      "sha256": "fc6896bd857f6ef3bacad5a8e5171240fa0ba001bbbef7e48b5a060aa8b74e8c"
+      "bytes": 35456,
+      "sha256": "a3850d6295ce6efe276fb513d21a5942184b5025306ec379e950b6bdd942371d"
     },
     "lake-manifest.json": {
       "bytes": 3159,
       "sha256": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
     },
     "lakefile.toml": {
-      "bytes": 1440,
-      "sha256": "3906b12337913587e574ea83925819b9f6b9aa1558e60893abbf73e5784cec07"
+      "bytes": 1581,
+      "sha256": "2889e6e90572981eb440ef5aaeb2448119d2aca24340e41dc6486318fb9e4c28"
     },
     "lean-toolchain": {
       "bytes": 29,
@@ -11306,21 +11322,25 @@
       "bytes": 636,
       "sha256": "0fbbcf8b7828d55500aaf5d4cb500fe9a5716aabd6e40263872861ee81d712f6"
     },
+    "palomar/principal/disk-local-limit.json": {
+      "bytes": 3504,
+      "sha256": "8ea2410096311d014f855f3af01aac61836e765634806bc31a22ec128bd61622"
+    },
     "palomar/principal/half-plane-reflection.json": {
       "bytes": 2741,
       "sha256": "4a8d50ca46c95fb014771fa937b1a45e46ae2a208941e89ef8c6b6f3809b3529"
     },
     "scripts/check_release.py": {
-      "bytes": 17782,
-      "sha256": "5e037b009ade9049bac986dfc9dd1bd8639b406ecdbfde2fcb9f3271d49dad55"
+      "bytes": 19770,
+      "sha256": "a367b2284d6c75a601c9752c49e6dd91835d205b61dcc4c5ec4aa484b71c413b"
     },
     "scripts/lean_syntax.py": {
       "bytes": 1801,
       "sha256": "9451fdcc7131208be4b91e26b1939ab2eab00fec3d5c175f2b8663b3ea894e34"
     },
     "scripts/verify-palomar.sh": {
-      "bytes": 5329,
-      "sha256": "9f873b900a712b26b81d797c1cb88de72225ec42703c583079483c2dc2fb0da0"
+      "bytes": 5841,
+      "sha256": "a00ed76a8e7395f9a440bc114c498a4742ec7f030e8b940144ad0527732d60f7"
     },
     "scripts/verify.sh": {
       "bytes": 2478,
@@ -11371,16 +11391,20 @@
       "sha256": "69407ba66177d56fd9f4082728bfb151f3be3372d26a3238063cf4b53df027c0"
     },
     "verification/PALOMAR-CURRENT-RESULTS.json": {
-      "bytes": 11949,
-      "sha256": "f12e0db81231aca9d8e99bfbefa79912309834931f19a1ff3b4fd07a05394d36"
+      "bytes": 13390,
+      "sha256": "3fe3f4e209018bda34a659d2d2bc29ea1916823d1e1b7e57bf6b5b94a161c64d"
+    },
+    "verification/PALOMAR-DISK-LOCAL-LIMIT-RESULTS.json": {
+      "bytes": 4079,
+      "sha256": "ae1e07db040000d1914ef70690a62c28a9e457fcf3a8b9a7d8559a4ad6dbf97b"
     },
     "verification/PALOMAR-HALF-PLANE-RESULTS.json": {
-      "bytes": 10984,
-      "sha256": "31b86a497ea2dfa4350ea6418b1e0bd47d9da98d1e1892fc3cbe20dfaf293980"
+      "bytes": 11739,
+      "sha256": "9a51fca8d5f96de0b57e7209faff195cfad409e233be3edc06f5913de674207e"
     },
     "verification/PALOMAR-OFFICIAL-RESULTS.json": {
-      "bytes": 21385,
-      "sha256": "a7b5eeaad73cb4d277b81b6f42a5525dcb30c31861e6c9d354465597f6b6b409"
+      "bytes": 22526,
+      "sha256": "572b8a9ecd9fda4cffed471e707726b44c445fa20787f40414ed461ab11c3a9c"
     },
     "verification/PALOMAR-RESULTS.json": {
       "bytes": 4501,
@@ -11418,6 +11442,10 @@
       "bytes": 444,
       "sha256": "b378564d076241193c27f163df8c5b41d0e02dd51db67e149637d06fc8422299"
     },
+    "verification/PalomarDiskLocalLimitAxioms.lean": {
+      "bytes": 3647,
+      "sha256": "2e215e8b0ad435fdccfb94c08c85a94c791b3d25f30d53b2ca7bdaf1110bd399"
+    },
     "verification/PalomarHalfPlaneReflectionAxioms.lean": {
       "bytes": 2781,
       "sha256": "5cc18e83dfbd63df92c228d066a4b82afd124ca1df3f9f6a2016365ba4ad84ac"
@@ -11451,16 +11479,16 @@
       "sha256": "da4047d9a5977ba33b1c2cd7a62236429a707686d25a2929ec7b6f631b0e33cf"
     },
     "verification/expected-challenge-holes.json": {
-      "bytes": 18035,
-      "sha256": "9d3988ebb0ccd7b3cb827f077a2f9f64ed570d1ae6bcdd916e4192d3737c054d"
+      "bytes": 21824,
+      "sha256": "05cfdbf6d80389a4ee0bd906d827fc9df5774f242da5c46928ac10857a013ebb"
     },
     "verification/expected-exports.json": {
-      "bytes": 36157,
-      "sha256": "f360f7408b5363a7a1c8bb3dbc91f5c873ff0337574ef16e9e00181c64ec1fc1"
+      "bytes": 39510,
+      "sha256": "2272b61eb3da1a740358a1a78c52213628bd40c00c06f1680d8b4b78d74e9171"
     },
     "verification/test_challenge_holes.py": {
-      "bytes": 22351,
-      "sha256": "66a20d34fa263df2840be14cea7261e13331534da20cd29ff7838f55bb51b82d"
+      "bytes": 27577,
+      "sha256": "12a94891a796f374c7312f6630f91a56476a773aeacb75e000e5dac4683eba61"
     },
     "verification/test_lexer.py": {
       "bytes": 1129,
@@ -11472,8 +11500,8 @@
     "lakefile.toml": "fc584f814627e17c8368bc437d4f382b28085009b15f0eb9bf23a641fc49b219",
     "lake-manifest.json": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
   },
-  "file_list_sha256": "a1c632a22ed6f0002f06078efdb5048161b183880b3c7c67d30c3a661f7bc5a2",
-  "content_tree_sha256": "abd7548ea05557aed6da8605888a67f4e122aa8072c2ed83b415bad19e51fa3b",
+  "file_list_sha256": "7010191b542083918f773fe8a3743721531b8bb2285849b326999bd98ab01d5c",
+  "content_tree_sha256": "18eb9e043d7980f66eae9aac3787a867503dc542a0266d461723d23aaf374307",
   "base_release_commit": "e1cfdce8ee7882a728df85747040e6969544fcb8",
   "publication_authorized": true,
   "preparation_only": true,

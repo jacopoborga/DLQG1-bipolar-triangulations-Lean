@@ -56,20 +56,18 @@ The root `comparator.json` selects the six numbered Appendix lemmas under
 `DLQG1.Palomar.AppendixA`; it separately passed local sandboxed Comparator, NanoDa and Lean checks.
 A separate source-fidelity review found no blocker for all six statements.
 
-The eight locally validated principal entries are Theorems 1.4, 1.6, 1.7,
-1.8, 1.11, 1.12, 1.13 and Proposition 5.9. The new [Busemann increment and
+The nine locally validated principal entries are Theorems 1.4, 1.6, 1.7,
+1.8, 1.11, 1.12, 1.13 and Propositions 5.9 and 5.16. The new [Busemann increment and
 tail entries](docs/PALOMAR-BUSEMANN-PROPERTIES.md) preserve the actual
 identified functions and their source laws. Proposition 5.9 passed the normal
 source Comparator, NanoDa, Lean default kernel and all 41 axiom checks; its
 [coverage](docs/PALOMAR-HALF-PLANE-REFLECTION.md) and
 [portable receipt](verification/PALOMAR-HALF-PLANE-RESULTS.json) record the
-scope. Proposition 5.16 remains pending. The nine intended local
-configurations are the six-lemma root Appendix configuration plus those eight
-principal entries. The optional A.2 pilot overlaps the Appendix and is not
+scope. Proposition 5.16 has a normal source Comparator, NanoDa, default Lean kernel and 55-target axiom pass; its coverage and portable receipt are in [the disk local-limit record](docs/PALOMAR-DISK-LOCAL-LIMIT.md) and [result receipt](verification/PALOMAR-DISK-LOCAL-LIMIT-RESULTS.json). The ten intended local configurations are the six-lemma root Appendix configuration plus those nine principal entries. The optional A.2 pilot overlaps the Appendix and is not
 counted. See the [current local results](verification/PALOMAR-CURRENT-RESULTS.json).
 No configuration claims that all 90 entries have been compared or registered.
 
-Run `bash scripts/verify-palomar.sh` to reproduce the pilot, Appendix, Busemann, functional-convergence, increment/tail, three finite principal configurations and the half-plane reflection entry,
+Run `bash scripts/verify-palomar.sh` to reproduce the pilot, Appendix, Busemann, functional-convergence, increment/tail, three finite-cell configurations, half-plane reflection and the disk local-limit entry,
 Challenge-hole controls and their exact Solution axiom audits. The generated
 logs are below `.lake/palomar-evidence/verify-<UTC>-<pid>/`; the portable
 [comparison receipts](verification/PALOMAR-RESULTS.json) record the checked scope.
@@ -78,10 +76,10 @@ The [preparation record](docs/PALOMAR-PREPARATION.md) pins the policy, metadata
 schema and official verification pipeline, explains each selection and lists
 the remaining definition obligations. The two workflow badges above are draft
 manual checks: Lean source/axiom/kernel verification and the official reusable
-Comparator preflight. Historical official full Comparator receipts now cover eight configurations
-and thirteen distinct numbered results: the root Appendix selection and
+Comparator preflight. Historical official full Comparator receipts now cover nine configurations
+and fourteen distinct numbered results: the root Appendix selection and
 Theorems 1.11–1.13 at `22f3180`, Theorem 1.4 at `2a368ad`, Theorem 1.6 at
-`66792ba`, and Theorems 1.7–1.8 at `63dd637`. Their exact workflow URLs,
+`66792ba`, Theorems 1.7–1.8 at `63dd637`, and Proposition 5.9 at `4a320e3`. Their exact workflow URLs,
 commits and report hashes are in the
 [portable official receipts](verification/PALOMAR-OFFICIAL-RESULTS.json).
 These are historical passes. A final official preflight must pass all ten
@@ -93,7 +91,7 @@ editorial review or registration.
 
 AI coding agents produced the Lean development under **Jacopo Borga’s supervision**. Human decisions covered mathematical interpretation and corrections; Lean checked the formal proof terms. Separate agent reviews examined source correspondence and release integrity. This is distinct from external human peer review.
 
-Development used OpenAI Codex models in the Sol, Luna and Astra families and Anthropic Claude models. The v0.1.0 public-release preparation and independent reviews used Sol. The Palomar preparation uses Sol and Luna agents, with no new Astra work. Tools, review scope and the limits of available cost information are recorded in [formalization.yaml](formalization.yaml). Total subscription and infrastructure spending was not separately tracked for this export.
+Development used OpenAI Codex models in the Sol, Luna and Astra families and Anthropic Claude models. The v0.1.0 public-release preparation and independent reviews used Sol. The Palomar preparation used Sol and Luna for implementation and bounded Astra review of the final Proposition 5.16 scope; Astra did not implement its proof. Tools, review scope and the limits of available cost information are recorded in [formalization.yaml](formalization.yaml). Total subscription and infrastructure spending was not separately tracked for this export.
 
 ## Credits and citation
 

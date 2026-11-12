@@ -3,7 +3,7 @@ import copy,hashlib,json,sys,unittest
 from pathlib import Path
 sys.dont_write_bytecode=True
 sys.path.insert(0,str(Path(__file__).resolve().parent.parent/'scripts'))
-from check_release import ROOT,check_challenge_config,check_challenge_text,check_proof_tokens,load_challenges
+from check_release import ROOT,check_challenge_config,check_challenge_imports,check_challenge_text,check_proof_tokens,load_challenges
 BASE='module\nnamespace Test\ntheorem result : True := by\n  sorry\nend Test\n'
 class ChallengeHoles(unittest.TestCase):
  def test_compared_terminal_hole(self):check_proof_tokens('Challenge.lean',BASE,['Test.result'])
@@ -51,6 +51,32 @@ class ChallengeHoles(unittest.TestCase):
   with self.assertRaises(ValueError):check_proof_tokens('Challenge.lean',BASE+'axiom bad : False\n',['Test.result'])
  def test_hole_in_noncompared_definition_rejected(self):
   with self.assertRaises(ValueError):check_challenge_text(BASE+'def extra : True := by sorry\n',['Test.result'])
+ def test_core_meta_import_is_exactly_scoped_and_public_meta(self):
+  source='module\npublic meta import Lean.Elab.PreDefinition.Basic\npublic import Mathlib\n'
+  check_challenge_imports('Palomar/Principal/DiskLocalLimit/Challenge.lean',source)
+  with self.assertRaises(ValueError):check_challenge_imports('Palomar/Principal/HalfPlaneReflection/Challenge.lean',source)
+  with self.assertRaises(ValueError):check_challenge_imports('Palomar/Principal/DiskLocalLimit/Challenge.lean','module\nimport Lean.Elab.PreDefinition.Basic\npublic import Mathlib\n')
+  with self.assertRaises(ValueError):check_challenge_imports('Palomar/Principal/DiskLocalLimit/Challenge.lean','module\npublic meta import Lean.Elab.PreDefinition.Basic\nimport Lean.Elab.Command\npublic import Mathlib\n')
+  with self.assertRaises(ValueError):check_challenge_imports('Palomar/Principal/DiskLocalLimit/Challenge.lean','module\npublic meta import Lean.Elab.PreDefinition.Basic\npublic import Palomar.Principal.Support.DiskLocalLimitSource\npublic import Mathlib\n')
+ def test_hash_pinned_disk_run_elab_boundary(self):
+  text='module\nnamespace Test\ntheorem result : True := by\n  sorry\nrun_elab do\n  pure ()\nend Test\n'
+  check_challenge_text(text,['Test.result'],'Palomar/Principal/DiskLocalLimit/Challenge.lean')
+  with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'],'Palomar/Principal/HalfPlaneReflection/Challenge.lean')
+ def test_indented_run_elab_cannot_bound_a_terminal_hole(self):
+  text='module\nnamespace Test\ntheorem result : True := by\n  sorry\n  run_elab do\n    pure ()\nend Test\n'
+  with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'],'Palomar/Principal/DiskLocalLimit/Challenge.lean')
+ def test_unlisted_hole_after_run_elab_boundary_is_rejected(self):
+  text='module\nnamespace Test\ntheorem result : True := by\n  sorry\nrun_elab do\n  pure ()\ntheorem other : True := by\n  sorry\nend Test\n'
+  with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'],'Palomar/Principal/DiskLocalLimit/Challenge.lean')
+ def test_run_elab_not_allowed_in_other_challenge(self):
+  text='module\nnamespace Test\ntheorem result : True := by\n  sorry\nrun_elab do\n  pure ()\nend Test\n'
+  with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'],'Palomar/Principal/HalfPlaneReflection/Challenge.lean')
+ def test_unindented_open_separates_compared_declarations(self):
+  text='module\nnamespace Test\ntheorem first : True := by sorry\nopen Foo\ntheorem second : True := by sorry\nend Test\n'
+  check_challenge_text(text,['Test.first','Test.second'])
+ def test_indented_open_cannot_bound_a_terminal_hole(self):
+  text='module\nnamespace Test\ntheorem result : True := by\n  sorry\n  open Foo\n  trivial\nend Test\n'
+  with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'])
  def test_actual_exact_challenges_and_configurations(self):
   specs=load_challenges()
   base={'Palomar/Pilot/Challenge.lean','Palomar/AppendixA/Challenge.lean'}
@@ -326,5 +352,44 @@ class ChallengeHoles(unittest.TestCase):
   spec,config=self.reflection_typing_fixture()
   spec['proved_auxiliaries'].pop()
   config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def disk_typing_fixture(self):
+  from check_release import DISK_TYPING_AUXILIARIES
+  spec,config=self.reflection_typing_fixture()
+  spec['path']='Palomar/Principal/DiskLocalLimit/Challenge.lean'
+  spec['solution_path']='Palomar/Principal/DiskLocalLimit/Solution.lean'
+  spec['proved_auxiliaries']=sorted(DISK_TYPING_AUXILIARIES)
+  config['challenge_module']='Palomar.Principal.DiskLocalLimit.Challenge'
+  config['solution_module']='Palomar.Principal.DiskLocalLimit.Solution'
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  return spec,config
+ def test_exact_disk_nineteen_proved_certificates_allowed(self):
+  spec,config=self.disk_typing_fixture()
+  check_challenge_config(spec,config)
+ def test_disk_nineteen_changed_set_rejected(self):
+  spec,config=self.disk_typing_fixture()
+  spec['proved_auxiliaries'][-1]='DirectedDistances.Example.record._proof_999'
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_disk_twentieth_proved_certificate_rejected(self):
+  spec,config=self.disk_typing_fixture()
+  spec['proved_auxiliaries'].append('DirectedDistances.Example.record._proof_999')
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_disk_eighteen_subset_rejected(self):
+  spec,config=self.disk_typing_fixture()
+  spec['proved_auxiliaries'].pop()
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_disk_nineteen_set_rejected_for_reflection(self):
+  spec,config=self.disk_typing_fixture()
+  spec['path']='Palomar/Principal/HalfPlaneReflection/Challenge.lean'
+  spec['solution_path']='Palomar/Principal/HalfPlaneReflection/Solution.lean'
+  config['challenge_module']='Palomar.Principal.HalfPlaneReflection.Challenge'
+  config['solution_module']='Palomar.Principal.HalfPlaneReflection.Solution'
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_disk_definitions_cannot_be_exempted(self):
+  spec,config=self.disk_typing_fixture()
+  config['definition_names']=['DLQG1.Palomar.DiskMinimal.finiteLaw']
   with self.assertRaises(ValueError):check_challenge_config(spec,config)
 if __name__=='__main__':unittest.main()

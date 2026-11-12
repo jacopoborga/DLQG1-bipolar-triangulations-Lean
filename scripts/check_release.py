@@ -10,19 +10,21 @@ ROOT=Path(__file__).resolve().parent.parent
 BAD=re.compile(r'github\.com/jacopoborga/DirectedDistances(?:[/\s]|$)|(?:/(?:home|orcd|tmp)/[A-Za-z0-9_.-]+|\.lake/(?:armstrong|aws|campaign)|paper/source/[A-Za-z0-9_.-]+|docs/(?:frozen|standing|routine|paper-inventory))|-----BEGIN [A-Z ]*PRIVATE KEY-----|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{20,}|sk-(?:proj-|ant-)?[A-Za-z0-9_-]{20,}')
 FORBIDDEN_SUFFIXES={'.pdf','.tex','.zip','.tar','.gz','.tgz','.xz','.7z','.olean','.ilean','.pyc','.sqlite','.db','.pem'}
 PROBE_SOURCES={'Axioms':'Axioms','Providers':'Providers','ConstantWindow':'ConstantWindowCheck','SourceDomains':'SourceScopeCheck','PalomarPilot':'PalomarPilotAxioms','PalomarAppendix':'PalomarAppendixAxioms'}
-PALOMAR_AUDIT_IMPORTS={'verification/PalomarPilotAxioms.lean':'Palomar.Pilot.Solution','verification/PalomarAppendixAxioms.lean':'Palomar.AppendixA.Solution'}
+PALOMAR_AUDIT_IMPORTS={'verification/PalomarPilotAxioms.lean':'Palomar.Pilot.Solution','verification/PalomarAppendixAxioms.lean':'Palomar.AppendixA.Solution','verification/PalomarDiskLocalLimitAxioms.lean':'Palomar.Principal.DiskLocalLimit.Solution'}
 PRINCIPAL_NAMES=('Busemann', 'BusemannConvergence', 'BusemannIncrements', 'BusemannTails', 'BoltzmannDistances', 'CellLDP', 'CellSDP', 'HalfPlaneReflection', 'DiskLocalLimit')
 PRINCIPAL_CHALLENGES={'Palomar/Principal/'+n+'/Challenge.lean' for n in PRINCIPAL_NAMES}
-NAMED_PROVED_AUXILIARIES={'Palomar/Principal/BoltzmannDistances/Challenge.lean': {'DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase'}, 'Palomar/Principal/CellLDP/Challenge.lean': {'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'}, 'Palomar/Principal/CellSDP/Challenge.lean': {'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'}, 'Palomar/Principal/HalfPlaneReflection/Challenge.lean': {'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'}}
+CHALLENGE_META_IMPORTS={'Palomar/Principal/DiskLocalLimit/Challenge.lean':('Lean.Elab.PreDefinition.Basic',)}
+NAMED_PROVED_AUXILIARIES={'Palomar/Principal/BoltzmannDistances/Challenge.lean': {'DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase'}, 'Palomar/Principal/CellLDP/Challenge.lean': {'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'}, 'Palomar/Principal/CellSDP/Challenge.lean': {'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'}, 'Palomar/Principal/HalfPlaneReflection/Challenge.lean': {'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'}, 'Palomar/Principal/DiskLocalLimit/Challenge.lean': {'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'}}
 BUSEMANN_TYPING_AUXILIARIES=frozenset(('DirectedDistances.KMSW.kmswCodeStep._proof_1', 'DirectedDistances.KMSW.StageRotation.step._proof_5', 'DirectedDistances.KMSW.StageRotation.step._proof_6', 'DirectedDistances.KMSW.StageRotation.step._proof_7', 'DirectedDistances.KMSW.StageRotation.step._proof_9', 'DirectedDistances.KMSW.StageRotation.step._proof_10', 'DirectedDistances.KMSW.StageRotation.allocation._proof_4', 'DirectedDistances.KMSW.StageRotation.allocation._proof_6', 'DirectedDistances.KMSW.StageRotation.allocation._proof_8', 'DirectedDistances.KMSW.StageRotation.allocation._proof_11', 'DirectedDistances.KMSW.StageRotation.allocation._proof_13', 'DirectedDistances.KMSW.boundaryHitTime._proof_2', 'DirectedDistances.KMSW.boundaryHitTime._proof_4'))
 REFLECTION_NEW_TYPING_AUXILIARIES=frozenset(('DirectedDistances.PaperProofs.Section5.uibhbotDefaultBlockLetterRel._proof_1', 'DirectedDistances.PlanarMap.Polyline.toPath._proof_3', 'DirectedDistances.PlanarMap.Polyline.toPath._proof_4', 'DirectedDistances.PlanarMap.ccwTurn._proof_1'))
 REFLECTION_TYPING_AUXILIARIES=frozenset(('DirectedDistances.KMSW.kmswCodeStep._proof_1', 'DirectedDistances.KMSW.StageRotation.step._proof_5', 'DirectedDistances.KMSW.StageRotation.step._proof_6', 'DirectedDistances.KMSW.StageRotation.step._proof_7', 'DirectedDistances.KMSW.StageRotation.step._proof_9', 'DirectedDistances.KMSW.StageRotation.step._proof_10', 'DirectedDistances.KMSW.StageRotation.allocation._proof_4', 'DirectedDistances.KMSW.StageRotation.allocation._proof_6', 'DirectedDistances.KMSW.StageRotation.allocation._proof_8', 'DirectedDistances.KMSW.StageRotation.allocation._proof_11', 'DirectedDistances.KMSW.StageRotation.allocation._proof_13', 'DirectedDistances.PaperProofs.Section3.d39GeomDistanceV2._proof_1', 'DirectedDistances.RandomWalk.iidCodeMeasure._proof_4', 'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure')) | REFLECTION_NEW_TYPING_AUXILIARIES
+DISK_TYPING_AUXILIARIES=REFLECTION_TYPING_AUXILIARIES | {'DirectedDistances.PlanarMap.HasWinding._proof_1'}
 PRINCIPAL_PROBES={'Palomar'+n:'Palomar'+n+'Axioms' for n in PRINCIPAL_NAMES}
 PROBE_SOURCES.update(PRINCIPAL_PROBES)
 PALOMAR_AUDIT_IMPORTS.update({'verification/Palomar'+n+'Axioms.lean':'Palomar.Principal.'+n+'.Solution' for n in PRINCIPAL_NAMES})
 COMPARATOR_KEYS={'challenge_module','solution_module','theorem_names','definition_names','permitted_axioms','enable_nanoda'}
 REQUIRED_COMPARATOR_KEYS={'challenge_module','solution_module','theorem_names','permitted_axioms'}
-DECL_COMMAND=re.compile(r'^[ \t]*(?:@\[[^\]\n]*\][ \t]*)*(?:(?:public|protected|noncomputable)[ \t]+)*(namespace|section|end|theorem|lemma|def|abbrev|opaque|instance|example|axiom|constant|inductive|structure|class|attribute)\b([^\n]*)',re.M)
+DECL_COMMAND=re.compile(r'^[ \t]*(?:@\[[^\]\n]*\][ \t]*)*(?:(?:public|protected|noncomputable)[ \t]+)*(namespace|section|end|open|run_elab|theorem|lemma|def|abbrev|opaque|instance|example|axiom|constant|inductive|structure|class|attribute)\b([^\n]*)',re.M)
 def sha(p):
  h=hashlib.sha256()
  with p.open('rb') as f:
@@ -44,19 +46,37 @@ def imports(text):
   m=re.match(r'\s*(?:(?:public|meta)\s+)*import\s+(?:all\s+)?(.+)',line)
   if m:out.extend(m.group(1).split())
  return out
+def check_challenge_imports(rel,text):
+ im=imports(text);allowed_meta=CHALLENGE_META_IMPORTS.get(rel,())
+ other=[m for m in im if m!='Mathlib' and not m.startswith('Mathlib.')]
+ if other!=list(allowed_meta):raise ValueError('Challenge imports must be Mathlib only except exact public meta imports: '+rel)
+ if allowed_meta:
+  code=masked_code(text)
+  core_lines=[line.strip() for line in code.splitlines() if re.search(r'\bimport\s+Lean(?:\.|\s|$)',line)]
+  expected_lines=['public meta import '+m for m in allowed_meta]
+  if core_lines!=expected_lines:raise ValueError('Challenge core imports must use the exact public meta form: '+rel)
 def check_proof_tokens(rel,text,challenge_names=None):
  tokens=command_tokens(text)
  for kind,token in tokens:
   if kind=='code' and (token in {'admit','axiom'} or (token=='sorry' and challenge_names is None)):
    raise ValueError('Forbidden proof token: '+rel+':'+token)
- if challenge_names is not None:check_challenge_text(text,challenge_names)
-def check_challenge_text(text,names):
+ if challenge_names is not None:check_challenge_text(text,challenge_names,rel)
+def check_challenge_text(text,names,source_path=None):
  """Allow one terminal := by sorry per compared theorem, with no other holes."""
  if not names or len(names)!=len(set(names)):raise ValueError('Invalid challenge declaration set')
  code=masked_code(text);events=[m for m in DECL_COMMAND.finditer(code) if m.group(1)!='attribute' or m.group(0).startswith('attribute')];scopes=[];found=[]
+ run_elab_events=[m for m in events if m.group(1)=='run_elab']
+ if run_elab_events and source_path!='Palomar/Principal/DiskLocalLimit/Challenge.lean':raise ValueError('run_elab is permitted only in the exact DiskLocalLimit Challenge')
+ if source_path=='Palomar/Principal/DiskLocalLimit/Challenge.lean' and len(run_elab_events)!=1:raise ValueError('The frozen DiskLocalLimit Challenge must contain exactly one top-level run_elab helper')
  for i,event in enumerate(events):
   kind,tail=event.group(1),event.group(2).strip()
-  if kind in {'namespace','section','end'}:
+  if kind=='run_elab':
+   line_start=code.rfind('\n',0,event.start())+1
+   if code[line_start:event.start()].strip() or code[line_start:event.start()]!='':raise ValueError('run_elab must be a column-zero top-level command')
+   line_end=code.find('\n',event.start())
+   if line_end<0:line_end=len(code)
+   if code[line_start:line_end].startswith((' ','\t')):raise ValueError('Indented run_elab cannot bound a proof')
+  if kind in {'namespace','section','end','open'}:
    line_start=code.rfind('\n',0,event.start())+1
    if code[line_start:event.start()].strip():raise ValueError('Malformed challenge scope command')
    line_end=code.find('\n',event.start())
@@ -94,7 +114,7 @@ def check_challenge_config(spec,config):
   raise ValueError('Solution/config module mismatch')
  auxiliaries=spec.get('proved_auxiliaries',[])
  named=NAMED_PROVED_AUXILIARIES.get(spec['path'],set())
- if not isinstance(auxiliaries,list) or (len(auxiliaries)>12 and not ((len(auxiliaries)==13 and spec['path'] in {'Palomar/Principal/Busemann/Challenge.lean','Palomar/Principal/BusemannConvergence/Challenge.lean','Palomar/Principal/BusemannIncrements/Challenge.lean','Palomar/Principal/BusemannTails/Challenge.lean'} and set(auxiliaries)==BUSEMANN_TYPING_AUXILIARIES) or (len(auxiliaries)==18 and spec['path']=='Palomar/Principal/HalfPlaneReflection/Challenge.lean' and set(auxiliaries)==REFLECTION_TYPING_AUXILIARIES))) or any(not isinstance(n,str) or (not re.fullmatch(r'DirectedDistances\.[\w.]+\._proof_[0-9]+',n) and n not in named) for n in auxiliaries):
+ if not isinstance(auxiliaries,list) or (len(auxiliaries)>12 and not ((len(auxiliaries)==13 and spec['path'] in {'Palomar/Principal/Busemann/Challenge.lean','Palomar/Principal/BusemannConvergence/Challenge.lean','Palomar/Principal/BusemannIncrements/Challenge.lean','Palomar/Principal/BusemannTails/Challenge.lean'} and set(auxiliaries)==BUSEMANN_TYPING_AUXILIARIES) or (len(auxiliaries)==18 and spec['path']=='Palomar/Principal/HalfPlaneReflection/Challenge.lean' and set(auxiliaries)==REFLECTION_TYPING_AUXILIARIES) or (len(auxiliaries)==19 and spec['path']=='Palomar/Principal/DiskLocalLimit/Challenge.lean' and set(auxiliaries)==DISK_TYPING_AUXILIARIES))) or any(not isinstance(n,str) or (not re.fullmatch(r'DirectedDistances\.[\w.]+\._proof_[0-9]+',n) and n not in named) for n in auxiliaries):
   raise ValueError('Unsupported proved typing auxiliary')
  compared=spec['declarations']+auxiliaries
  order=spec.get('comparison_order',compared)
@@ -123,8 +143,7 @@ def load_challenges():
   if len(text.splitlines())>1000 or path.stat().st_size>100*1024:raise ValueError('Challenge size limit: '+spec['path'])
   check_challenge_config(spec,json.loads((ROOT/spec['config']).read_text()))
   check_proof_tokens(spec['path'],text,spec['declarations'])
-  if not imports(text) or any(m!='Mathlib' and not m.startswith('Mathlib.') for m in imports(text)):
-   raise ValueError('Challenge imports must be Mathlib only: '+spec['path'])
+  check_challenge_imports(spec['path'],text)
   if not (ROOT/spec['solution_path']).is_file():raise ValueError('Missing challenge Solution')
  return {s['path']:s for s in specs}
 def axiom_log(label,path):
