@@ -35,3 +35,8 @@ python3 -B scripts/check_release.py --axioms PalomarCellSDP --log "$evidence_dir
 lake "${lake_args[@]}" comparator --config palomar/principal/busemann.json > "$evidence_dir/busemann-comparator.log" 2>&1
 lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarBusemannAxioms.lean > "$evidence_dir/busemann-axioms.log" 2>&1
 python3 -B scripts/check_release.py --axioms PalomarBusemann --log "$evidence_dir/busemann-axioms.log"
+
+# Both full functional limits, exact model objects and all construction prerequisites.
+lake "${lake_args[@]}" comparator --config palomar/principal/busemann-convergence.json > "$evidence_dir/convergence-comparator.log" 2>&1
+lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarBusemannConvergenceAxioms.lean > "$evidence_dir/convergence-axioms.log" 2>&1
+python3 -B scripts/check_release.py --axioms PalomarBusemannConvergence --log "$evidence_dir/convergence-axioms.log"

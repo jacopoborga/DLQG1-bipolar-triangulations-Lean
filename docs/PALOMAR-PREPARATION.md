@@ -43,12 +43,12 @@ No custom definitions or extra assumptions are used.
 The standalone real-valued generalization is not advertised as the numbered
 paper lemma.
 
-The six Challenge files deliberately contain twenty-four theorem proof holes: one
-pilot, six Appendix, three finite principal main results and fourteen Busemann
-construction/main declarations. Production proofs and Solutions contain zero;
+The seven Challenge files deliberately contain fifty-four theorem proof holes:
+one pilot, six Appendix, three finite principal main results, fourteen Busemann
+construction/main declarations and thirty functional-convergence prerequisites/main. Production proofs and Solutions contain zero;
 there are no definition holes. The pinned v0.4 metadata convention excludes
 deliberate Challenge holes from `status.sorry_count`; separate Challenge and
-total-tree counts explicitly record all twenty-four. Integrity checks enforce the
+total-tree counts explicitly record all fifty-four. Integrity checks enforce the
 exact Challenge allowlist.
 
 The pilot passed sandboxed Comparator, NanoDa and Lean kernel checks, and a
@@ -81,9 +81,9 @@ tail exponent. General real-valued companion theorems are outside this selection
 
 ## Planned principal entries
 
-Theorems 1.4, 1.11, 1.12 and 1.13 are implemented and locally validated; five entries remain
+Theorems 1.4, 1.6, 1.11, 1.12 and 1.13 are implemented and locally validated; four entries remain
 **PLANNED**. Their paths/names are proposals. No entry is registered.
-Each principal configuration would be a separate entry if submitted separately. The Busemann entry and three finite theorems are locally validated; the remaining five are planned.
+Each principal configuration would be a separate entry if submitted separately. The Busemann entry and three finite theorems are locally validated; the remaining four are planned.
 The existing source exports are all under `DirectedDistances.Paper`.
 The new names are under `DLQG1.Palomar.Principal`.
 
@@ -103,7 +103,7 @@ Theorem 1.11 passed normal source Comparator, Lean/NanoDa, axiom checks and
 independent fidelity review; its [exact coverage](PALOMAR-BOLTZMANN-DISTANCES.md)
 and [local receipt](../verification/PALOMAR-BOLTZMANN-RESULTS.json) are separate
 from official preflight. Definition extraction, identification transports and
-validation remain work for the five planned entries. No failure of their existing Lean proofs is asserted.
+validation remain work for the four planned entries. No failure of their existing Lean proofs is asserted.
 No global equality of the broad implementation map classes and the restricted
 source views is claimed. The existing source-domain membership and sampling-law
 transport must remain available when those actual objects are presented.
@@ -122,7 +122,7 @@ A common project-specific definitions module cannot be imported by a Challenge
 under the current rule. Any source-level reuse on that surface must place the
 actual audited definitions within each standalone Challenge (or use an already
 permitted upstream definition), respecting the size cap. The finite Challenges have 498/252/324 lines for Theorems 1.11/1.12/1.13;
-the other five compact Challenges remain in preparation. See the coverage records for [1.11](PALOMAR-BOLTZMANN-DISTANCES.md),
+the other four compact Challenges remain in preparation. See the coverage records for [1.11](PALOMAR-BOLTZMANN-DISTANCES.md),
 [1.12](PALOMAR-CELLLDP.md) and [1.13](PALOMAR-CELLSDP.md).
 
 ## Metadata and source scope
@@ -146,7 +146,7 @@ snapshots at the pinned pipeline revision.
 ## Local reproduction
 
 With the pinned dependencies available, `bash scripts/verify-palomar.sh` runs
-the exact Challenge-hole controls, all six implemented local Comparator configurations
+the exact Challenge-hole controls, all seven implemented local Comparator configurations
 and their exact Solution axiom probes. It retains each run in a distinct
 `.lake/palomar-evidence/verify-<UTC>-<pid>/` directory. It requires ordinary
 Comparator sandbox support and adds the submitted toolchain's real bin
@@ -212,3 +212,7 @@ status is inferred from these local passes.
 ## Implemented Busemann entry
 
 [Theorem 1.4 coverage](PALOMAR-BUSEMANN.md) documents all twenty-seven compared declarations, fourteen explicit construction/main holes, thirteen proved constructor certificates, actual map/distance transports, normal Comparator and both kernel passes. The complete official preflight remains tied to its exact public commit.
+
+## Implemented functional-convergence entry
+
+[Theorem1.6 coverage](PALOMAR-CONVERGENCE.md) lists all forty-three compared declarations and proves actual scalar, metric/Borel and complete path-law correspondence. Both full functional limits remain; no FDD-only substitute or extra assumption is used.

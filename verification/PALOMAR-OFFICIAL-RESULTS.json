@@ -191,5 +191,61 @@
     "pending": [],
     "intake": false,
     "registration": false
+  },
+  "busemann_at_2a368ad": {
+    "status": "pass",
+    "commit": "2a368ad55f863be08051f8e0e138019d6228fc70",
+    "configuration": "palomar/principal/busemann.json",
+    "theorem_names": [
+      "DirectedDistances.KMSW.act_lt_nextEdge",
+      "DirectedDistances.KMSW.stageRotation_UL_bound",
+      "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east",
+      "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique",
+      "DLQG1.Palomar.Model.KMSW.value_rel",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot",
+      "DLQG1.Palomar.Model.KMSW.eventualPresence_rel",
+      "DLQG1.Palomar.Model.KMSW.m0CutData_nonempty",
+      "DLQG1.Palomar.Principal.busemann",
+      "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+      "DirectedDistances.KMSW.StageRotation.step._proof_5",
+      "DirectedDistances.KMSW.StageRotation.step._proof_6",
+      "DirectedDistances.KMSW.StageRotation.step._proof_7",
+      "DirectedDistances.KMSW.StageRotation.step._proof_9",
+      "DirectedDistances.KMSW.StageRotation.step._proof_10",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_13",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_4",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_6",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_8",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_11",
+      "DirectedDistances.KMSW.boundaryHitTime._proof_2",
+      "DirectedDistances.KMSW.boundaryHitTime._proof_4"
+    ],
+    "definition_names": [],
+    "required_kernels": [
+      "Lean default accepted",
+      "NanoDa accepted"
+    ],
+    "advisory_kernels": [
+      {
+        "budget_seconds": 1800,
+        "detail": "con-ron: accepted 65992 declarations (--verified)\n\ncon-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)",
+        "exit_code": 0,
+        "name": "con-ron",
+        "reason": "complete",
+        "status": "accepted"
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      "configured Challenge source exceeds the preferred 32 KiB / 300-line review surface"
+    ],
+    "report_sha256": "39c1679bfcd9aa9c351dcb1eeb97f38ec01def26bc1e8982ce63acdd20a54457",
+    "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111",
+    "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111/artifacts/13934718924"
   }
 }

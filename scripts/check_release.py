@@ -20,7 +20,7 @@ PROBE_SOURCES.update(PRINCIPAL_PROBES)
 PALOMAR_AUDIT_IMPORTS.update({'verification/Palomar'+n+'Axioms.lean':'Palomar.Principal.'+n+'.Solution' for n in PRINCIPAL_NAMES})
 COMPARATOR_KEYS={'challenge_module','solution_module','theorem_names','definition_names','permitted_axioms','enable_nanoda'}
 REQUIRED_COMPARATOR_KEYS={'challenge_module','solution_module','theorem_names','permitted_axioms'}
-DECL_COMMAND=re.compile(r'^[ \t]*(?:@\[[^\]\n]*\][ \t]*)*(?:(?:public|protected|noncomputable)[ \t]+)*(namespace|end|theorem|lemma|def|abbrev|opaque|instance|example|axiom|constant|inductive|structure|class)\b([^\n]*)',re.M)
+DECL_COMMAND=re.compile(r'^[ \t]*(?:@\[[^\]\n]*\][ \t]*)*(?:(?:public|protected|noncomputable)[ \t]+)*(namespace|end|theorem|lemma|def|abbrev|opaque|instance|example|axiom|constant|inductive|structure|class|attribute)\b([^\n]*)',re.M)
 def sha(p):
  h=hashlib.sha256()
  with p.open('rb') as f:
@@ -51,7 +51,7 @@ def check_proof_tokens(rel,text,challenge_names=None):
 def check_challenge_text(text,names):
  """Allow one terminal := by sorry per compared theorem, with no other holes."""
  if not names or len(names)!=len(set(names)):raise ValueError('Invalid challenge declaration set')
- code=masked_code(text);events=list(DECL_COMMAND.finditer(code));namespace=[];found=[]
+ code=masked_code(text);events=[m for m in DECL_COMMAND.finditer(code) if m.group(1)!='attribute' or m.group(0).startswith('attribute')];namespace=[];found=[]
  for i,event in enumerate(events):
   kind,tail=event.group(1),event.group(2).strip()
   if kind=='namespace':
@@ -80,13 +80,22 @@ def check_challenge_config(spec,config):
   raise ValueError('Solution/config module mismatch')
  auxiliaries=spec.get('proved_auxiliaries',[])
  named=NAMED_PROVED_AUXILIARIES.get(spec['path'],set())
- if not isinstance(auxiliaries,list) or (len(auxiliaries)>12 and not (spec['path']=='Palomar/Principal/Busemann/Challenge.lean' and len(auxiliaries)==13 and set(auxiliaries)==BUSEMANN_TYPING_AUXILIARIES)) or any(not isinstance(n,str) or (not re.fullmatch(r'DirectedDistances\.[\w.]+\._proof_[0-9]+',n) and n not in named) for n in auxiliaries):
+ if not isinstance(auxiliaries,list) or (len(auxiliaries)>12 and not (spec['path'] in {'Palomar/Principal/Busemann/Challenge.lean','Palomar/Principal/BusemannConvergence/Challenge.lean'} and len(auxiliaries)==13 and set(auxiliaries)==BUSEMANN_TYPING_AUXILIARIES)) or any(not isinstance(n,str) or (not re.fullmatch(r'DirectedDistances\.[\w.]+\._proof_[0-9]+',n) and n not in named) for n in auxiliaries):
   raise ValueError('Unsupported proved typing auxiliary')
  compared=spec['declarations']+auxiliaries
- if len(compared)!=len(set(compared)) or config['theorem_names']!=compared or config.get('definition_names',[])!=[]:
+ order=spec.get('comparison_order',compared)
+ if 'comparison_order' in spec and spec['path']!='Palomar/Principal/BusemannConvergence/Challenge.lean':
+  raise ValueError('Comparison-order exception outside convergence configuration')
+ if not isinstance(order,list) or len(order)!=len(compared) or any(not isinstance(n,str) for n in order) or set(order)!=set(compared):
+  raise ValueError('Comparison order must contain exactly the compared declarations')
+ if len(compared)!=len(set(compared)) or config['theorem_names']!=order or config.get('definition_names',[])!=[]:
   raise ValueError('Challenge/config declaration mismatch')
  if set(config['permitted_axioms'])!={'propext','Quot.sound','Classical.choice'} or config.get('enable_nanoda') is not True:
   raise ValueError('Comparator axiom/kernel policy mismatch')
+def allowed_palomar_import(rel,m):
+ if PALOMAR_AUDIT_IMPORTS.get(rel)==m:return True
+ if (rel,m)==('Palomar/Principal/Support/BusemannIdentified.lean','Palomar.Principal.Busemann.Solution'):return True
+ return m.startswith('Palomar.Principal.Support.') and rel.startswith('Palomar/Principal/') and (rel.endswith('/Solution.lean') or rel.startswith('Palomar/Principal/Support/'))
 def load_challenges():
  data=json.loads((ROOT/'verification/expected-challenge-holes.json').read_text())
  if data['schema_version']!=1:raise ValueError('Unknown challenge-hole schema')
@@ -142,8 +151,7 @@ def check():
     raise ValueError('Challenge import is forbidden: '+rel+':'+m)
    if (m.startswith(('DirectedDistances.','verification.','Palomar.')) or m=='DirectedDistances') and m not in module_paths:raise ValueError('Missing project import: '+m)
    if m.startswith('Palomar.'):
-    support=m.startswith('Palomar.Principal.Support.') and rel.startswith('Palomar/Principal/') and (rel.endswith('/Solution.lean') or rel.startswith('Palomar/Principal/Support/'))
-    if PALOMAR_AUDIT_IMPORTS.get(rel)!=m and not support:raise ValueError('Palomar import outside exact solution audit/support: '+rel+':'+m)
+    if not allowed_palomar_import(rel,m):raise ValueError('Palomar import outside exact solution audit/support: '+rel+':'+m)
    elif not (m=='DirectedDistances' or m.startswith(('DirectedDistances.','Mathlib.','Init.','Lean.')) or m in {'Mathlib','Init','Lean','verification.ConstantWindow','verification.SourceBoundaryDomain','verification.SourceBoundaryChanneled'}):raise ValueError('Undeclared import root: '+m)
   graph[rel[:-5].replace('/','.')]=[m for m in im if m in module_paths]
  seen=set();todo=['DirectedDistances']
@@ -164,7 +172,7 @@ def check():
  audits=[(challenges['Palomar/Pilot/Challenge.lean'],'PalomarPilot'),(challenges['Palomar/AppendixA/Challenge.lean'],'PalomarAppendix')]
  audits.extend((challenges['Palomar/Principal/'+n+'/Challenge.lean'],'Palomar'+n) for n in PRINCIPAL_NAMES if 'Palomar/Principal/'+n+'/Challenge.lean' in challenges)
  for spec,label in audits:
-  if exp['probes'][label]!=spec['declarations']+spec.get('proved_auxiliaries',[]):raise ValueError('Challenge/solution audit-set mismatch: '+label)
+  if exp['probes'][label]!=spec.get('comparison_order',spec['declarations']+spec.get('proved_auxiliaries',[])):raise ValueError('Challenge/solution audit-set mismatch: '+label)
  print(json.dumps({'status':'PASS','files':len(files),'lean_files':len(lean),'project_modules_reachable':len(seen),'paper_entries':90,'paper_exports':len(exp['paper_exports']),'semantic_roots':len(imports((ROOT/'DirectedDistances/DeliveryVerificationRoot.lean').read_text())),'challenge_files':len(challenges),'deliberate_compared_holes':sum(len(s['declarations']) for s in challenges.values())}))
 def main():
  p=argparse.ArgumentParser();p.add_argument('--axioms',choices=list(PROBE_SOURCES));p.add_argument('--log');a=p.parse_args()

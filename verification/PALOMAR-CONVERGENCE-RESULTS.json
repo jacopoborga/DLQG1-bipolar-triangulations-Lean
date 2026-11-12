@@ -1,0 +1,298 @@
+{
+  "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+  "paper_result": "1.6",
+  "compared_numbered_prerequisite": "1.4",
+  "source_label": "thm-busemann-conv",
+  "source_archive_sha256": "85306d3050f88727cbff01ea54ca3023f7c75a38ab770e49802108bf87ecc84b",
+  "config": "palomar/principal/busemann-convergence.json",
+  "files": {
+    "Palomar/Principal/BusemannConvergence/Challenge.lean": {
+      "sha256": "c5750a875c5ffc47185c789cce88c8a840cd1e237dab4d48a7498bd9d97f5ff8",
+      "bytes": 54547,
+      "physical_lines": 869
+    },
+    "Palomar/Principal/BusemannConvergence/Solution.lean": {
+      "sha256": "c37065592719c6273e9f58fafc71d07669bbf30d012736193340255a6b0820be",
+      "bytes": 5740,
+      "physical_lines": 103
+    },
+    "Palomar/Principal/Support/BusemannPaths.lean": {
+      "sha256": "4d7929b172adb673edc3bd2b69d3f111a6367fe12807dd8a0f017a94d6745691",
+      "bytes": 14015,
+      "physical_lines": 227
+    },
+    "Palomar/Principal/Support/BusemannIdentified.lean": {
+      "sha256": "f8ffebc51f823c6648e1aaf60ca3edb880193560b6aac47e0f3d4c2fc207bd93",
+      "bytes": 9971,
+      "physical_lines": 215
+    },
+    "palomar/principal/busemann-convergence.json": {
+      "sha256": "d4fdb11d4a9d48c90e486e38c6caca9c1a4677c7d4ba24ad97c4d8813b5a4c74",
+      "bytes": 2911,
+      "physical_lines": 56
+    }
+  },
+  "theorem_names": [
+    "DirectedDistances.KMSW.act_lt_nextEdge",
+    "DirectedDistances.KMSW.stageRotation_UL_bound",
+    "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east",
+    "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique",
+    "DLQG1.Palomar.Model.KMSW.value_rel",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot",
+    "DLQG1.Palomar.Model.KMSW.eventualPresence_rel",
+    "DLQG1.Palomar.Model.KMSW.m0CutData_nonempty",
+    "DLQG1.Palomar.Principal.busemann",
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+    "DirectedDistances.KMSW.StageRotation.step._proof_5",
+    "DirectedDistances.KMSW.StageRotation.step._proof_6",
+    "DirectedDistances.KMSW.StageRotation.step._proof_7",
+    "DirectedDistances.KMSW.StageRotation.step._proof_9",
+    "DirectedDistances.KMSW.StageRotation.step._proof_10",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_13",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_4",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_6",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_8",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_11",
+    "DirectedDistances.KMSW.boundaryHitTime._proof_2",
+    "DirectedDistances.KMSW.boundaryHitTime._proof_4",
+    "DLQG1.Palomar.Model.Probability.cutoffWindow_isCadlag",
+    "DLQG1.Palomar.Model.Probability.j1LocalDist_self",
+    "DLQG1.Palomar.Model.Probability.j1LocalDist_symm",
+    "DLQG1.Palomar.Model.Probability.j1LocalDist_triangle",
+    "DLQG1.Palomar.Model.Probability.j1LocalDist_eq_zero_iff",
+    "DLQG1.Palomar.Model.Probability.wholeLineJ1WindowPath_cadlag",
+    "DLQG1.Palomar.Model.Probability.wholeLineLocalJ1Distance_self",
+    "DLQG1.Palomar.Model.Probability.wholeLineLocalJ1Distance_symm",
+    "DLQG1.Palomar.Model.Probability.wholeLineLocalJ1Distance_triangle",
+    "DLQG1.Palomar.Model.Probability.wholeLineLocalJ1Distance_eq_zero_iff",
+    "DLQG1.Palomar.Model.Probability.wholeLineGlue_isCadlag",
+    "DLQG1.Palomar.Model.Probability.floorStep_isCadlag",
+    "DLQG1.Palomar.Model.RandomWalk.wholePlaneIIDCodeMeasure_isProbabilityMeasure",
+    "DLQG1.Palomar.Model.PaperProofs.Section1.aemeasurable_identifiedLDPScalingPath",
+    "DLQG1.Palomar.Model.PaperProofs.Section1.aemeasurable_identifiedSDPScalingPath",
+    "DLQG1.Palomar.Principal.busemann_convergence"
+  ],
+  "explicit_challenge_holes": 30,
+  "proved_auxiliaries": 13,
+  "definition_names": [],
+  "normal_source_build": true,
+  "sandbox_bypass": false,
+  "from_export": false,
+  "local_command": "lake comparator --config palomar/principal/busemann-convergence.json",
+  "local_comparator": "PASS",
+  "nanoda": "PASS",
+  "lean_default_kernel": "PASS",
+  "elapsed_seconds": 308.5586513299495,
+  "peak_tree_rss_KiB": 5055364,
+  "finished_at_utc": "2026-11-12T10:28:23.945003+00:00",
+  "log_sha256": "49ecdb329c4a7b6782d10f2db8c795cc17cd87837b60b97328116b89e7ab6042",
+  "axioms": {
+    "DirectedDistances.KMSW.act_lt_nextEdge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.stageRotation_UL_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.value_rel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.eventualPresence_rel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.m0CutData_nonempty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Principal.busemann": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_5": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_6": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_7": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_9": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_10": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_13": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_4": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_6": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_8": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_11": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.boundaryHitTime._proof_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.boundaryHitTime._proof_4": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.cutoffWindow_isCadlag": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.j1LocalDist_self": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.j1LocalDist_symm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.j1LocalDist_triangle": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.j1LocalDist_eq_zero_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.wholeLineJ1WindowPath_cadlag": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.wholeLineLocalJ1Distance_self": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.wholeLineLocalJ1Distance_symm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.wholeLineLocalJ1Distance_triangle": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.wholeLineLocalJ1Distance_eq_zero_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.wholeLineGlue_isCadlag": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.Probability.floorStep_isCadlag": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.RandomWalk.wholePlaneIIDCodeMeasure_isProbabilityMeasure": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.PaperProofs.Section1.aemeasurable_identifiedLDPScalingPath": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.PaperProofs.Section1.aemeasurable_identifiedSDPScalingPath": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Principal.busemann_convergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "axiom_log_sha256": "f981c40d169bc9b7f893a6d7a3acbfb4f6b83a0cee4229ace6fcfbc56c46a3e0",
+  "independent_fidelity_review": "PASS complete no-hole metric/Borel/scalar/full-functional Source correspondence and exact future declarations. Unchanged1.4 geometry/certificates reused by hashes. Final integrated snapshot review follows.",
+  "ordinary_repair": "Declaration order restored to the checked Solution so shared numeric proof certificates have the same kernel-level references; no data definition was exempted.",
+  "official_preflight": "Requires exact public integration commit; no official status inferred from local checks",
+  "intake": "NOT PERFORMED",
+  "registration": "NOT PERFORMED"
+}

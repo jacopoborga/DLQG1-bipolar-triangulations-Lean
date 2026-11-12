@@ -158,4 +158,74 @@ class ChallengeHoles(unittest.TestCase):
  def test_attributed_unlisted_theorem_hole_rejected(self):
   text=BASE.replace('end Test','@[simp] theorem extra : True := by sorry\nend Test')
   with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'])
+ def test_global_instance_attribute_after_hole_allowed(self):
+  text=BASE.replace('end Test','attribute [instance] result\nend Test')
+  check_challenge_text(text,['Test.result'])
+ def test_indented_attribute_cannot_hide_extra_proof_steps(self):
+  text=BASE.replace('  sorry','  sorry\n  attribute [simp] result\n  trivial')
+  with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'])
+ def test_global_attribute_cannot_hide_unlisted_hole(self):
+  text=BASE.replace('end Test','attribute [simp] result\ntheorem extra : True := by sorry\nend Test')
+  with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'])
+ def test_exact_convergence_thirteen_certificates_allowed(self):
+  spec,config=self.busemann_typing_fixture()
+  spec['path']='Palomar/Principal/BusemannConvergence/Challenge.lean'
+  spec['solution_path']='Palomar/Principal/BusemannConvergence/Solution.lean'
+  config['challenge_module']='Palomar.Principal.BusemannConvergence.Challenge'
+  config['solution_module']='Palomar.Principal.BusemannConvergence.Solution'
+  check_challenge_config(spec,config)
+ def test_convergence_fourteenth_certificate_rejected(self):
+  spec,config=self.busemann_typing_fixture()
+  spec['path']='Palomar/Principal/BusemannConvergence/Challenge.lean'
+  spec['solution_path']='Palomar/Principal/BusemannConvergence/Solution.lean'
+  config['challenge_module']='Palomar.Principal.BusemannConvergence.Challenge'
+  config['solution_module']='Palomar.Principal.BusemannConvergence.Solution'
+  spec['proved_auxiliaries'].append('DirectedDistances.Example.record._proof_999')
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_shared_identified_support_may_import_validated_busemann_solution(self):
+  from check_release import allowed_palomar_import
+  self.assertTrue(allowed_palomar_import('Palomar/Principal/Support/BusemannIdentified.lean','Palomar.Principal.Busemann.Solution'))
+ def test_other_support_cannot_import_arbitrary_solution(self):
+  from check_release import allowed_palomar_import
+  self.assertFalse(allowed_palomar_import('Palomar/Principal/Support/Other.lean','Palomar.Principal.Busemann.Solution'))
+ def test_production_cannot_import_palomar_solution_or_support(self):
+  from check_release import allowed_palomar_import
+  self.assertFalse(allowed_palomar_import('DirectedDistances/Example.lean','Palomar.Principal.Busemann.Solution'))
+  self.assertFalse(allowed_palomar_import('DirectedDistances/Example.lean','Palomar.Principal.Support.BusemannIdentified'))
+ def test_challenge_cannot_import_support(self):
+  from check_release import allowed_palomar_import
+  self.assertFalse(allowed_palomar_import('Palomar/Principal/BusemannConvergence/Challenge.lean','Palomar.Principal.Support.BusemannIdentified'))
+ def convergence_order_fixture(self):
+  spec,config=self.busemann_typing_fixture()
+  spec['path']='Palomar/Principal/BusemannConvergence/Challenge.lean'
+  spec['solution_path']='Palomar/Principal/BusemannConvergence/Solution.lean'
+  config['challenge_module']='Palomar.Principal.BusemannConvergence.Challenge'
+  config['solution_module']='Palomar.Principal.BusemannConvergence.Solution'
+  spec['declarations'].append('DLQG1.Palomar.Principal.busemann_convergence')
+  order=[spec['declarations'][0]]+spec['proved_auxiliaries']+[spec['declarations'][1]]
+  spec['comparison_order']=order
+  config['theorem_names']=list(order)
+  return spec,config
+ def test_exact_interleaved_convergence_target_order_allowed(self):
+  spec,config=self.convergence_order_fixture()
+  check_challenge_config(spec,config)
+ def test_interleaved_order_cannot_add_or_omit_targets(self):
+  spec,config=self.convergence_order_fixture()
+  spec['comparison_order'][-1]='DLQG1.Palomar.Principal.unreviewed'
+  config['theorem_names']=list(spec['comparison_order'])
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_interleaved_order_cannot_duplicate_targets(self):
+  spec,config=self.convergence_order_fixture()
+  spec['comparison_order'][-1]=spec['comparison_order'][0]
+  config['theorem_names']=list(spec['comparison_order'])
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_interleaved_order_must_match_exact_configuration(self):
+  spec,config=self.convergence_order_fixture()
+  config['theorem_names']=list(reversed(config['theorem_names']))
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_order_exception_cannot_spread_to_other_configuration(self):
+  spec,config=self.busemann_typing_fixture()
+  spec['comparison_order']=list(config['theorem_names'])
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
 if __name__=='__main__':unittest.main()

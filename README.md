@@ -63,11 +63,12 @@ The finite configurations for [Theorem 1.11](docs/PALOMAR-BOLTZMANN-DISTANCES.md
 [Theorem 1.13](docs/PALOMAR-CELLSDP.md) pass normal local Comparator,
 NanoDa, default Lean and axiom checks, with independent fidelity review.
 [Theorem 1.4](docs/PALOMAR-BUSEMANN.md) also passes normal source Comparator,
-Lean/NanoDa and its complete construction/axiom audits. Five other principal
+Lean/NanoDa and its complete construction/axiom audits. [Theorem 1.6](docs/PALOMAR-CONVERGENCE.md) also passes normal source Comparator,
+Lean/NanoDa and its full functional-object/path-law audits. Four other principal
 configurations remain in preparation.
 No configuration claims that all 90 entries have been compared or registered.
 
-Run `bash scripts/verify-palomar.sh` to reproduce the pilot, Appendix, Busemann and three finite principal configurations,
+Run `bash scripts/verify-palomar.sh` to reproduce the pilot, Appendix, Busemann, functional-convergence and three finite principal configurations,
 Challenge-hole controls and their exact Solution axiom audits. The generated
 logs are below `.lake/palomar-evidence/verify-<UTC>-<pid>/`; the portable
 [comparison receipts](verification/PALOMAR-RESULTS.json) record the checked scope.
