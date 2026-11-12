@@ -1,7 +1,11 @@
 {
   "format_version": 1,
-  "scope": "Source-only 90-item public release with documented source-domain bindings and rendering conventions. No manuscript, supplementary collection, private history or campaign records.",
+  "scope": "Verified 90-item public release with a minimal pinned manual Palomar preflight caller. Accepted Lean sources, pins and correspondence are unchanged. No manuscript, supplementary collection, private history or campaign records.",
   "files": {
+    ".github/workflows/comparator.yml": {
+      "bytes": 606,
+      "sha256": "b3a662cfbdfa906ce95da82e26926fa4857c40c7b31112f3b24561ebebe8cacb"
+    },
     ".gitignore": {
       "bytes": 50,
       "sha256": "d6bf069d676dff583fae89e0b4f062c02516df3a6c3d5674f8e9b9b2db72aba5"
@@ -17,6 +21,10 @@
     "CORRESPONDENCE.md": {
       "bytes": 24026,
       "sha256": "bad34f215c24266500dbe683d6f2d7e5b725579d9b966680bc3306b6ead07bf3"
+    },
+    "DirectedDistances.lean": {
+      "bytes": 64,
+      "sha256": "acb717e9f2b471b9bc884c958a79606ce1c7d3e7dd1891e8d45267be54760d7d"
     },
     "DirectedDistances/DeliveryVerificationRoot.lean": {
       "bytes": 6628,
@@ -11086,10 +11094,6 @@
       "bytes": 11232,
       "sha256": "7bbd141519d5c64379188faeb909f5c9bc0e1346bc90037e66779f7555a63d94"
     },
-    "DirectedDistances.lean": {
-      "bytes": 64,
-      "sha256": "acb717e9f2b471b9bc884c958a79606ce1c7d3e7dd1891e8d45267be54760d7d"
-    },
     "ERRATA-AND-DEVIATIONS.md": {
       "bytes": 170,
       "sha256": "f87e0d6d54297e36f1e68b4fa3bf9983a267e549d09a0e4fb1786508daeede52"
@@ -11200,7 +11204,7 @@
     "lakefile.toml": "b9d5771511cc181b6d0e7d423ff63eb1a1a5bae2aa66bfed28de89c290074952",
     "lake-manifest.json": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
   },
-  "file_list_sha256": "f548483a29c8ce229ab409872fb8cc6cc068040698bff1a5e59deb9623d39b2c",
-  "content_tree_sha256": "a6a73020045e7b9955b007c27bf312e043e9093ccf090bf3d4534bf161226f8c",
+  "file_list_sha256": "f228e8d8300b20bd65d7345580944c57f959459476394e147622896b7e9e3e90",
+  "content_tree_sha256": "ebf9b3c51c77dc0f9fe8f8967c0bf651efa8da04aff52ec8c7b114cfad3982bd",
   "publication_authorized": true
 }
