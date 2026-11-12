@@ -1,0 +1,297 @@
+{
+  "format_version": 1,
+  "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_ALL41_AXIOMS",
+  "paper_result": "5.9",
+  "source_label": "prop-uihbot-sym",
+  "source_declaration": "DirectedDistances.Paper.Section5.prop_uihbot_sym",
+  "configuration": "palomar/principal/half-plane-reflection.json",
+  "challenge_module": "Palomar.Principal.HalfPlaneReflection.Challenge",
+  "solution_module": "Palomar.Principal.HalfPlaneReflection.Solution",
+  "main_declaration": "DLQG1.Palomar.Principal.half_plane_reflection",
+  "target_set": {
+    "count": 41,
+    "explicit_challenge_theorem_holes": 23,
+    "proved_certificates": [
+      "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+      "DirectedDistances.KMSW.StageRotation.step._proof_5",
+      "DirectedDistances.KMSW.StageRotation.step._proof_6",
+      "DirectedDistances.KMSW.StageRotation.step._proof_7",
+      "DirectedDistances.KMSW.StageRotation.step._proof_9",
+      "DirectedDistances.KMSW.StageRotation.step._proof_10",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_4",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_6",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_8",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_11",
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_13",
+      "DirectedDistances.PaperProofs.Section3.d39GeomDistanceV2._proof_1",
+      "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+      "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure",
+      "DirectedDistances.PaperProofs.Section5.uibhbotDefaultBlockLetterRel._proof_1",
+      "DirectedDistances.PlanarMap.Polyline.toPath._proof_3",
+      "DirectedDistances.PlanarMap.Polyline.toPath._proof_4",
+      "DirectedDistances.PlanarMap.ccwTurn._proof_1"
+    ],
+    "definition_names": [],
+    "explicit_holes": [
+      "DLQG1.Palomar.Principal.half_plane_reflection",
+      "DLQG1.Palomar.GeometryLawMinimal.existsUnique_sourceLaw",
+      "DirectedDistances.PaperProofs.Section3.d39GeomRootEdge_mem",
+      "DLQG1.Palomar.GeometryInterface.related_equivalence",
+      "DLQG1.Palomar.GeometryInterface.distance_respects",
+      "DLQG1.Palomar.GeometryInterface.distance_self",
+      "DLQG1.Palomar.GeometryInterface.distance_comm",
+      "DLQG1.Palomar.GeometryInterface.distance_triangle",
+      "DLQG1.Palomar.GeometryInterface.mirrorMap_external",
+      "DLQG1.Palomar.GeometryInterface.mirrorDomainValid",
+      "DLQG1.Palomar.GeometryInterface.mirror_respects",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east",
+      "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique",
+      "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique",
+      "DLQG1.Palomar.Model.KMSW.value_rel",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv",
+      "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot",
+      "DLQG1.Palomar.Model.KMSW.eventualPresence_rel",
+      "DirectedDistances.KMSW.act_lt_nextEdge",
+      "DirectedDistances.KMSW.stageRotation_UL_bound"
+    ]
+  },
+  "challenge": {
+    "lines": 964,
+    "bytes": 58107,
+    "hard_policy_limits_met": true,
+    "preferred_300_line_advisory_exceeded": true
+  },
+  "source_file_sha256": {
+    "Palomar/Principal/HalfPlaneReflection/Challenge.lean": "8d1b1fb38e945daefddc0c6729c8319c5a66fd9265078df89e37fe9e3b420ad3",
+    "Palomar/Principal/Support/HalfPlaneSource.lean": "575a59d3eeb54e8fe87d753b8a27e23a02d1617c7098bf92cd2319868a4b98a1",
+    "Palomar/Principal/HalfPlaneReflection/Solution.lean": "9e2736814e5a92a5bed29ca93bcfb468d79ad968c45e571bdee4e64c0c1d0a5f",
+    "palomar/principal/half-plane-reflection.json": "4a8d50ca46c95fb014771fa937b1a45e46ae2a208941e89ef8c6b6f3809b3529"
+  },
+  "normal_source_comparator": {
+    "status": "PASS_NORMAL_SOURCE_COMPARATOR",
+    "source_build": true,
+    "from_export": false,
+    "sandbox_bypass": false,
+    "nanoda_enabled": true,
+    "lean_default_kernel_enabled": true,
+    "observed_success_messages": [
+      "nanoda kernel accepts the solution",
+      "Lean default kernel accepts the solution",
+      "Your solution is okay!"
+    ],
+    "reproduction_command": "lake comparator --config palomar/principal/half-plane-reflection.json",
+    "started_at_utc": "2026-11-12T12:27:53.136485+00:00",
+    "finished_at_utc": "2026-11-12T12:31:42.407244+00:00",
+    "elapsed_seconds": 229.27076026902068,
+    "peak_all_thread_tree_rss_kib": 5375832,
+    "log_sha256": "16f03bf3d7b87b55a6694164bccdc296d9bf7907b2b737f7d5b3df8b58625e70",
+    "log_bytes": 1364325
+  },
+  "axiom_audit": {
+    "status": "FRESH_NORMAL_ALL41_STD3_ONLY",
+    "target_count": 41,
+    "actual_axioms": {
+      "DLQG1.Palomar.Principal.half_plane_reflection": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.GeometryLawMinimal.existsUnique_sourceLaw": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.d39GeomRootEdge_mem": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.GeometryInterface.related_equivalence": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.GeometryInterface.distance_respects": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.GeometryInterface.distance_self": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.GeometryInterface.distance_comm": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.GeometryInterface.distance_triangle": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.GeometryInterface.mirrorMap_external": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.GeometryInterface.mirrorDomainValid": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.GeometryInterface.mirror_respects": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.value_rel": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DLQG1.Palomar.Model.KMSW.eventualPresence_rel": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.act_lt_nextEdge": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.stageRotation_UL_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.kmswCodeStep._proof_1": [
+        "propext"
+      ],
+      "DirectedDistances.KMSW.StageRotation.step._proof_5": [
+        "propext"
+      ],
+      "DirectedDistances.KMSW.StageRotation.step._proof_6": [
+        "propext"
+      ],
+      "DirectedDistances.KMSW.StageRotation.step._proof_7": [
+        "propext"
+      ],
+      "DirectedDistances.KMSW.StageRotation.step._proof_9": [
+        "propext"
+      ],
+      "DirectedDistances.KMSW.StageRotation.step._proof_10": [
+        "propext"
+      ],
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_4": [
+        "propext",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_6": [
+        "propext",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_8": [
+        "propext",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_11": [
+        "propext",
+        "Quot.sound"
+      ],
+      "DirectedDistances.KMSW.StageRotation.allocation._proof_13": [
+        "propext",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section3.d39GeomDistanceV2._proof_1": [
+        "propext"
+      ],
+      "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4": [
+        "propext"
+      ],
+      "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PaperProofs.Section5.uibhbotDefaultBlockLetterRel._proof_1": [
+        "propext"
+      ],
+      "DirectedDistances.PlanarMap.Polyline.toPath._proof_3": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.Polyline.toPath._proof_4": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "DirectedDistances.PlanarMap.ccwTurn._proof_1": [
+        "propext"
+      ]
+    },
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 1.4902516170404851,
+    "probe": "verification/PalomarHalfPlaneReflectionAxioms.lean",
+    "probe_sha256": "5cc18e83dfbd63df92c228d066a4b82afd124ca1df3f9f6a2016365ba4ad84ac",
+    "log_sha256": "fae37c1fe968c421c777f685c4f5fdf613e59c7b5c0c4532271c2e802794d4ee"
+  },
+  "official_preflight": "PENDING_ONE_EXACT_FINAL_COMMIT",
+  "historical_official_receipts": "Eight prior configurations cover thirteen distinct results at their listed earlier commits; they do not certify this later snapshot.",
+  "intake_initiated": false,
+  "registration_performed": false,
+  "notes": [
+    "The normal source Comparator used the exact frozen Challenge, Solution, support module, and configuration hashes listed above; the integrated Lakefile adds only the three Palomar roots needed to include those modules.",
+    "This portable receipt records result metadata and hashes; raw run logs and private process paths are not included."
+  ]
+}

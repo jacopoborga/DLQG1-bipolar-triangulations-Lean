@@ -56,17 +56,20 @@ The root `comparator.json` selects the six numbered Appendix lemmas under
 `DLQG1.Palomar.AppendixA`; it separately passed local sandboxed Comparator, NanoDa and Lean checks.
 A separate source-fidelity review found no blocker for all six statements.
 
-The seven numbered principal theorems—1.4, 1.6, 1.7, 1.8, 1.11, 1.12 and
-1.13—have locally validated standalone configurations and independent fidelity
-reviews. The new [Busemann increment and tail entries](docs/PALOMAR-BUSEMANN-PROPERTIES.md)
-preserve the actual identified functions and their source laws. Propositions
-5.9 and 5.16 remain pending. The eight intended local configurations are the
-six-lemma root Appendix configuration plus those seven principal entries. The
-optional A.2 pilot overlaps the Appendix and is not counted. See the
-[current local results](verification/PALOMAR-CURRENT-RESULTS.json).
+The eight locally validated principal entries are Theorems 1.4, 1.6, 1.7,
+1.8, 1.11, 1.12, 1.13 and Proposition 5.9. The new [Busemann increment and
+tail entries](docs/PALOMAR-BUSEMANN-PROPERTIES.md) preserve the actual
+identified functions and their source laws. Proposition 5.9 passed the normal
+source Comparator, NanoDa, Lean default kernel and all 41 axiom checks; its
+[coverage](docs/PALOMAR-HALF-PLANE-REFLECTION.md) and
+[portable receipt](verification/PALOMAR-HALF-PLANE-RESULTS.json) record the
+scope. Proposition 5.16 remains pending. The nine intended local
+configurations are the six-lemma root Appendix configuration plus those eight
+principal entries. The optional A.2 pilot overlaps the Appendix and is not
+counted. See the [current local results](verification/PALOMAR-CURRENT-RESULTS.json).
 No configuration claims that all 90 entries have been compared or registered.
 
-Run `bash scripts/verify-palomar.sh` to reproduce the pilot, Appendix, Busemann, functional-convergence, increment/tail and three finite principal configurations,
+Run `bash scripts/verify-palomar.sh` to reproduce the pilot, Appendix, Busemann, functional-convergence, increment/tail, three finite principal configurations and the half-plane reflection entry,
 Challenge-hole controls and their exact Solution axiom audits. The generated
 logs are below `.lake/palomar-evidence/verify-<UTC>-<pid>/`; the portable
 [comparison receipts](verification/PALOMAR-RESULTS.json) record the checked scope.
@@ -75,10 +78,11 @@ The [preparation record](docs/PALOMAR-PREPARATION.md) pins the policy, metadata
 schema and official verification pipeline, explains each selection and lists
 the remaining definition obligations. The two workflow badges above are draft
 manual checks: Lean source/axiom/kernel verification and the official reusable
-Comparator preflight. Historical official full Comparator receipts now cover six configurations
-and eleven distinct numbered results: the root Appendix selection and
-Theorems 1.11–1.13 at `22f3180`, Theorem 1.4 at `2a368ad`, and Theorem 1.6 at
-`66792ba`. Their exact workflow URLs, commits and report hashes are in the
+Comparator preflight. Historical official full Comparator receipts now cover eight configurations
+and thirteen distinct numbered results: the root Appendix selection and
+Theorems 1.11–1.13 at `22f3180`, Theorem 1.4 at `2a368ad`, Theorem 1.6 at
+`66792ba`, and Theorems 1.7–1.8 at `63dd637`. Their exact workflow URLs,
+commits and report hashes are in the
 [portable official receipts](verification/PALOMAR-OFFICIAL-RESULTS.json).
 These are historical passes. A final official preflight must pass all ten
 intended configurations at one exact final integration commit; that gate is

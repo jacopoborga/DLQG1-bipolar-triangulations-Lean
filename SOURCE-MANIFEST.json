@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "scope": "Accepted 90-entry public formalization with the Appendix selection, optional A.2 pilot and seven locally validated principal configurations; Propositions 5.9 and 5.16 remain pending. Eight intended local configurations (Appendix plus seven principal entries) are complete. Six historical official configurations cover eleven numbered results at prior exact commits; the final all-ten exact-commit preflight remains pending. No intake or registration. Baseline production sources, pins and correspondence preserved; publication exclusions enforced.",
+  "scope": "Accepted 90-entry public formalization with the Appendix selection, optional A.2 pilot, and nine locally validated intended configurations: the Appendix plus eight principal entries (Theorems 1.4, 1.6, 1.7, 1.8, 1.11, 1.12, 1.13 and Proposition 5.9). Proposition 5.16 remains pending. Eight historical official configurations cover thirteen numbered results at prior exact commits; the final all-ten exact-commit preflight remains pending. No intake or registration. Baseline production sources, pins and correspondence are preserved; publication exclusions are enforced.",
   "files": {
     ".github/workflows/comparator.yml": {
       "bytes": 1487,
@@ -11186,6 +11186,14 @@
       "bytes": 2105,
       "sha256": "7ea771a5fbe9d80872a57935c692e10e209661b189bc9c96cf367bc0df03fcf5"
     },
+    "Palomar/Principal/HalfPlaneReflection/Challenge.lean": {
+      "bytes": 58107,
+      "sha256": "8d1b1fb38e945daefddc0c6729c8319c5a66fd9265078df89e37fe9e3b420ad3"
+    },
+    "Palomar/Principal/HalfPlaneReflection/Solution.lean": {
+      "bytes": 804,
+      "sha256": "9e2736814e5a92a5bed29ca93bcfb468d79ad968c45e571bdee4e64c0c1d0a5f"
+    },
     "Palomar/Principal/Support/BusemannIdentified.lean": {
       "bytes": 9971,
       "sha256": "f8ffebc51f823c6648e1aaf60ca3edb880193560b6aac47e0f3d4c2fc207bd93"
@@ -11198,13 +11206,17 @@
       "bytes": 7943,
       "sha256": "6dabde0811997934b8ba60eef1f67324d2884104fedca4a270952badf45caa51"
     },
+    "Palomar/Principal/Support/HalfPlaneSource.lean": {
+      "bytes": 16361,
+      "sha256": "575a59d3eeb54e8fe87d753b8a27e23a02d1617c7098bf92cd2319868a4b98a1"
+    },
     "README.md": {
-      "bytes": 10451,
-      "sha256": "316f772047f2b8de1c9c4d7f03c5b10ca6663ce3e4878c4f7c5404f824e89e37"
+      "bytes": 10711,
+      "sha256": "f3e314aac3e95dac753a8379c2b0a0becc79b11af91b3d4278348176774214da"
     },
     "VERIFICATION.md": {
-      "bytes": 4937,
-      "sha256": "ecc128538ac69f969f7b50ff86214238e47a9a95778de6f758711725cf87cfde"
+      "bytes": 5042,
+      "sha256": "36e52bc62b5a8c1bb6482b838de676acab41ed69d7ddb156cd5308c8a139686f"
     },
     "comparator.json": {
       "bytes": 534,
@@ -11219,8 +11231,8 @@
       "sha256": "51739e2ed779bf6ca8a5bf74d5d0eef91448b3ffb807f01d646e8bd36a8036c4"
     },
     "docs/PALOMAR-BUSEMANN-PROPERTIES.md": {
-      "bytes": 3236,
-      "sha256": "217a7ab7e5e0e8ea529460bfe84f1fa360c9ccd7e16c8e6930f33e8901e62a3b"
+      "bytes": 3230,
+      "sha256": "63e1815e14fa723a29d3732179d1c5acde727ccdeb52e2a66d5f5bc64c2f316a"
     },
     "docs/PALOMAR-BUSEMANN.md": {
       "bytes": 5837,
@@ -11238,21 +11250,25 @@
       "bytes": 7961,
       "sha256": "453330104435dc4d458c25d5efa342fc99196b294e8c7273e4e6a33b4121bf2f"
     },
+    "docs/PALOMAR-HALF-PLANE-REFLECTION.md": {
+      "bytes": 1944,
+      "sha256": "7796b9d4d380ae379e88a856ace4bb0d4ff1c4a1f8e28f156f789e7be138ff38"
+    },
     "docs/PALOMAR-PREPARATION.md": {
-      "bytes": 17607,
-      "sha256": "29d2615881a82f2f8f7f8b56ca1f94e782d23aa6c425277c747624e6648bfd1f"
+      "bytes": 18027,
+      "sha256": "bfa1221c64bc97b918a29d50110ab4c5d4f3aa7cacdccc054de9070fa6121487"
     },
     "formalization.yaml": {
-      "bytes": 31465,
-      "sha256": "274051377cdb2687a0139c02dd01530b788a87441e9b499f132e06e7c1778273"
+      "bytes": 33135,
+      "sha256": "fc6896bd857f6ef3bacad5a8e5171240fa0ba001bbbef7e48b5a060aa8b74e8c"
     },
     "lake-manifest.json": {
       "bytes": 3159,
       "sha256": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
     },
     "lakefile.toml": {
-      "bytes": 1294,
-      "sha256": "dbc3fe9bc1ebfd61db18f45e2ebacb5e2050fcc163b3c4586863d30e9692b9ad"
+      "bytes": 1440,
+      "sha256": "3906b12337913587e574ea83925819b9f6b9aa1558e60893abbf73e5784cec07"
     },
     "lean-toolchain": {
       "bytes": 29,
@@ -11290,17 +11306,21 @@
       "bytes": 636,
       "sha256": "0fbbcf8b7828d55500aaf5d4cb500fe9a5716aabd6e40263872861ee81d712f6"
     },
+    "palomar/principal/half-plane-reflection.json": {
+      "bytes": 2741,
+      "sha256": "4a8d50ca46c95fb014771fa937b1a45e46ae2a208941e89ef8c6b6f3809b3529"
+    },
     "scripts/check_release.py": {
-      "bytes": 15375,
-      "sha256": "d8129a6c8734e9eab64b96857f3875fca8879243d5d2e6c7022c1a1b46d27519"
+      "bytes": 17782,
+      "sha256": "5e037b009ade9049bac986dfc9dd1bd8639b406ecdbfde2fcb9f3271d49dad55"
     },
     "scripts/lean_syntax.py": {
       "bytes": 1801,
       "sha256": "9451fdcc7131208be4b91e26b1939ab2eab00fec3d5c175f2b8663b3ea894e34"
     },
     "scripts/verify-palomar.sh": {
-      "bytes": 4769,
-      "sha256": "91b5fbc200820327c657d56a43677b3ab94ba4c69020f4166ac0b1f34f0e2be2"
+      "bytes": 5329,
+      "sha256": "9f873b900a712b26b81d797c1cb88de72225ec42703c583079483c2dc2fb0da0"
     },
     "scripts/verify.sh": {
       "bytes": 2478,
@@ -11351,12 +11371,16 @@
       "sha256": "69407ba66177d56fd9f4082728bfb151f3be3372d26a3238063cf4b53df027c0"
     },
     "verification/PALOMAR-CURRENT-RESULTS.json": {
-      "bytes": 10268,
-      "sha256": "4a23a751eb8ae786764b4358891b0ee59876a7fed12cd162275652cd2ac321b0"
+      "bytes": 11949,
+      "sha256": "f12e0db81231aca9d8e99bfbefa79912309834931f19a1ff3b4fd07a05394d36"
+    },
+    "verification/PALOMAR-HALF-PLANE-RESULTS.json": {
+      "bytes": 10984,
+      "sha256": "31b86a497ea2dfa4350ea6418b1e0bd47d9da98d1e1892fc3cbe20dfaf293980"
     },
     "verification/PALOMAR-OFFICIAL-RESULTS.json": {
-      "bytes": 19796,
-      "sha256": "b6bf123650e8dfe001cec321a1b9b7b87a68e608facafd3e58b265539991fba6"
+      "bytes": 21385,
+      "sha256": "a7b5eeaad73cb4d277b81b6f42a5525dcb30c31861e6c9d354465597f6b6b409"
     },
     "verification/PALOMAR-RESULTS.json": {
       "bytes": 4501,
@@ -11394,6 +11418,10 @@
       "bytes": 444,
       "sha256": "b378564d076241193c27f163df8c5b41d0e02dd51db67e149637d06fc8422299"
     },
+    "verification/PalomarHalfPlaneReflectionAxioms.lean": {
+      "bytes": 2781,
+      "sha256": "5cc18e83dfbd63df92c228d066a4b82afd124ca1df3f9f6a2016365ba4ad84ac"
+    },
     "verification/PalomarPilotAxioms.lean": {
       "bytes": 93,
       "sha256": "4cd516ff220eefa7b46a0b847a739b37319be31a036085696009c5007add1efa"
@@ -11423,16 +11451,16 @@
       "sha256": "da4047d9a5977ba33b1c2cd7a62236429a707686d25a2929ec7b6f631b0e33cf"
     },
     "verification/expected-challenge-holes.json": {
-      "bytes": 15060,
-      "sha256": "22f711f86fdf8e80e2d4ef25913912aa8bcfd50812ce22c6cb263ed75ca32eb3"
+      "bytes": 18035,
+      "sha256": "9d3988ebb0ccd7b3cb827f077a2f9f64ed570d1ae6bcdd916e4192d3737c054d"
     },
     "verification/expected-exports.json": {
-      "bytes": 33600,
-      "sha256": "7f439a4409fd83ce011248915db5411fd1775427db631a2d4927204c0b514b19"
+      "bytes": 36157,
+      "sha256": "f360f7408b5363a7a1c8bb3dbc91f5c873ff0337574ef16e9e00181c64ec1fc1"
     },
     "verification/test_challenge_holes.py": {
-      "bytes": 17279,
-      "sha256": "02dbec36f6a95e866847fd9266629648e64673cfbc2ffea999b35db1ea2622ee"
+      "bytes": 22351,
+      "sha256": "66a20d34fa263df2840be14cea7261e13331534da20cd29ff7838f55bb51b82d"
     },
     "verification/test_lexer.py": {
       "bytes": 1129,
@@ -11444,8 +11472,8 @@
     "lakefile.toml": "fc584f814627e17c8368bc437d4f382b28085009b15f0eb9bf23a641fc49b219",
     "lake-manifest.json": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
   },
-  "file_list_sha256": "854034da2055c63e222e0a46660241579c0bd22725341bb625f127afc6d640ef",
-  "content_tree_sha256": "c304714ca9a21aa26379f9813aac5266f0cb32e5dd7d47572b2b41a87c44ee96",
+  "file_list_sha256": "a1c632a22ed6f0002f06078efdb5048161b183880b3c7c67d30c3a661f7bc5a2",
+  "content_tree_sha256": "abd7548ea05557aed6da8605888a67f4e122aa8072c2ed83b415bad19e51fa3b",
   "base_release_commit": "e1cfdce8ee7882a728df85747040e6969544fcb8",
   "publication_authorized": true,
   "preparation_only": true,

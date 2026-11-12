@@ -43,13 +43,15 @@ No custom definitions or extra assumptions are used.
 The standalone real-valued generalization is not advertised as the numbered
 paper lemma.
 
-The nine Challenge files deliberately contain eighty-two theorem proof holes:
-one optional pilot, six Appendix, fourteen each for Theorems 1.4, 1.7 and 1.8,
-thirty for Theorem 1.6, and one main-result hole each for Theorems 1.11, 1.12
-and 1.13. Production proofs and Solutions contain zero; there are no definition
-holes. The pinned v0.4 metadata convention excludes deliberate Challenge holes
-from `status.sorry_count`; separate Challenge and total-tree counts record all
-eighty-two. Integrity checks enforce the exact Challenge allowlist.
+The ten Challenge files deliberately contain 105 theorem proof holes: one
+optional pilot, six Appendix, fourteen each for Theorems 1.4, 1.7 and 1.8,
+thirty for Theorem 1.6, one main-result hole each for Theorems 1.11, 1.12 and
+1.13, and 23 for Proposition 5.9. Its 18 constructor certificates remain
+proved and separately compared. Production proofs and Solutions contain zero;
+there are no definition holes. The pinned v0.4 metadata convention excludes
+deliberate Challenge holes from `status.sorry_count`; separate Challenge and
+total-tree counts record all 105. Integrity checks enforce the exact Challenge
+allowlist.
 
 The pilot passed sandboxed Comparator, NanoDa and Lean kernel checks, and a
 separate source-fidelity review found no blocker. Local evidence is written to
@@ -81,10 +83,12 @@ tail exponent. General real-valued companion theorems are outside this selection
 
 ## Principal entries and status
 
-Seven principal entries (Theorems 1.4, 1.6, 1.7, 1.8, 1.11, 1.12 and 1.13)
-have locally validated standalone configurations and independent fidelity
-reviews. Their local results do not substitute for final official preflight.
-Propositions 5.9 and 5.16 remain pending standalone Challenge and local checks.
+Eight principal entries (Theorems 1.4, 1.6, 1.7, 1.8, 1.11, 1.12, 1.13 and
+Proposition 5.9) have locally validated standalone configurations. The seven
+Theorem entries retain their independent fidelity reviews; Proposition 5.9
+also has a separately documented source scope and normal Comparator/kernel
+receipt. These local results do not substitute for final official preflight.
+Proposition 5.16 remains pending its standalone Challenge and local checks.
 Each principal configuration is a separate entry; no entry has been registered.
 The existing source exports are under `DirectedDistances.Paper`. The new names
 are under `DLQG1.Palomar.Principal`.
@@ -98,16 +102,17 @@ are under `DLQG1.Palomar.Principal`.
 | 1.11 | `palomar/principal/boltzmann-distances.json` | `boltzmann_distances` | `Section1.thm_boltzmann_ldp` | Fixed right-boundary length and LEFT-vertex-marked Boltzmann space and law, plane-map isoclasses with edge identity, directed LDP/SDP and left-boundary vertex marking. Preserve one A(delta) for every size and all three bounds. | Local Comparator, NanoDa, Lean and fidelity review PASS; official final-commit run pending. |
 | 1.12 | `palomar/principal/cell-ldp.json` | `cell_ldp` | `Section1.thm_cell_ldp` | IID code law and exact KMSW finite stage, allocated/present vertices, directed paths and longest-path supremum, retaining existence and uniform upper bound with one A(delta). | Local Comparator, NanoDa, Lean and fidelity review PASS; official final-commit run pending. |
 | 1.13 | `palomar/principal/cell-sdp.json` | `cell_sdp` | `Section1.thm_cell_sdp` | The same finite-stage construction, ordered LL/LR/UL/UR boundary incidence, shortest-path semantics and boundary-hit witnesses; retain all three quantified clauses and the shared A(delta). | Local Comparator, NanoDa, Lean and fidelity review PASS; official final-commit run pending. |
-| 5.9 | `palomar/principal/half-plane-reflection.json` | `half_plane_reflection` | `Section5.prop_uihbot_sym` | Geometric rooted-map quotient and Borel structure, the actual half-plane law and geometric mirror, including the same missing geometric root with reversed ordered endpoints. | Pending standalone Challenge and local checks. |
+| 5.9 | `palomar/principal/half-plane-reflection.json` | `half_plane_reflection` | `Section5.prop_uihbot_sym` | Geometric rooted-map quotient and Borel structure, the actual half-plane law and geometric mirror, including the same missing geometric root with reversed ordered endpoints. | Local normal source Comparator, NanoDa, Lean default kernel and all 41 axiom probes PASS; official final-commit run pending. |
 | 5.16 | `palomar/principal/disk-local-limit.json` | `disk_local_limit` | `Section5.prop_disk_bs_conv` | Geometric rooted-map quotient/local topology and probability-law convergence, actual uniform finite class with independent mark and partial-map observable, and actual half-plane law. Preserve every admissibility, congruence and uniform square-root bound. | Pending standalone Challenge and local checks. |
 
 Theorem 1.11 passed normal source Comparator, Lean/NanoDa, axiom checks and
 independent fidelity review; its [exact coverage](PALOMAR-BOLTZMANN-DISTANCES.md)
 and [local receipt](../verification/PALOMAR-BOLTZMANN-RESULTS.json) are separate
 from official preflight. Theorems 1.4, 1.6, 1.7 and 1.8 also have their own
-coverage records and hash-bound local receipts. Propositions 5.9 and 5.16 are
-the only two principal statements still pending standalone Challenges and
-local checks. No failure of their existing Lean proofs is asserted.
+coverage records and hash-bound local receipts. Proposition 5.9 also has its
+separate coverage record and local receipt. Proposition 5.16 is the only
+principal statement still pending a standalone Challenge and local checks. No
+failure of its existing Lean proof is asserted.
 No global equality of the broad implementation map classes and the restricted
 source views is claimed. The existing source-domain membership and sampling-law
 transport must remain available when those actual objects are presented.
@@ -150,7 +155,7 @@ snapshots at the pinned pipeline revision.
 ## Local reproduction
 
 With the pinned dependencies available, `bash scripts/verify-palomar.sh` runs
-the exact Challenge-hole controls, all eight intended local Comparator configurations,
+the exact Challenge-hole controls, all nine intended local Comparator configurations,
 the optional A.2 pilot, and their exact Solution axiom probes. It retains each run in a distinct
 `.lake/palomar-evidence/verify-<UTC>-<pid>/` directory. It requires ordinary
 Comparator sandbox support and adds the submitted toolchain's real bin
@@ -180,10 +185,11 @@ The full original 90-entry verification remains `bash scripts/verify.sh`.
 Both workflows are manual-dispatch checks with no push or pull-request trigger.
 The root six-Appendix configuration passed the complete official full preflight
 at `e2e3be75d8e7b39eaf0d8ce24b504287421c4a41` on 12 November 2026.
-The Appendix pass and five subsequent principal passes are recorded in
+The Appendix pass and seven subsequent principal passes are recorded in
 [portable receipts](../verification/PALOMAR-OFFICIAL-RESULTS.json), with exact
-workflow URLs, configuration paths and report hashes. These six historical
-configurations cover eleven numbered results. A PASS is bound to its exact
+workflow URLs, configuration paths and report hashes. These eight historical
+configurations cover thirteen numbered results; Theorems 1.7 and 1.8 passed at
+`63dd637`. A PASS is bound to its exact
 commit and configuration; the final integration still requires all ten
 configurations to pass at the same exact commit. Local checks alone do not establish this gate.
 No Palomar editorial review, intake or registration has occurred.
@@ -204,8 +210,8 @@ source coverage, independent fidelity review, local kernel/axiom checks, and
 the official mechanical receipt. The separate pilot overlaps A.2 and is not an
 additional intended result. The nine principal configurations and the combined
 Appendix configuration cover fifteen results, not the whole 90-item catalogue.
-At this snapshot eight intended configurations (the Appendix plus seven principal
-entries) are locally validated; the two Proposition entries remain pending.
+At this snapshot nine intended configurations (the Appendix plus eight principal
+entries, including Proposition 5.9) are locally validated; Proposition 5.16 remains pending.
 
 Final submission requires separate human authorization. Do not initiate intake
 or registration as part of preparation.
@@ -227,7 +233,7 @@ actual identified LDP/SDP functions, both independent increment families, the
 paired tail constants and exponents, and the all-index integrability and mean
 clauses. Both entries passed normal source Comparator, NanoDa and default Lean
 checks with all 27 axiom targets per entry. Their final official checks remain
-pending with the other eight intended configurations.
+pending with the full all-ten configuration set.
 
 ## Implemented functional-convergence entry
 

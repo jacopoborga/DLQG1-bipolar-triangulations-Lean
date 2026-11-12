@@ -53,6 +53,6 @@ messages and log hashes.
 
 These are local results. The final official preflight still requires all ten
 intended configurations to pass at one exact final integration commit. The
-six historical official passes are bound to earlier commits and do not certify
-that later snapshot. Propositions 5.9 and 5.16 remain pending. No Palomar
+eight historical official passes are bound to earlier commits and do not certify
+that later snapshot. Proposition 5.16 remains pending. No Palomar
 intake or registration has occurred.

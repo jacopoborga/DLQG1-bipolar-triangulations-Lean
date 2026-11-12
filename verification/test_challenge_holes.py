@@ -22,6 +22,29 @@ class ChallengeHoles(unittest.TestCase):
   with self.assertRaises(ValueError):check_challenge_text(BASE.replace('result :','different :'),['Test.result'])
  def test_nested_comment_is_masked(self):
   check_challenge_text(BASE.replace('  sorry','  /- sorry /- admit -/ -/ sorry'),['Test.result'])
+ def test_anonymous_section_end_preserves_namespace(self):
+  text='module\nnamespace A.B\nsection\ntheorem before : True := by sorry\nend\ntheorem after : True := by sorry\nend A.B\n'
+  check_challenge_text(text,['A.B.before','A.B.after'])
+ def test_named_section_does_not_prefix_declaration_names(self):
+  text='module\nnamespace A\nsection Named\ntheorem result : True := by sorry\nend Named\nend A\n'
+  check_challenge_text(text,['A.result'])
+ def test_nested_namespace_and_reopened_namespace_under_section(self):
+  text='module\nsection Outer\nnamespace A\ntheorem inside : True := by sorry\nend A\nnamespace B\ntheorem after : True := by sorry\nend B\nend Outer\n'
+  check_challenge_text(text,['A.inside','B.after'])
+ def test_public_section_and_reopened_namespaces(self):
+  text='module\npublic section\nnamespace A\ntheorem first : True := by sorry\nend A\nnamespace B\ntheorem second : True := by sorry\nend B\n'
+  check_challenge_text(text,['A.first','B.second'])
+ def test_noncomputable_section_does_not_prefix_names(self):
+  text='module\nnoncomputable section\nnamespace A\ntheorem result : True := by sorry\nend A\n'
+  check_challenge_text(text,['A.result'])
+ def test_unlisted_hole_inside_section_is_rejected(self):
+  text='module\nnamespace Test\nsection\ntheorem result : True := by sorry\ntheorem extra : True := by sorry\nend\nend Test\n'
+  with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'])
+ def test_indented_scope_command_cannot_hide_proof_steps(self):
+  for command in ['namespace Hidden','section Hidden','end Test']:
+   with self.subTest(command=command):
+    text=BASE.replace('  sorry','  sorry\n  '+command)
+    with self.assertRaises(ValueError):check_challenge_text(text,['Test.result'])
  def test_admit_is_never_allowed(self):
   with self.assertRaises(ValueError):check_proof_tokens('Challenge.lean',BASE.replace('sorry','admit'),['Test.result'])
  def test_custom_axiom_is_never_allowed(self):
@@ -252,6 +275,56 @@ class ChallengeHoles(unittest.TestCase):
   config['challenge_module']='Palomar.Principal.BusemannTails.Challenge'
   config['solution_module']='Palomar.Principal.BusemannTails.Solution'
   spec['proved_auxiliaries'].append('DirectedDistances.Example.record._proof_999')
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def reflection_typing_fixture(self):
+  from check_release import REFLECTION_TYPING_AUXILIARIES
+  spec,config=self.busemann_typing_fixture()
+  spec['path']='Palomar/Principal/HalfPlaneReflection/Challenge.lean'
+  spec['solution_path']='Palomar/Principal/HalfPlaneReflection/Solution.lean'
+  spec['proved_auxiliaries']=sorted(REFLECTION_TYPING_AUXILIARIES)
+  config['challenge_module']='Palomar.Principal.HalfPlaneReflection.Challenge'
+  config['solution_module']='Palomar.Principal.HalfPlaneReflection.Solution'
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  return spec,config
+ def test_exact_reflection_eighteen_certificates_allowed(self):
+  from check_release import REFLECTION_NEW_TYPING_AUXILIARIES,REFLECTION_TYPING_AUXILIARIES
+  spec,config=self.reflection_typing_fixture()
+  self.assertEqual(len(spec['proved_auxiliaries']),18)
+  self.assertEqual(len(REFLECTION_TYPING_AUXILIARIES),18)
+  self.assertEqual(set(spec['proved_auxiliaries']) & set(REFLECTION_NEW_TYPING_AUXILIARIES),set(REFLECTION_NEW_TYPING_AUXILIARIES))
+  self.assertEqual(REFLECTION_NEW_TYPING_AUXILIARIES,frozenset((
+   'DirectedDistances.PaperProofs.Section5.uibhbotDefaultBlockLetterRel._proof_1',
+   'DirectedDistances.PlanarMap.Polyline.toPath._proof_3',
+   'DirectedDistances.PlanarMap.Polyline.toPath._proof_4',
+   'DirectedDistances.PlanarMap.ccwTurn._proof_1')))
+  check_challenge_config(spec,config)
+ def test_reflection_eighteen_changed_set_rejected(self):
+  spec,config=self.reflection_typing_fixture()
+  spec['proved_auxiliaries'][-1]='DirectedDistances.Example.record._proof_999'
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_reflection_nineteenth_certificate_rejected(self):
+  spec,config=self.reflection_typing_fixture()
+  spec['proved_auxiliaries'].append('DirectedDistances.Example.record._proof_999')
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_reflection_set_not_allowed_in_other_challenge(self):
+  spec,config=self.reflection_typing_fixture()
+  spec['path']='Palomar/Principal/DiskLocalLimit/Challenge.lean'
+  spec['solution_path']='Palomar/Principal/DiskLocalLimit/Solution.lean'
+  config['challenge_module']='Palomar.Principal.DiskLocalLimit.Challenge'
+  config['solution_module']='Palomar.Principal.DiskLocalLimit.Solution'
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_halfplane_source_exact_shared_import_allowed(self):
+  from check_release import allowed_palomar_import
+  self.assertTrue(allowed_palomar_import('Palomar/Principal/Support/HalfPlaneSource.lean','Palomar.Principal.Busemann.Solution'))
+ def test_halfplane_challenge_cannot_import_shared_solution(self):
+  from check_release import allowed_palomar_import
+  self.assertFalse(allowed_palomar_import('Palomar/Principal/HalfPlaneReflection/Challenge.lean','Palomar.Principal.Busemann.Solution'))
+ def test_reflection_seventeen_subset_rejected(self):
+  spec,config=self.reflection_typing_fixture()
+  spec['proved_auxiliaries'].pop()
   config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
   with self.assertRaises(ValueError):check_challenge_config(spec,config)
 if __name__=='__main__':unittest.main()

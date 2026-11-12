@@ -1,7 +1,7 @@
 {
-  "status": "PASS_LOCAL_EIGHT_INTENDED_CONFIGS; TWO_PROPOSITIONS_PENDING; FINAL_OFFICIAL_PREFLIGHT_PENDING",
-  "scope": "Current local Palomar campaign summary. Comparator selections remain separate from the unchanged 90-entry correspondence and 97 primary exports.",
-  "intended_local_configuration_count": 8,
+  "status": "PASS_LOCAL_NINE_INTENDED_CONFIGS; ONE_PROPOSITION_PENDING; FINAL_OFFICIAL_PREFLIGHT_PENDING",
+  "scope": "Current local Palomar campaign summary. The 90-entry correspondence and 97 primary exports are unchanged. Nine intended local configurations have local Comparator and kernel evidence; Proposition 5.16 remains pending. Eight historical official configurations cover thirteen distinct results at their listed earlier commits. The final all-ten exact-commit official preflight remains pending. No intake or registration.",
+  "intended_local_configuration_count": 9,
   "intended_local_configurations": [
     {
       "configuration": "comparator.json",
@@ -122,6 +122,21 @@
       "normal_source_comparator": true,
       "from_export": false,
       "sandbox_bypass": false
+    },
+    {
+      "configuration": "palomar/principal/half-plane-reflection.json",
+      "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+      "paper_results": [
+        "5.9"
+      ],
+      "receipt": "verification/PALOMAR-HALF-PLANE-RESULTS.json",
+      "main_declaration": "DLQG1.Palomar.Principal.half_plane_reflection",
+      "theorem_target_count": 41,
+      "challenge_holes": 23,
+      "definition_names": [],
+      "normal_source_comparator": true,
+      "from_export": false,
+      "sandbox_bypass": false
     }
   ],
   "optional_pilot": {
@@ -133,12 +148,6 @@
   },
   "pending_propositions": [
     {
-      "paper_result": "5.9",
-      "source_declaration": "DirectedDistances.Paper.Section5.prop_uihbot_sym",
-      "proposed_configuration": "palomar/principal/half-plane-reflection.json",
-      "status": "PENDING_STANDALONE_CHALLENGE_AND_LOCAL_CHECKS"
-    },
-    {
       "paper_result": "5.16",
       "source_declaration": "DirectedDistances.Paper.Section5.prop_disk_bs_conv",
       "proposed_configuration": "palomar/principal/disk-local-limit.json",
@@ -147,8 +156,8 @@
   ],
   "historical_official_preflight": {
     "status": "PASS_AT_THEIR_LISTED_EXACT_COMMITS",
-    "configuration_count": 6,
-    "distinct_paper_result_count": 11,
+    "configuration_count": 8,
+    "distinct_paper_result_count": 13,
     "configurations": [
       {
         "configuration": "palomar/principal/cell-sdp.json",
@@ -203,6 +212,24 @@
         "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43204652040",
         "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43204652040/artifacts/13940127120",
         "mechanical_report_sha256": "5e83fc7435e09d5c4c088cb2846134275f48d7c4b73af595bed73d9f1207c476"
+      },
+      {
+        "configuration": "palomar/principal/busemann-increments.json",
+        "exact_commit": "63dd63737332d70507250027b7942b93451b7c8a",
+        "status": "pass",
+        "run_id": 43218301835,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218301835",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218301835/artifacts/13947195358",
+        "mechanical_report_sha256": "5eac678d64df1518e3df907a4931ab2fa8516f54e83505ddbacc853302525ab2"
+      },
+      {
+        "configuration": "palomar/principal/busemann-tails.json",
+        "exact_commit": "63dd63737332d70507250027b7942b93451b7c8a",
+        "status": "pass",
+        "run_id": 43218309346,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218309346",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218309346/artifacts/13944999029",
+        "mechanical_report_sha256": "0c1c91f1df203638def15a64df8240fdfba408c8346e6920e6859f6ba5f516c1"
       }
     ],
     "source_receipts": "Official workflow/report hashes and URLs from the corresponding exact-commit live status records."
@@ -223,13 +250,13 @@
       "palomar/principal/half-plane-reflection.json",
       "palomar/principal/disk-local-limit.json"
     ],
-    "reason": "The six prior official passes bind earlier commits. All ten intended configurations must pass on one exact final integration commit."
+    "reason": "The eight historical official passes bind earlier commits. All ten intended configurations must pass on one exact final integration commit."
   },
   "challenge_holes": {
     "production": 0,
     "solutions": 0,
     "definitions": 0,
-    "explicit_challenge_theorem_holes": 82,
+    "explicit_challenge_theorem_holes": 105,
     "manifest": "verification/expected-challenge-holes.json"
   },
   "source_correspondence": {

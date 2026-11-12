@@ -1,5 +1,5 @@
 {
-  "scope": "Historical exact-commit official mechanical receipts only; a later commit requires its own checks. The six currently counted historical configurations cover eleven distinct paper results. No current all-ten final-commit pass, intake, or registration is claimed.",
+  "scope": "Historical exact-commit official mechanical receipts only; a later commit requires its own checks. Eight counted historical configurations cover thirteen distinct paper results. No current all-ten final-commit pass, intake, or registration is claimed.",
   "previous_appendix_receipt": {
     "scope": "Historical official mechanical receipts; PASS applies only to its named exact source commit/configuration. Not editorial review, intake or registration.",
     "reports": [
@@ -248,68 +248,6 @@
     "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111",
     "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111/artifacts/13934718924"
   },
-  "historical_six_configurations": {
-    "status": "PASS_AT_THEIR_LISTED_EXACT_COMMITS",
-    "configuration_count": 6,
-    "distinct_paper_result_count": 11,
-    "configurations": [
-      {
-        "configuration": "palomar/principal/cell-sdp.json",
-        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
-        "status": "pass",
-        "run_id": 43184093159,
-        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184093159",
-        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184093159/artifacts/13930280719",
-        "mechanical_report_sha256": "ad70ad66ab6b187adff2b91aaa95e5f8bf7326a6607ce6fa974cd937bd6ea132"
-      },
-      {
-        "configuration": "palomar/principal/cell-ldp.json",
-        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
-        "status": "pass",
-        "run_id": 43184086772,
-        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184086772",
-        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184086772/artifacts/13930296824",
-        "mechanical_report_sha256": "a35ede4f78bf1f458b5404d2d9b2b50f781da4c685d735e9a05a041fb57f491d"
-      },
-      {
-        "configuration": "palomar/principal/boltzmann-distances.json",
-        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
-        "status": "pass",
-        "run_id": 43184079849,
-        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184079849",
-        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184079849/artifacts/13929631929",
-        "mechanical_report_sha256": "c60d0d50d15e385b837c972d2f1910bfe9f506f044abf62ba8cc2f2b4a9abb76"
-      },
-      {
-        "configuration": "comparator.json",
-        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
-        "status": "pass",
-        "run_id": 43184073905,
-        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184073905",
-        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184073905/artifacts/13928655172",
-        "mechanical_report_sha256": "3b34fcdf66a159e554c01cb56d3fcd385abfc2ea980f44fe2fb7cf5b5c8b1b89"
-      },
-      {
-        "configuration": "palomar/principal/busemann.json",
-        "exact_commit": "2a368ad55f863be08051f8e0e138019d6228fc70",
-        "status": "pass",
-        "run_id": 43198552111,
-        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111",
-        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111/artifacts/13934718924",
-        "mechanical_report_sha256": "39c1679bfcd9aa9c351dcb1eeb97f38ec01def26bc1e8982ce63acdd20a54457"
-      },
-      {
-        "configuration": "palomar/principal/busemann-convergence.json",
-        "exact_commit": "66792ba592a0e263a9ccab5cad9774d21a40aae4",
-        "status": "pass",
-        "run_id": 43204652040,
-        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43204652040",
-        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43204652040/artifacts/13940127120",
-        "mechanical_report_sha256": "5e83fc7435e09d5c4c088cb2846134275f48d7c4b73af595bed73d9f1207c476"
-      }
-    ],
-    "source_receipts": "Official workflow/report hashes and URLs from the corresponding exact-commit live status records."
-  },
   "busemann_convergence_at_66792ba": {
     "status": "pass",
     "commit": "66792ba592a0e263a9ccab5cad9774d21a40aae4",
@@ -384,6 +322,108 @@
       "palomar/principal/half-plane-reflection.json",
       "palomar/principal/disk-local-limit.json"
     ],
-    "reason": "The six prior official passes bind earlier commits. All ten intended configurations must pass on one exact final integration commit."
+    "reason": "The eight historical official passes bind earlier commits. All ten intended configurations must pass on one exact final integration commit."
+  },
+  "historical_eight_configurations": {
+    "status": "PASS_AT_THEIR_LISTED_EXACT_COMMITS",
+    "configuration_count": 8,
+    "distinct_paper_result_count": 13,
+    "configurations": [
+      {
+        "configuration": "palomar/principal/cell-sdp.json",
+        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "pass",
+        "run_id": 43184093159,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184093159",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184093159/artifacts/13930280719",
+        "mechanical_report_sha256": "ad70ad66ab6b187adff2b91aaa95e5f8bf7326a6607ce6fa974cd937bd6ea132"
+      },
+      {
+        "configuration": "palomar/principal/cell-ldp.json",
+        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "pass",
+        "run_id": 43184086772,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184086772",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184086772/artifacts/13930296824",
+        "mechanical_report_sha256": "a35ede4f78bf1f458b5404d2d9b2b50f781da4c685d735e9a05a041fb57f491d"
+      },
+      {
+        "configuration": "palomar/principal/boltzmann-distances.json",
+        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "pass",
+        "run_id": 43184079849,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184079849",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184079849/artifacts/13929631929",
+        "mechanical_report_sha256": "c60d0d50d15e385b837c972d2f1910bfe9f506f044abf62ba8cc2f2b4a9abb76"
+      },
+      {
+        "configuration": "comparator.json",
+        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "pass",
+        "run_id": 43184073905,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184073905",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184073905/artifacts/13928655172",
+        "mechanical_report_sha256": "3b34fcdf66a159e554c01cb56d3fcd385abfc2ea980f44fe2fb7cf5b5c8b1b89"
+      },
+      {
+        "configuration": "palomar/principal/busemann.json",
+        "exact_commit": "2a368ad55f863be08051f8e0e138019d6228fc70",
+        "status": "pass",
+        "run_id": 43198552111,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111/artifacts/13934718924",
+        "mechanical_report_sha256": "39c1679bfcd9aa9c351dcb1eeb97f38ec01def26bc1e8982ce63acdd20a54457"
+      },
+      {
+        "configuration": "palomar/principal/busemann-convergence.json",
+        "exact_commit": "66792ba592a0e263a9ccab5cad9774d21a40aae4",
+        "status": "pass",
+        "run_id": 43204652040,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43204652040",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43204652040/artifacts/13940127120",
+        "mechanical_report_sha256": "5e83fc7435e09d5c4c088cb2846134275f48d7c4b73af595bed73d9f1207c476"
+      },
+      {
+        "configuration": "palomar/principal/busemann-increments.json",
+        "paper_results": [
+          "1.7"
+        ],
+        "exact_commit": "63dd63737332d70507250027b7942b93451b7c8a",
+        "status": "pass",
+        "run_id": 43218301835,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218301835",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218301835/artifacts/13947195358",
+        "mechanical_report_sha256": "5eac678d64df1518e3df907a4931ab2fa8516f54e83505ddbacc853302525ab2"
+      },
+      {
+        "configuration": "palomar/principal/busemann-tails.json",
+        "paper_results": [
+          "1.8"
+        ],
+        "exact_commit": "63dd63737332d70507250027b7942b93451b7c8a",
+        "status": "pass",
+        "run_id": 43218309346,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218309346",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43218309346/artifacts/13944999029",
+        "mechanical_report_sha256": "0c1c91f1df203638def15a64df8240fdfba408c8346e6920e6859f6ba5f516c1"
+      }
+    ],
+    "source_receipts": "Official workflow/report hashes and URLs from the corresponding exact-commit live status records; the final two entries were verified at 63dd63737332d70507250027b7942b93451b7c8a.",
+    "paper_result_coverage": [
+      "A.1",
+      "A.2",
+      "A.3",
+      "A.4",
+      "A.5",
+      "A.6",
+      "1.11",
+      "1.12",
+      "1.13",
+      "1.4",
+      "1.6",
+      "1.7",
+      "1.8"
+    ],
+    "updated_at_utc": "2026-11-12T13:03:53.607424Z"
   }
 }
