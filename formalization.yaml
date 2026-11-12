@@ -2,7 +2,7 @@
   "version": "v0.4",
   "project": {
     "name": "DLQG1-bipolar-triangulations-Lean",
-    "description": "Lean formalization of 90 numbered definitions/results and their required proof dependencies for directed distances on bipolar-oriented triangulations, with explicit source-domain bindings and rendering conventions.",
+    "description": "Lean formalization of 90 numbered definitions and results concerning directed distances in bipolar-oriented triangulations: geometric KMSW maps, Busemann functions and stable limits, Boltzmann and finite-cell distance estimates, half-plane symmetry and local limits, and six Appendix asymptotic/Tauberian lemmas. Explicit source-domain bindings and rendering conventions are recorded. Optional Palomar preparation selects the six Appendix lemmas; the A.2 pilot and six-lemma selection have separately passed local sandboxed Comparator, NanoDa and Lean checks; the complete official preflight remains unrun. Geometric principal-entry configurations are planned, not implemented; no Palomar registration is claimed.",
     "authors": [
       "Jacopo Borga"
     ],
@@ -26,14 +26,208 @@
     }
   ],
   "status": {
-    "scope": "90 numbered entries, required definitions and proof dependencies, with the source-domain views and explicit conventions in ERRATA-AND-DEVIATIONS.md.",
+    "scope": "90 numbered entries and required definitions/proof dependencies, with 97 primary exports and proved current-source domain views. The 17 rendering/scope notes and four approved unprinted conventions remain in docs/ERRATA-AND-DEVIATIONS.md. Comparator selections are separately bounded: the implemented A.2 pilot and root comparator.json selection of six Appendix lemmas separately passed local sandboxed Comparator, NanoDa and Lean checks; nine geometric principal configurations remain planned. Complete official preflight and Palomar intake/registration have not occurred.",
     "sorry_count": 0,
     "sorry_in_definitions": 0,
     "axioms": [
       "propext",
       "Classical.choice",
       "Quot.sound"
-    ]
+    ],
+    "main_results": [
+      {
+        "declaration": "DirectedDistances.Paper.Section1.thm_busemann",
+        "file": "DirectedDistances/Paper/Section1/BusemannM0.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "palomar_status": "planned; standalone Challenge definition surface not implemented",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.busemann"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.Section1.thm_busemann_conv",
+        "file": "DirectedDistances/Paper/Section1/BusemannConvergence.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "palomar_status": "planned; standalone Challenge definition surface not implemented",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.busemann_convergence"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.Section1.thm_busemann_property",
+        "file": "DirectedDistances/Paper/Section1/BusemannProperty.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "palomar_status": "planned; standalone Challenge definition surface not implemented",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.busemann_increments"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.Section1.thm_busemann_tail",
+        "file": "DirectedDistances/Paper/Section1/BusemannTail.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "palomar_status": "planned; standalone Challenge definition surface not implemented",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.busemann_tails"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.Section1.thm_boltzmann_ldp",
+        "file": "DirectedDistances/Paper/Section1/BoltzmannLDP.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "palomar_status": "planned; standalone Challenge definition surface not implemented",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.boltzmann_distances"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.Section1.thm_cell_ldp",
+        "file": "DirectedDistances/Paper/Section1/CellLDP.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "palomar_status": "planned; standalone Challenge definition surface not implemented",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.cell_ldp"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.Section1.thm_cell_sdp",
+        "file": "DirectedDistances/Paper/Section1/CellSDP.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "palomar_status": "planned; standalone Challenge definition surface not implemented",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.cell_sdp"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.Section5.prop_uihbot_sym",
+        "file": "DirectedDistances/Paper/Section5/UIHBOTSym.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "palomar_status": "planned; standalone Challenge definition surface not implemented",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.half_plane_reflection"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.Section5.prop_disk_bs_conv",
+        "file": "DirectedDistances/Paper/Section5/DiskBSConv.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "palomar_status": "planned; standalone Challenge definition surface not implemented",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.disk_local_limit"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.AppendixA.holomorphic_asymptotic",
+        "file": "DirectedDistances/Paper/AppendixA/HolomorphicAsymptotics.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "comparator_config": "comparator.json",
+        "compared_declaration": "DLQG1.Palomar.AppendixA.holomorphic_asymptotic",
+        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.AppendixA.tauberian",
+        "file": "DirectedDistances/Paper/AppendixA/Tauberian.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "comparator_config": "comparator.json",
+        "compared_declaration": "DLQG1.Palomar.AppendixA.tauberian",
+        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.AppendixA.tauberian_above_one",
+        "file": "DirectedDistances/Paper/AppendixA/TauberianAboveOne.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "comparator_config": "comparator.json",
+        "compared_declaration": "DLQG1.Palomar.AppendixA.tauberian_above_one",
+        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.AppendixA.positive_sine",
+        "file": "DirectedDistances/Paper/AppendixA/PositiveSine.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "comparator_config": "comparator.json",
+        "compared_declaration": "DLQG1.Palomar.AppendixA.positive_sine",
+        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.AppendixA.abel",
+        "file": "DirectedDistances/Paper/AppendixA/Abel.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "comparator_config": "comparator.json",
+        "compared_declaration": "DLQG1.Palomar.AppendixA.abel",
+        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+      },
+      {
+        "declaration": "DirectedDistances.Paper.AppendixA.riemann",
+        "file": "DirectedDistances/Paper/AppendixA/Riemann.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "comparator_config": "comparator.json",
+        "compared_declaration": "DLQG1.Palomar.AppendixA.riemann",
+        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+      }
+    ],
+    "sorry_count_scope": "Unresolved proof-development and Solution sorries, excluding the seven deliberate Comparator Challenge theorem holes as required by the pinned v0.4 metadata convention.",
+    "production_sorry_count": 0,
+    "solution_sorry_count": 0,
+    "challenge_sorry_count": 7,
+    "total_tree_sorry_count": 7,
+    "challenge_sorry_note": "One deliberate theorem hole in Palomar/Pilot/Challenge.lean and six in Palomar/AppendixA/Challenge.lean; no Challenge definition holes. The exact two-file allowlist and integrity checks enforce the separation."
   },
   "automation": {
     "methods": [
@@ -51,19 +245,90 @@
           "spend_usd": "not separately tracked (existing subscriptions and infrastructure)"
         },
         "prompting_notes": "Human supervision covered mathematical interpretation and corrections; separate agent reviews checked correspondence and integrity."
+      },
+      {
+        "method": "agent",
+        "models": [
+          "OpenAI Codex Sol",
+          "OpenAI Codex Luna"
+        ],
+        "framework": "Codex coding agents",
+        "tool_setup": "Bounded Palomar preparation with unchanged Lean/Mathlib pins; standalone Mathlib-only Challenge statements, sandboxed Comparator, NanoDa and Lean checks; metadata, documentation and manual workflow drafts.",
+        "prompting_notes": "Human-directed parallel preparation and separate review; no new Astra work. Source statements and the complete 90-entry correspondence are preserved."
       }
     ],
     "notes": "AI-assisted proof development and agent review do not replace Lean kernel checks or independent human mathematical review. Model names are family-level disclosures; this snapshot does not assert a complete per-run model ledger or exact spending totals."
   },
   "review": {
-    "status": "agent-reviewed; author-approved for public release",
+    "status": "agent-reviewed; v0.1.0 author-approved for public release; Palomar preparation pending final review",
     "reviewers": [
       "Independent coding-agent reviewers"
     ],
-    "notes": "Accepted statements retain their source and proof reviews. Explicit source-domain views account for revised standing conventions. Technical verification is recorded in VERIFICATION.md; the author completed final release review and approved publication."
+    "notes": "The v0.1.0 release retains its source/proof reviews, source-domain bindings and author publication approval. The natural-valued A.2 pilot passed local Comparator, NanoDa and Lean checks; a separate source-fidelity review found no blocker. The six-Appendix comparison separately passed local sandboxed Comparator, NanoDa and Lean kernel checks, and a separate source-fidelity review found no blocker for all six statements. The complete hosted official preflight remains unrun. No external human peer review or Palomar editorial review/registration is asserted."
   },
   "fidelity": {
-    "divergences": "See ERRATA-AND-DEVIATIONS.md and CORRESPONDENCE.json for precise rendering conventions, broader implementation carriers and proved source-domain bindings."
+    "divergences": "See docs/ERRATA-AND-DEVIATIONS.md and CORRESPONDENCE.json: 17 designated rendering/scope notes, including four approved conventions still unprinted in the current manuscript, plus broader generic implementation carriers with proved restricted source views and actual-object/law bindings. The Appendix selection uses the natural-valued numbered A.2/A.3 statements, not their real-valued companion generalizations. No novelty is claimed."
   },
-  "acknowledgements": "Lean 4, Mathlib, Lake, elan; release workflow adapted from Scott Armstrong."
+  "acknowledgements": "Lean 4, Mathlib, Lake, elan; release workflow adapted from Scott Armstrong.",
+  "classification": {
+    "arxiv": [
+      "math.PR",
+      "math.CO"
+    ],
+    "msc2020": [
+      "60D05",
+      "60F05",
+      "05C10",
+      "40E05"
+    ]
+  },
+  "metadata_standard": {
+    "version": "v0.4",
+    "repository": "mathlib-initiative/formalization.yaml",
+    "revision": "99c678e569c7c4c0772db297c5ddd5e4c9b6322e"
+  },
+  "alignment": {
+    "catalogue": "CORRESPONDENCE.json",
+    "entry_count": 90,
+    "primary_export_count": 97,
+    "current_manuscript_archive_sha256": "85306d3050f88727cbff01ea54ca3023f7c75a38ab770e49802108bf87ecc84b",
+    "rendering_scope_notes": 17,
+    "approved_unprinted_conventions": 4,
+    "palomar_preparation": "docs/PALOMAR-PREPARATION.md"
+  },
+  "palomar_preparation": {
+    "baseline_public_revision": "e1cfdce8ee7882a728df85747040e6969544fcb8",
+    "policy_revision": "28bd48b9b71bbb2a82c718ce761d5a4220ef8e60",
+    "pipeline_revision": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+    "taxonomy_verified_at_pipeline_revision": true,
+    "pilot": {
+      "comparator_config": "palomar/comparator-pilot.json",
+      "declaration": "DLQG1.Palomar.tauberian_below_one",
+      "source": "DirectedDistances.Paper.AppendixA.tauberian",
+      "local_checks": "passed sandboxed Comparator, NanoDa and Lean kernel checks",
+      "independent_source_review": "no blocker found"
+    },
+    "selected_config": {
+      "path": "comparator.json",
+      "scope": "six numbered Appendix lemmas A.1-A.6",
+      "compared_declarations": [
+        "DLQG1.Palomar.AppendixA.holomorphic_asymptotic",
+        "DLQG1.Palomar.AppendixA.tauberian",
+        "DLQG1.Palomar.AppendixA.tauberian_above_one",
+        "DLQG1.Palomar.AppendixA.positive_sine",
+        "DLQG1.Palomar.AppendixA.abel",
+        "DLQG1.Palomar.AppendixA.riemann"
+      ],
+      "status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run",
+      "independent_source_review": "no blocker found for all six statements",
+      "elapsed_seconds": 100.49,
+      "max_rss_kib": 729244,
+      "exit_code": 0
+    },
+    "official_preflight": "NOT RUN; requires approved public push of exact snapshot",
+    "principal_configs": "9 planned, not implemented",
+    "intake": "not performed",
+    "registration": "not performed",
+    "portable_comparison_receipts": "verification/PALOMAR-RESULTS.json"
+  }
 }

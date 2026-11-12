@@ -1,5 +1,10 @@
 # DLQG1: bipolar triangulations in Lean
 
+[![Lean verification](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/workflows/lean.yml/badge.svg)](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/workflows/lean.yml)
+[![Comparator official preflight](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/workflows/comparator.yml/badge.svg)](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/workflows/comparator.yml)
+
+Both workflows are manual-dispatch preparation drafts. Hosted checks have not run for these changes.
+
 A Lean 4 / Mathlib development of **90 numbered definitions, theorems, propositions and lemmas**, including Appendix A, associated with *Directed distances in bipolar-oriented triangulations: exact exponents and scaling limits* by **Jacopo Borga and Ewain Gwynne** ([arXiv:2510.26123](https://arxiv.org/abs/2510.26123)).
 
 **Author-approved public release.** The accepted 90-item statements are preserved. The correspondence table uses the current author-supplied manuscript. Additional source-domain views and supporting proofs account for its revised boundary conventions; the general implementation interfaces remain available. The precise rendering conventions are recorded below.
@@ -26,7 +31,7 @@ Definition 3.17 is represented by a source-facing view that combines the general
 
 ## Errata and deviations
 
-There are **17 numbered entries with explicit rendering or scope notes**. The [deviations record](docs/ERRATA-AND-DEVIATIONS.md) gives counts by source section and distinguishes proved source-domain bindings from previously approved conventions that are not yet literal in the supplied text. These notes are part of the correspondence claim.
+There are **17 numbered entries with explicit rendering or scope notes**, including **four approved conventions still unprinted in the manuscript**. The [deviations record](docs/ERRATA-AND-DEVIATIONS.md) gives counts by source section and distinguishes proved source-domain bindings from previously approved conventions that are not yet literal in the supplied text. These notes are part of the correspondence claim.
 
 ## Building and verification
 
@@ -40,11 +45,41 @@ The script builds pinned dependencies when their compiled cache is unavailable. 
 
 The axiom probes list every advertised wrapper and the required implementation exports. The expected foundational axioms are `propext`, `Classical.choice` and `Quot.sound`. The fresh replay checks the compiled proof terms; correspondence review separately addresses their mathematical interpretation.
 
+## Palomar preparation
+
+This preparation keeps the complete 90-entry correspondence separate from
+optional Comparator selections. The natural-valued Appendix A.2 pilot
+(`palomar/comparator-pilot.json`,
+`DLQG1.Palomar.tauberian_below_one`) passed sandboxed Comparator, NanoDa and
+Lean kernel checks, with no blocker from a separate source-fidelity review.
+The root `comparator.json` selects the six numbered Appendix lemmas under
+`DLQG1.Palomar.AppendixA`; it separately passed local sandboxed Comparator, NanoDa and Lean checks.
+A separate source-fidelity review found no blocker for all six statements.
+
+The seven introductory theorems, including Theorem 1.13, and Propositions 5.9
+and 5.16 have a [planned principal-entry map](docs/PALOMAR-PREPARATION.md).
+Their standalone Mathlib-only Challenge definitions and comparisons are not
+implemented. No configuration claims that all 90 entries have been compared
+or registered.
+
+Run `bash scripts/verify-palomar.sh` to reproduce both local configurations,
+Challenge-hole controls and all seven Solution axiom audits. The generated
+logs are below `.lake/palomar-evidence/verify-<UTC>-<pid>/`; the portable
+[comparison receipts](verification/PALOMAR-RESULTS.json) record the checked scope.
+
+The [preparation record](docs/PALOMAR-PREPARATION.md) pins the policy, metadata
+schema and official verification pipeline, explains each selection and lists
+the remaining definition obligations. The two workflow badges above are draft
+manual checks: Lean source/axiom/kernel verification and the official reusable
+Comparator preflight. **The complete official preflight is NOT RUN** until an
+approved public push supplies the exact final commit. Preparation and local
+checks do not perform Palomar intake, editorial review or registration.
+
 ## How this was built
 
 AI coding agents produced the Lean development under **Jacopo Borga’s supervision**. Human decisions covered mathematical interpretation and corrections; Lean checked the formal proof terms. Separate agent reviews examined source correspondence and release integrity. This is distinct from external human peer review.
 
-Development used OpenAI Codex models in the Sol, Luna and Astra families and Anthropic Claude models. This public-release preparation and its independent reviews use Sol, with no new Astra work. Tools, review scope and the limits of available cost information are recorded in [formalization.yaml](formalization.yaml). Total subscription and infrastructure spending was not separately tracked for this export.
+Development used OpenAI Codex models in the Sol, Luna and Astra families and Anthropic Claude models. The v0.1.0 public-release preparation and independent reviews used Sol. The Palomar preparation uses Sol and Luna agents, with no new Astra work. Tools, review scope and the limits of available cost information are recorded in [formalization.yaml](formalization.yaml). Total subscription and infrastructure spending was not separately tracked for this export.
 
 ## Credits and citation
 

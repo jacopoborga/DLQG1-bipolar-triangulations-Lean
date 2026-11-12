@@ -1,0 +1,13 @@
+{
+  "challenge_module": "Palomar.Pilot.Challenge",
+  "solution_module": "Palomar.Pilot.Solution",
+  "theorem_names": [
+    "DLQG1.Palomar.tauberian_below_one"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

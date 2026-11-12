@@ -1,0 +1,115 @@
+{
+  "status": "PREPARATION_LOCAL_COMPARATOR_PASS",
+  "base_release_commit": "e1cfdce8ee7882a728df85747040e6969544fcb8",
+  "prepared_branch": "palomar/prepare-v0.1.0-20261112",
+  "production_lean_files_unchanged": 2775,
+  "toolchain_unchanged": true,
+  "mathlib_manifest_unchanged": true,
+  "complete_90_entry_correspondence_unchanged": true,
+  "historical_verification_receipts_unchanged": true,
+  "comparison_configurations": [
+    {
+      "config": "palomar/comparator-pilot.json",
+      "theorems": [
+        "DLQG1.Palomar.tauberian_below_one"
+      ],
+      "definition_names": [],
+      "challenge_module": "Palomar.Pilot.Challenge",
+      "solution_module": "Palomar.Pilot.Solution",
+      "challenge_lines": 52,
+      "challenge_bytes": 2374,
+      "challenge_sha256": "5290d0cf15e3e5c2b0fb0d0684d1f0f981f03ff05864ff7604407de7e89134d7",
+      "solution_sha256": "ac57e244b47898074992f40dd5d19d330b403e91152f07183860b059443ad310",
+      "local_comparator": "PASS",
+      "lean_kernel": "PASS",
+      "nanoda": "PASS",
+      "log_sha256": "4f94b64fb03f37c8ea616601cca85039141dd104f7aef1f4577888b494280361"
+    },
+    {
+      "config": "comparator.json",
+      "theorems": [
+        "DLQG1.Palomar.AppendixA.holomorphic_asymptotic",
+        "DLQG1.Palomar.AppendixA.tauberian",
+        "DLQG1.Palomar.AppendixA.tauberian_above_one",
+        "DLQG1.Palomar.AppendixA.positive_sine",
+        "DLQG1.Palomar.AppendixA.abel",
+        "DLQG1.Palomar.AppendixA.riemann"
+      ],
+      "definition_names": [],
+      "challenge_module": "Palomar.AppendixA.Challenge",
+      "solution_module": "Palomar.AppendixA.Solution",
+      "challenge_lines": 142,
+      "challenge_bytes": 7254,
+      "challenge_sha256": "ac2903cbafe3cf2a45eca5e4ab673f6ffb0223e8cb66d7df7a8ed6d029e67eb5",
+      "solution_sha256": "b3d10f6355d4ef631d77fa4b9cfb4e9e09b466337b76e9eed986ee4a62a86eab",
+      "local_comparator": "PASS",
+      "lean_kernel": "PASS",
+      "nanoda": "PASS",
+      "log_sha256": "87328ba035e654d54565170c1d74c465ce7484cb82bbe82f65e2cde5371dbae7"
+    }
+  ],
+  "independent_statement_review": "PASS all six full accepted types; no additional premises, definitions or identification assumptions",
+  "integrity_controls": {
+    "total": 15,
+    "negative": 12,
+    "positive": 3,
+    "lexer_tests": 6
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "solution_axiom_audits": {
+    "status": "PASS",
+    "pilot_declarations": 1,
+    "appendix_declarations": 6,
+    "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "pilot_log_sha256": "710fc838702d810b5b148312c6d691922b5a45bec917beb4219b8c7efcd84ea3",
+    "appendix_log_sha256": "d1e2ed16688904f63faa00bcf9edbb1b82d198d6863dd7922128acffd76b1015"
+  },
+  "challenge_holes": 7,
+  "production_and_solution_holes": 0,
+  "definition_holes": 0,
+  "official_preflight": {
+    "status": "NOT_RUN",
+    "reason": "Requires review approval to commit/push the preparation snapshot and install its manual caller on the default branch (e.g. reviewed merge); a branch-only push is insufficient for workflow_dispatch. Then run the pinned full workflow at the exact selected commit. Local checks are not that report.",
+    "pipeline_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+    "policy_commit": "28bd48b9b71bbb2a82c718ce761d5a4220ef8e60",
+    "metadata_standard_commit": "99c678e569c7c4c0772db297c5ddd5e4c9b6322e",
+    "github_actions_enabled": true,
+    "default_branch_workflow_bootstrap_required": true
+  },
+  "registry_entries": 0,
+  "intake_initiated": false,
+  "public_push_performed": false,
+  "appendix_run_resources": {
+    "elapsed_seconds": 100.49,
+    "max_rss_kib": 729244,
+    "exit": 0
+  },
+  "challenge_dependency_audit": {
+    "status": "PASS",
+    "source_modules_per_challenge": 4412,
+    "project_specific_dependencies": 0,
+    "allowed": "Lean core and exact canonical Mathlib revision plus its pinned dependency closure"
+  },
+  "shipped_verifier": {
+    "command": "bash scripts/verify-palomar.sh",
+    "exit": 0,
+    "completed_utc": "2026-11-12T03:48:06.081790+00:00",
+    "source_integrity": "PASS",
+    "hole_controls": {
+      "negative": 12,
+      "positive": 3
+    },
+    "lexer_tests": 6,
+    "both_comparators_and_both_kernel_checks": "PASS",
+    "pilot_comparator_log_sha256": "41d29903e31e33ad5c8bea7dc34491cb739df948eb770e3ce28b9b35f6db836b",
+    "appendix_comparator_log_sha256": "4b12a78db33e0d1e8283f6038e07e71ee24a22afeedaad800c403d42dbae518f"
+  }
+}

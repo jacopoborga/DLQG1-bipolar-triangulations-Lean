@@ -373,6 +373,17 @@
       "DirectedDistances.PlanarMap.KMSWMapRep.isSourceBoundaryChanneled_iff_right_one",
       "DirectedDistances.PaperProofs.Section5.Prop516ExteriorAssembly5.finiteGeometricLaw_sourceView_filter_eq",
       "DirectedDistances.KMSW.finiteIsoClass_source_boundary_domain"
+    ],
+    "PalomarPilot": [
+      "DLQG1.Palomar.tauberian_below_one"
+    ],
+    "PalomarAppendix": [
+      "DLQG1.Palomar.AppendixA.holomorphic_asymptotic",
+      "DLQG1.Palomar.AppendixA.tauberian",
+      "DLQG1.Palomar.AppendixA.tauberian_above_one",
+      "DLQG1.Palomar.AppendixA.positive_sine",
+      "DLQG1.Palomar.AppendixA.abel",
+      "DLQG1.Palomar.AppendixA.riemann"
     ]
   },
   "allowed_axioms": [
