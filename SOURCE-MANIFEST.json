@@ -3,8 +3,8 @@
   "scope": "Verified 90-item public release with a minimal pinned manual Palomar preflight caller. Accepted Lean sources, pins and correspondence are unchanged. No manuscript, supplementary collection, private history or campaign records.",
   "files": {
     ".github/workflows/comparator.yml": {
-      "bytes": 606,
-      "sha256": "b3a662cfbdfa906ce95da82e26926fa4857c40c7b31112f3b24561ebebe8cacb"
+      "bytes": 1487,
+      "sha256": "c41da5e8a2a052ee98f983592d8277125b1eeddcfac15e78833373e3d1372a14"
     },
     ".gitignore": {
       "bytes": 50,
@@ -11205,6 +11205,6 @@
     "lake-manifest.json": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
   },
   "file_list_sha256": "f228e8d8300b20bd65d7345580944c57f959459476394e147622896b7e9e3e90",
-  "content_tree_sha256": "ebf9b3c51c77dc0f9fe8f8967c0bf651efa8da04aff52ec8c7b114cfad3982bd",
+  "content_tree_sha256": "6d202c93bdf0124ab518f088aab655cbc080873c82129762b29631d005b25ed6",
   "publication_authorized": true
 }

@@ -2,6 +2,29 @@ name: Comparator official preflight
 
 on:
   workflow_dispatch:
+    inputs:
+      configuration:
+        description: Reviewed Comparator configuration to check
+        required: true
+        default: comparator.json
+        type: choice
+        options:
+          - comparator.json
+          - palomar/principal/busemann.json
+          - palomar/principal/busemann-convergence.json
+          - palomar/principal/busemann-increments.json
+          - palomar/principal/busemann-tails.json
+          - palomar/principal/boltzmann-distances.json
+          - palomar/principal/cell-ldp.json
+          - palomar/principal/cell-sdp.json
+          - palomar/principal/half-plane-reflection.json
+          - palomar/principal/disk-local-limit.json
+
+      request_id:
+        description: Exactly 12 lowercase letters or digits for this preflight
+        required: true
+        default: dlqgprep0001
+        type: string
 
 permissions:
   contents: read
@@ -13,7 +36,8 @@ jobs:
       repository: ${{ github.repository }}
       commit: ${{ github.sha }}
       pipeline_commit: 14aa8d6b3c2f14a8540605e37144560b9a00e7e7
-      request_id: dlqgprep0001
+      request_id: ${{ inputs.request_id }}
       mode: full
       execution_profile: palomar-standard-v1
-      options: '{"comparator_config_path":"comparator.json","authorization_relationship":"I am a responsible author or maintainer"}'
+      options: >-
+        {"comparator_config_path":"${{ inputs.configuration }}","authorization_relationship":"I am a responsible author or maintainer"}
