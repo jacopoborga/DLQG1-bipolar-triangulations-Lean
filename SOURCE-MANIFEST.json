@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "scope": "Accepted90-item public formalization with Appendix/pilot and five locally validated principal configurations; four planned entries remain. No intake/registration. Baseline production sources/pins/correspondence preserved, all publication exclusions enforced.",
+  "scope": "Accepted 90-entry public formalization with the Appendix selection, optional A.2 pilot and seven locally validated principal configurations; Propositions 5.9 and 5.16 remain pending. Eight intended local configurations (Appendix plus seven principal entries) are complete. Six historical official configurations cover eleven numbered results at prior exact commits; the final all-ten exact-commit preflight remains pending. No intake or registration. Baseline production sources, pins and correspondence preserved; publication exclusions enforced.",
   "files": {
     ".github/workflows/comparator.yml": {
       "bytes": 1487,
@@ -25,6 +25,10 @@
     "CORRESPONDENCE.md": {
       "bytes": 24026,
       "sha256": "bad34f215c24266500dbe683d6f2d7e5b725579d9b966680bc3306b6ead07bf3"
+    },
+    "DirectedDistances.lean": {
+      "bytes": 64,
+      "sha256": "acb717e9f2b471b9bc884c958a79606ce1c7d3e7dd1891e8d45267be54760d7d"
     },
     "DirectedDistances/DeliveryVerificationRoot.lean": {
       "bytes": 6628,
@@ -11094,10 +11098,6 @@
       "bytes": 11232,
       "sha256": "7bbd141519d5c64379188faeb909f5c9bc0e1346bc90037e66779f7555a63d94"
     },
-    "DirectedDistances.lean": {
-      "bytes": 64,
-      "sha256": "acb717e9f2b471b9bc884c958a79606ce1c7d3e7dd1891e8d45267be54760d7d"
-    },
     "ERRATA-AND-DEVIATIONS.md": {
       "bytes": 170,
       "sha256": "f87e0d6d54297e36f1e68b4fa3bf9983a267e549d09a0e4fb1786508daeede52"
@@ -11154,6 +11154,22 @@
       "bytes": 5740,
       "sha256": "c37065592719c6273e9f58fafc71d07669bbf30d012736193340255a6b0820be"
     },
+    "Palomar/Principal/BusemannIncrements/Challenge.lean": {
+      "bytes": 46790,
+      "sha256": "49ee56d6a167476d1d3311e3d3a6cc4df6ba5c1beb9e18bcac1ba66824951522"
+    },
+    "Palomar/Principal/BusemannIncrements/Solution.lean": {
+      "bytes": 5093,
+      "sha256": "4f4d71055477776c7dfae559dc85e313101a0fe0866da452218faeebeed0fb30"
+    },
+    "Palomar/Principal/BusemannTails/Challenge.lean": {
+      "bytes": 44950,
+      "sha256": "48914b29c5d3c2add29ee46cb9fc7dba964037a8312c7bf733c08baf698fbf0b"
+    },
+    "Palomar/Principal/BusemannTails/Solution.lean": {
+      "bytes": 3290,
+      "sha256": "efd278e823640d4433c1cf1ef95dc92476386cd180fd241c0cb0a5ab08303d65"
+    },
     "Palomar/Principal/CellLDP/Challenge.lean": {
       "bytes": 10800,
       "sha256": "bf6eb98364240ce830cdb8bc92f01afe3abfca2fbbdd5d426a4789de1beb48e1"
@@ -11183,12 +11199,12 @@
       "sha256": "6dabde0811997934b8ba60eef1f67324d2884104fedca4a270952badf45caa51"
     },
     "README.md": {
-      "bytes": 10498,
-      "sha256": "bfd70d8acc633899e58f92fe0508d86882edeef20acf1534e49b22146ac0938d"
+      "bytes": 10451,
+      "sha256": "316f772047f2b8de1c9c4d7f03c5b10ca6663ce3e4878c4f7c5404f824e89e37"
     },
     "VERIFICATION.md": {
-      "bytes": 4545,
-      "sha256": "b7c8a99369d21c7c319ac9f7350b91727226ed58e801c5b62b88dcaf8301076a"
+      "bytes": 4937,
+      "sha256": "ecc128538ac69f969f7b50ff86214238e47a9a95778de6f758711725cf87cfde"
     },
     "comparator.json": {
       "bytes": 534,
@@ -11201,6 +11217,10 @@
     "docs/PALOMAR-BOLTZMANN-DISTANCES.md": {
       "bytes": 4068,
       "sha256": "51739e2ed779bf6ca8a5bf74d5d0eef91448b3ffb807f01d646e8bd36a8036c4"
+    },
+    "docs/PALOMAR-BUSEMANN-PROPERTIES.md": {
+      "bytes": 3236,
+      "sha256": "217a7ab7e5e0e8ea529460bfe84f1fa360c9ccd7e16c8e6930f33e8901e62a3b"
     },
     "docs/PALOMAR-BUSEMANN.md": {
       "bytes": 5837,
@@ -11219,20 +11239,20 @@
       "sha256": "453330104435dc4d458c25d5efa342fc99196b294e8c7273e4e6a33b4121bf2f"
     },
     "docs/PALOMAR-PREPARATION.md": {
-      "bytes": 16035,
-      "sha256": "aa874200835bf1d1343dd40d014109de6929f5f9a328709c308753b0e5c49f18"
+      "bytes": 17607,
+      "sha256": "29d2615881a82f2f8f7f8b56ca1f94e782d23aa6c425277c747624e6648bfd1f"
     },
     "formalization.yaml": {
-      "bytes": 24465,
-      "sha256": "c8f0100c9710d8f1dbdbb91af6c59a63b6a0066391dbc2d97922ef1f6b2b3dd1"
+      "bytes": 31465,
+      "sha256": "274051377cdb2687a0139c02dd01530b788a87441e9b499f132e06e7c1778273"
     },
     "lake-manifest.json": {
       "bytes": 3159,
       "sha256": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
     },
     "lakefile.toml": {
-      "bytes": 1106,
-      "sha256": "f7da090ba7e747b3cb64eebfcb9d0b059111df97125ff95fc00ac995974ec06b"
+      "bytes": 1294,
+      "sha256": "dbc3fe9bc1ebfd61db18f45e2ebacb5e2050fcc163b3c4586863d30e9692b9ad"
     },
     "lean-toolchain": {
       "bytes": 29,
@@ -11250,6 +11270,14 @@
       "bytes": 2911,
       "sha256": "d4fdb11d4a9d48c90e486e38c6caca9c1a4677c7d4ba24ad97c4d8813b5a4c74"
     },
+    "palomar/principal/busemann-increments.json": {
+      "bytes": 1841,
+      "sha256": "f54ee2013271c2a3cbac30da303d66a47e18e1a8afa8ea3094d811ed025c6135"
+    },
+    "palomar/principal/busemann-tails.json": {
+      "bytes": 1826,
+      "sha256": "bde6f1fa329b8238e1c53815b66bae22cf06a49a3c80dc7a2da925d7c5dfd356"
+    },
     "palomar/principal/busemann.json": {
       "bytes": 1810,
       "sha256": "36bbffc1b3eddf1c9937a161cba977e4535f9ca14887ad7317dc0666399ec030"
@@ -11263,16 +11291,16 @@
       "sha256": "0fbbcf8b7828d55500aaf5d4cb500fe9a5716aabd6e40263872861ee81d712f6"
     },
     "scripts/check_release.py": {
-      "bytes": 15272,
-      "sha256": "6fbe7cc9b32e704732f8d60047c0b04c29959d4ff85a13577722e2e5deb5b217"
+      "bytes": 15375,
+      "sha256": "d8129a6c8734e9eab64b96857f3875fca8879243d5d2e6c7022c1a1b46d27519"
     },
     "scripts/lean_syntax.py": {
       "bytes": 1801,
       "sha256": "9451fdcc7131208be4b91e26b1939ab2eab00fec3d5c175f2b8663b3ea894e34"
     },
     "scripts/verify-palomar.sh": {
-      "bytes": 3716,
-      "sha256": "6dd3934ed611046566a83d3d79b1df8f2049b49baddcfd1c6268e89f98a804ea"
+      "bytes": 4769,
+      "sha256": "91b5fbc200820327c657d56a43677b3ab94ba4c69020f4166ac0b1f34f0e2be2"
     },
     "scripts/verify.sh": {
       "bytes": 2478,
@@ -11298,9 +11326,17 @@
       "bytes": 3289,
       "sha256": "d091b9b1b784563882a36b83435931c65356362ef5fbdaec325a6f162970f85e"
     },
+    "verification/PALOMAR-BUSEMANN-INCREMENTS-RESULTS.json": {
+      "bytes": 8914,
+      "sha256": "fc18714cb2d82ca3aedd8b1b5efc8ef7880400e75d5f3ecb0697f4214142b83b"
+    },
     "verification/PALOMAR-BUSEMANN-RESULTS.json": {
       "bytes": 6775,
       "sha256": "72a32a68fdc11ef99cacf5ac393ed8cd6cb7e838375098c21a64d6169517d1cd"
+    },
+    "verification/PALOMAR-BUSEMANN-TAILS-RESULTS.json": {
+      "bytes": 8854,
+      "sha256": "ae299dbc9eb9f26ba54737777570135572803219745fdeeb90e715bce6367c5f"
     },
     "verification/PALOMAR-CELLLDP-RESULTS.json": {
       "bytes": 2480,
@@ -11314,9 +11350,13 @@
       "bytes": 10429,
       "sha256": "69407ba66177d56fd9f4082728bfb151f3be3372d26a3238063cf4b53df027c0"
     },
+    "verification/PALOMAR-CURRENT-RESULTS.json": {
+      "bytes": 10268,
+      "sha256": "4a23a751eb8ae786764b4358891b0ee59876a7fed12cd162275652cd2ac321b0"
+    },
     "verification/PALOMAR-OFFICIAL-RESULTS.json": {
-      "bytes": 11818,
-      "sha256": "25184f4a57f156bc885c88e913b49a5ed3fc8aee37c077af862a58a94eca1f66"
+      "bytes": 19796,
+      "sha256": "b6bf123650e8dfe001cec321a1b9b7b87a68e608facafd3e58b265539991fba6"
     },
     "verification/PALOMAR-RESULTS.json": {
       "bytes": 4501,
@@ -11337,6 +11377,14 @@
     "verification/PalomarBusemannConvergenceAxioms.lean": {
       "bytes": 2988,
       "sha256": "c79722d8ef322efc0266067f2d118bc9ce2c1fa78c3e1de042c303887c3857f0"
+    },
+    "verification/PalomarBusemannIncrementsAxioms.lean": {
+      "bytes": 1807,
+      "sha256": "c05ecced2fa097a2b568fa4f6a52cd005599e3416d91d01ee79a2050ca51d91f"
+    },
+    "verification/PalomarBusemannTailsAxioms.lean": {
+      "bytes": 1797,
+      "sha256": "cc6bd27b26c7cb0707ede09996c570f6acd024a3d996aafab1e96a281704ee52"
     },
     "verification/PalomarCellLDPAxioms.lean": {
       "bytes": 320,
@@ -11375,16 +11423,16 @@
       "sha256": "da4047d9a5977ba33b1c2cd7a62236429a707686d25a2929ec7b6f631b0e33cf"
     },
     "verification/expected-challenge-holes.json": {
-      "bytes": 11046,
-      "sha256": "f8b4f1db28714263d43a7545717cad3b59e34cf0ae16278591bd4d17e27c25d5"
+      "bytes": 15060,
+      "sha256": "22f711f86fdf8e80e2d4ef25913912aa8bcfd50812ce22c6cb263ed75ca32eb3"
     },
     "verification/expected-exports.json": {
-      "bytes": 30350,
-      "sha256": "6e83de631b14265bf1c7b316caf19f02c39571bc3a21f0ac7f093cc2a63dd8e3"
+      "bytes": 33600,
+      "sha256": "7f439a4409fd83ce011248915db5411fd1775427db631a2d4927204c0b514b19"
     },
     "verification/test_challenge_holes.py": {
-      "bytes": 15564,
-      "sha256": "bb31c96d574991459ace9545bd0a2c17d78d20157092027cdcc0b0e23bb784fb"
+      "bytes": 17279,
+      "sha256": "02dbec36f6a95e866847fd9266629648e64673cfbc2ffea999b35db1ea2622ee"
     },
     "verification/test_lexer.py": {
       "bytes": 1129,
@@ -11396,9 +11444,10 @@
     "lakefile.toml": "fc584f814627e17c8368bc437d4f382b28085009b15f0eb9bf23a641fc49b219",
     "lake-manifest.json": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
   },
-  "file_list_sha256": "eaae7e28db5add84b33d4118f15c8593ac340f3702904d021f3cbc3b87e5be13",
-  "content_tree_sha256": "4b97eb241dcf81108fbfa21f2af713b2a6a8a5db572e31e93b6e1aaa458e61e6",
+  "file_list_sha256": "854034da2055c63e222e0a46660241579c0bd22725341bb625f127afc6d640ef",
+  "content_tree_sha256": "c304714ca9a21aa26379f9813aac5266f0cb32e5dd7d47572b2b41a87c44ee96",
   "base_release_commit": "e1cfdce8ee7882a728df85747040e6969544fcb8",
-  "publication_authorized": false,
-  "preparation_only": true
+  "publication_authorized": true,
+  "preparation_only": true,
+  "publication_authorization_scope": "Public preparation branch only, after independent review under existing authorization; intake/registration remain unauthorized."
 }

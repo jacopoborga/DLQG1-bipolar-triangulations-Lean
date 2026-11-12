@@ -1,6 +1,6 @@
 # Release verification
 
-**Technical checks: PASS. Final author review is complete and publication is approved.** Source-domain bindings and rendering conventions are documented in [the deviations record](docs/ERRATA-AND-DEVIATIONS.md).
+**The v0.1.0 core technical checks passed, and the author approved that reviewed archive.** This evidence is bound to that snapshot. The later Palomar integration has eight intended local configurations complete, two Propositions pending, and still requires all ten intended configurations to pass the official workflow at one exact final commit. Its local and historical official results are summarized in [the current Palomar results](verification/PALOMAR-CURRENT-RESULTS.json). Source-domain bindings and rendering conventions are documented in [the deviations record](docs/ERRATA-AND-DEVIATIONS.md).
 
 ## Isolation and evidence reuse
 

@@ -40,3 +40,13 @@ python3 -B scripts/check_release.py --axioms PalomarBusemann --log "$evidence_di
 lake "${lake_args[@]}" comparator --config palomar/principal/busemann-convergence.json > "$evidence_dir/convergence-comparator.log" 2>&1
 lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarBusemannConvergenceAxioms.lean > "$evidence_dir/convergence-axioms.log" 2>&1
 python3 -B scripts/check_release.py --axioms PalomarBusemannConvergence --log "$evidence_dir/convergence-axioms.log"
+
+# Full source comparison and every selected axiom target for busemann-increments.
+lake "${lake_args[@]}" comparator --config palomar/principal/busemann-increments.json > "$evidence_dir/busemann-increments-comparator.log" 2>&1
+lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarBusemannIncrementsAxioms.lean > "$evidence_dir/busemann-increments-axioms.log" 2>&1
+python3 -B scripts/check_release.py --axioms PalomarBusemannIncrements --log "$evidence_dir/busemann-increments-axioms.log"
+
+# Full source comparison and every selected axiom target for busemann-tails.
+lake "${lake_args[@]}" comparator --config palomar/principal/busemann-tails.json > "$evidence_dir/busemann-tails-comparator.log" 2>&1
+lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarBusemannTailsAxioms.lean > "$evidence_dir/busemann-tails-axioms.log" 2>&1
+python3 -B scripts/check_release.py --axioms PalomarBusemannTails --log "$evidence_dir/busemann-tails-axioms.log"

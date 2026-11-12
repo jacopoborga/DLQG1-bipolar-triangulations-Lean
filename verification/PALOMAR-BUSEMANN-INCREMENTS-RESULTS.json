@@ -1,0 +1,237 @@
+{
+  "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+  "paper_result": "1.7",
+  "source_label": "thm-busemann-property",
+  "source_archive_sha256": "85306d3050f88727cbff01ea54ca3023f7c75a38ab770e49802108bf87ecc84b",
+  "config": "palomar/principal/busemann-increments.json",
+  "files": {
+    "Palomar/Principal/BusemannIncrements/Challenge.lean": {
+      "bytes": 46790,
+      "sha256": "49ee56d6a167476d1d3311e3d3a6cc4df6ba5c1beb9e18bcac1ba66824951522"
+    },
+    "Palomar/Principal/BusemannIncrements/Solution.lean": {
+      "bytes": 5093,
+      "sha256": "4f4d71055477776c7dfae559dc85e313101a0fe0866da452218faeebeed0fb30"
+    },
+    "Palomar/Principal/Support/BusemannIdentified.lean": {
+      "bytes": 9971,
+      "sha256": "f8ffebc51f823c6648e1aaf60ca3edb880193560b6aac47e0f3d4c2fc207bd93"
+    },
+    "palomar/principal/busemann-increments.json": {
+      "bytes": 1841,
+      "sha256": "f54ee2013271c2a3cbac30da303d66a47e18e1a8afa8ea3094d811ed025c6135"
+    }
+  },
+  "challenge_module": "Palomar.Principal.BusemannIncrements.Challenge",
+  "solution_module": "Palomar.Principal.BusemannIncrements.Solution",
+  "compared_declaration": "DLQG1.Palomar.Principal.busemann_increments",
+  "theorem_names": [
+    "DirectedDistances.KMSW.act_lt_nextEdge",
+    "DirectedDistances.KMSW.stageRotation_UL_bound",
+    "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east",
+    "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique",
+    "DLQG1.Palomar.Model.KMSW.value_rel",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot",
+    "DLQG1.Palomar.Model.KMSW.eventualPresence_rel",
+    "DLQG1.Palomar.Model.KMSW.m0CutData_nonempty",
+    "DLQG1.Palomar.Principal.busemann_increments",
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+    "DirectedDistances.KMSW.StageRotation.step._proof_5",
+    "DirectedDistances.KMSW.StageRotation.step._proof_6",
+    "DirectedDistances.KMSW.StageRotation.step._proof_7",
+    "DirectedDistances.KMSW.StageRotation.step._proof_9",
+    "DirectedDistances.KMSW.StageRotation.step._proof_10",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_13",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_4",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_6",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_8",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_11",
+    "DirectedDistances.KMSW.boundaryHitTime._proof_2",
+    "DirectedDistances.KMSW.boundaryHitTime._proof_4"
+  ],
+  "definition_names": [],
+  "explicit_challenge_holes": 14,
+  "holed_declarations": [
+    "DirectedDistances.KMSW.act_lt_nextEdge",
+    "DirectedDistances.KMSW.stageRotation_UL_bound",
+    "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east",
+    "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique",
+    "DLQG1.Palomar.Model.KMSW.value_rel",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv",
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot",
+    "DLQG1.Palomar.Model.KMSW.eventualPresence_rel",
+    "DLQG1.Palomar.Model.KMSW.m0CutData_nonempty",
+    "DLQG1.Palomar.Principal.busemann_increments"
+  ],
+  "proved_auxiliaries": [
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+    "DirectedDistances.KMSW.StageRotation.step._proof_5",
+    "DirectedDistances.KMSW.StageRotation.step._proof_6",
+    "DirectedDistances.KMSW.StageRotation.step._proof_7",
+    "DirectedDistances.KMSW.StageRotation.step._proof_9",
+    "DirectedDistances.KMSW.StageRotation.step._proof_10",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_13",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_4",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_6",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_8",
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_11",
+    "DirectedDistances.KMSW.boundaryHitTime._proof_2",
+    "DirectedDistances.KMSW.boundaryHitTime._proof_4"
+  ],
+  "normal_source_build": true,
+  "sandbox_bypass": false,
+  "from_export": false,
+  "local_command": "lake comparator --config palomar/principal/busemann-increments.json",
+  "local_comparator": "PASS",
+  "nanoda": "PASS",
+  "lean_default_kernel": "PASS",
+  "kernel_output": {
+    "nanoda": "nanoda kernel accepts the solution",
+    "lean_default": "Lean default kernel accepts the solution",
+    "comparator": "Your solution is okay!"
+  },
+  "elapsed_seconds": 282.4569260410499,
+  "peak_tree_rss_KiB": 4990940,
+  "finished_at_utc": "2026-11-12T11:26:35.115060+00:00",
+  "log_sha256": "c2c7a36be6237ad9c464f171a72d1f77d168b73dfe533e5858ce87a3da97ca8e",
+  "axioms": {
+    "DirectedDistances.KMSW.act_lt_nextEdge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.stageRotation_UL_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.value_rel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.eventualPresence_rel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Model.KMSW.m0CutData_nonempty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DLQG1.Palomar.Principal.busemann_increments": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_5": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_6": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_7": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_9": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.step._proof_10": [
+      "propext"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_13": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_4": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_6": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_8": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.StageRotation.allocation._proof_11": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.boundaryHitTime._proof_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.boundaryHitTime._proof_4": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "axiom_log_sha256": "1adc7139aaf63ae363d4ffa815a2332627a93cab72c2e75971a82181f1607eb9",
+  "axiom_probe_count": 27,
+  "axiom_probe_set_matches_config": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sorryAx_found": false,
+  "independent_fidelity_review": "PASS: current manuscript statement, actual geometric identification, all listed clauses and source-defined objects independently reviewed. Thirteen constructor obligations are selected and consumed; all thirteen accompanying constructor certificates remain proved. No definition is skipped.",
+  "official_preflight": "PENDING: all ten intended configurations must pass the official pipeline at one exact final integration commit. Local PASS does not certify that commit.",
+  "intake": "NOT PERFORMED",
+  "registration": "NOT PERFORMED"
+}

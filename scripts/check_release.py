@@ -80,7 +80,7 @@ def check_challenge_config(spec,config):
   raise ValueError('Solution/config module mismatch')
  auxiliaries=spec.get('proved_auxiliaries',[])
  named=NAMED_PROVED_AUXILIARIES.get(spec['path'],set())
- if not isinstance(auxiliaries,list) or (len(auxiliaries)>12 and not (spec['path'] in {'Palomar/Principal/Busemann/Challenge.lean','Palomar/Principal/BusemannConvergence/Challenge.lean'} and len(auxiliaries)==13 and set(auxiliaries)==BUSEMANN_TYPING_AUXILIARIES)) or any(not isinstance(n,str) or (not re.fullmatch(r'DirectedDistances\.[\w.]+\._proof_[0-9]+',n) and n not in named) for n in auxiliaries):
+ if not isinstance(auxiliaries,list) or (len(auxiliaries)>12 and not (spec['path'] in {'Palomar/Principal/Busemann/Challenge.lean','Palomar/Principal/BusemannConvergence/Challenge.lean','Palomar/Principal/BusemannIncrements/Challenge.lean','Palomar/Principal/BusemannTails/Challenge.lean'} and len(auxiliaries)==13 and set(auxiliaries)==BUSEMANN_TYPING_AUXILIARIES)) or any(not isinstance(n,str) or (not re.fullmatch(r'DirectedDistances\.[\w.]+\._proof_[0-9]+',n) and n not in named) for n in auxiliaries):
   raise ValueError('Unsupported proved typing auxiliary')
  compared=spec['declarations']+auxiliaries
  order=spec.get('comparison_order',compared)

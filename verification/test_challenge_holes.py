@@ -228,4 +228,30 @@ class ChallengeHoles(unittest.TestCase):
   spec,config=self.busemann_typing_fixture()
   spec['comparison_order']=list(config['theorem_names'])
   with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_exact_property_tail_thirteen_certificates_allowed(self):
+  for module in ['BusemannIncrements','BusemannTails']:
+   spec,config=self.busemann_typing_fixture()
+   spec['path']='Palomar/Principal/'+module+'/Challenge.lean'
+   spec['solution_path']='Palomar/Principal/'+module+'/Solution.lean'
+   config['challenge_module']='Palomar.Principal.'+module+'.Challenge'
+   config['solution_module']='Palomar.Principal.'+module+'.Solution'
+   check_challenge_config(spec,config)
+ def test_property_thirteen_changed_set_rejected(self):
+  spec,config=self.busemann_typing_fixture()
+  spec['path']='Palomar/Principal/BusemannIncrements/Challenge.lean'
+  spec['solution_path']='Palomar/Principal/BusemannIncrements/Solution.lean'
+  config['challenge_module']='Palomar.Principal.BusemannIncrements.Challenge'
+  config['solution_module']='Palomar.Principal.BusemannIncrements.Solution'
+  spec['proved_auxiliaries'][-1]='DirectedDistances.Example.record._proof_999'
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
+ def test_tail_fourteen_certificates_rejected(self):
+  spec,config=self.busemann_typing_fixture()
+  spec['path']='Palomar/Principal/BusemannTails/Challenge.lean'
+  spec['solution_path']='Palomar/Principal/BusemannTails/Solution.lean'
+  config['challenge_module']='Palomar.Principal.BusemannTails.Challenge'
+  config['solution_module']='Palomar.Principal.BusemannTails.Solution'
+  spec['proved_auxiliaries'].append('DirectedDistances.Example.record._proof_999')
+  config['theorem_names']=spec['declarations']+spec['proved_auxiliaries']
+  with self.assertRaises(ValueError):check_challenge_config(spec,config)
 if __name__=='__main__':unittest.main()

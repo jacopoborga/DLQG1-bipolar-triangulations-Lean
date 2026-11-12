@@ -205,6 +205,80 @@
         "DLQG1.Palomar.Model.PaperProofs.Section1.aemeasurable_identifiedSDPScalingPath",
         "DLQG1.Palomar.Principal.busemann_convergence"
       ]
+    },
+    {
+      "path": "Palomar/Principal/BusemannIncrements/Challenge.lean",
+      "sha256": "49ee56d6a167476d1d3311e3d3a6cc4df6ba5c1beb9e18bcac1ba66824951522",
+      "config": "palomar/principal/busemann-increments.json",
+      "solution_path": "Palomar/Principal/BusemannIncrements/Solution.lean",
+      "declarations": [
+        "DirectedDistances.KMSW.act_lt_nextEdge",
+        "DirectedDistances.KMSW.stageRotation_UL_bound",
+        "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east",
+        "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique",
+        "DLQG1.Palomar.Model.KMSW.value_rel",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot",
+        "DLQG1.Palomar.Model.KMSW.eventualPresence_rel",
+        "DLQG1.Palomar.Model.KMSW.m0CutData_nonempty",
+        "DLQG1.Palomar.Principal.busemann_increments"
+      ],
+      "proved_auxiliaries": [
+        "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+        "DirectedDistances.KMSW.StageRotation.step._proof_5",
+        "DirectedDistances.KMSW.StageRotation.step._proof_6",
+        "DirectedDistances.KMSW.StageRotation.step._proof_7",
+        "DirectedDistances.KMSW.StageRotation.step._proof_9",
+        "DirectedDistances.KMSW.StageRotation.step._proof_10",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_13",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_4",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_6",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_8",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_11",
+        "DirectedDistances.KMSW.boundaryHitTime._proof_2",
+        "DirectedDistances.KMSW.boundaryHitTime._proof_4"
+      ]
+    },
+    {
+      "path": "Palomar/Principal/BusemannTails/Challenge.lean",
+      "sha256": "48914b29c5d3c2add29ee46cb9fc7dba964037a8312c7bf733c08baf698fbf0b",
+      "config": "palomar/principal/busemann-tails.json",
+      "solution_path": "Palomar/Principal/BusemannTails/Solution.lean",
+      "declarations": [
+        "DirectedDistances.KMSW.act_lt_nextEdge",
+        "DirectedDistances.KMSW.stageRotation_UL_bound",
+        "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east",
+        "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique",
+        "DLQG1.Palomar.Model.KMSW.value_rel",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv",
+        "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot",
+        "DLQG1.Palomar.Model.KMSW.eventualPresence_rel",
+        "DLQG1.Palomar.Model.KMSW.m0CutData_nonempty",
+        "DLQG1.Palomar.Principal.busemann_tails"
+      ],
+      "proved_auxiliaries": [
+        "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+        "DirectedDistances.KMSW.StageRotation.step._proof_5",
+        "DirectedDistances.KMSW.StageRotation.step._proof_6",
+        "DirectedDistances.KMSW.StageRotation.step._proof_7",
+        "DirectedDistances.KMSW.StageRotation.step._proof_9",
+        "DirectedDistances.KMSW.StageRotation.step._proof_10",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_13",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_4",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_6",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_8",
+        "DirectedDistances.KMSW.StageRotation.allocation._proof_11",
+        "DirectedDistances.KMSW.boundaryHitTime._proof_2",
+        "DirectedDistances.KMSW.boundaryHitTime._proof_4"
+      ]
     }
   ]
 }

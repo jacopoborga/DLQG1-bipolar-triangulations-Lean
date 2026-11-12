@@ -1,0 +1,31 @@
+module
+public import Palomar.Principal.BusemannTails.Solution
+
+public section
+#print axioms DirectedDistances.KMSW.act_lt_nextEdge
+#print axioms DirectedDistances.KMSW.stageRotation_UL_bound
+#print axioms DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique
+#print axioms DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence
+#print axioms DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence
+#print axioms DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west
+#print axioms DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east
+#print axioms DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique
+#print axioms DLQG1.Palomar.Model.KMSW.value_rel
+#print axioms DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv
+#print axioms DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot
+#print axioms DLQG1.Palomar.Model.KMSW.eventualPresence_rel
+#print axioms DLQG1.Palomar.Model.KMSW.m0CutData_nonempty
+#print axioms DLQG1.Palomar.Principal.busemann_tails
+#print axioms DirectedDistances.KMSW.kmswCodeStep._proof_1
+#print axioms DirectedDistances.KMSW.StageRotation.step._proof_5
+#print axioms DirectedDistances.KMSW.StageRotation.step._proof_6
+#print axioms DirectedDistances.KMSW.StageRotation.step._proof_7
+#print axioms DirectedDistances.KMSW.StageRotation.step._proof_9
+#print axioms DirectedDistances.KMSW.StageRotation.step._proof_10
+#print axioms DirectedDistances.KMSW.StageRotation.allocation._proof_13
+#print axioms DirectedDistances.KMSW.StageRotation.allocation._proof_4
+#print axioms DirectedDistances.KMSW.StageRotation.allocation._proof_6
+#print axioms DirectedDistances.KMSW.StageRotation.allocation._proof_8
+#print axioms DirectedDistances.KMSW.StageRotation.allocation._proof_11
+#print axioms DirectedDistances.KMSW.boundaryHitTime._proof_2
+#print axioms DirectedDistances.KMSW.boundaryHitTime._proof_4

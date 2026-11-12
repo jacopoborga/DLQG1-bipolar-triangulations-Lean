@@ -1,0 +1,244 @@
+{
+  "status": "PASS_LOCAL_EIGHT_INTENDED_CONFIGS; TWO_PROPOSITIONS_PENDING; FINAL_OFFICIAL_PREFLIGHT_PENDING",
+  "scope": "Current local Palomar campaign summary. Comparator selections remain separate from the unchanged 90-entry correspondence and 97 primary exports.",
+  "intended_local_configuration_count": 8,
+  "intended_local_configurations": [
+    {
+      "configuration": "comparator.json",
+      "status": "PASS_LOCAL_COMPARATOR_NANODA_LEAN",
+      "paper_results": [
+        "A.1",
+        "A.2",
+        "A.3",
+        "A.4",
+        "A.5",
+        "A.6"
+      ],
+      "receipt": "verification/PALOMAR-RESULTS.json",
+      "challenge_module": "Palomar.AppendixA.Challenge",
+      "solution_module": "Palomar.AppendixA.Solution"
+    },
+    {
+      "configuration": "palomar/principal/busemann.json",
+      "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+      "paper_results": [
+        "1.4"
+      ],
+      "receipt": "verification/PALOMAR-BUSEMANN-RESULTS.json",
+      "main_declaration": "DLQG1.Palomar.Principal.busemann",
+      "theorem_target_count": 27,
+      "challenge_holes": 14,
+      "definition_names": [],
+      "normal_source_comparator": true,
+      "from_export": false,
+      "sandbox_bypass": false
+    },
+    {
+      "configuration": "palomar/principal/busemann-convergence.json",
+      "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+      "paper_results": [
+        "1.6"
+      ],
+      "receipt": "verification/PALOMAR-CONVERGENCE-RESULTS.json",
+      "main_declaration": "DLQG1.Palomar.Principal.busemann_convergence",
+      "theorem_target_count": 43,
+      "challenge_holes": 30,
+      "definition_names": [],
+      "normal_source_comparator": true,
+      "from_export": false,
+      "sandbox_bypass": false
+    },
+    {
+      "configuration": "palomar/principal/busemann-increments.json",
+      "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+      "paper_results": [
+        "1.7"
+      ],
+      "receipt": "verification/PALOMAR-BUSEMANN-INCREMENTS-RESULTS.json",
+      "main_declaration": "DLQG1.Palomar.Principal.busemann_increments",
+      "theorem_target_count": 27,
+      "challenge_holes": 14,
+      "definition_names": [],
+      "normal_source_comparator": true,
+      "from_export": false,
+      "sandbox_bypass": false
+    },
+    {
+      "configuration": "palomar/principal/busemann-tails.json",
+      "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+      "paper_results": [
+        "1.8"
+      ],
+      "receipt": "verification/PALOMAR-BUSEMANN-TAILS-RESULTS.json",
+      "main_declaration": "DLQG1.Palomar.Principal.busemann_tails",
+      "theorem_target_count": 27,
+      "challenge_holes": 14,
+      "definition_names": [],
+      "normal_source_comparator": true,
+      "from_export": false,
+      "sandbox_bypass": false
+    },
+    {
+      "configuration": "palomar/principal/boltzmann-distances.json",
+      "status": "PASS_LOCAL_NORMAL_SOURCE_AND_INDEPENDENT_FIDELITY_REVIEW",
+      "paper_results": [
+        "1.11"
+      ],
+      "receipt": "verification/PALOMAR-BOLTZMANN-RESULTS.json",
+      "main_declaration": "DLQG1.Palomar.Principal.boltzmann_distances",
+      "theorem_target_count": 7,
+      "challenge_holes": 1,
+      "definition_names": [],
+      "normal_source_comparator": true,
+      "from_export": false,
+      "sandbox_bypass": false
+    },
+    {
+      "configuration": "palomar/principal/cell-ldp.json",
+      "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+      "paper_results": [
+        "1.12"
+      ],
+      "receipt": "verification/PALOMAR-CELLLDP-RESULTS.json",
+      "main_declaration": "DLQG1.Palomar.Principal.cell_ldp",
+      "theorem_target_count": 4,
+      "challenge_holes": 1,
+      "definition_names": [],
+      "normal_source_comparator": true,
+      "from_export": false,
+      "sandbox_bypass": false
+    },
+    {
+      "configuration": "palomar/principal/cell-sdp.json",
+      "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+      "paper_results": [
+        "1.13"
+      ],
+      "receipt": "verification/PALOMAR-CELLSDP-RESULTS.json",
+      "main_declaration": "DLQG1.Palomar.Principal.cell_sdp",
+      "theorem_target_count": 6,
+      "challenge_holes": 1,
+      "definition_names": [],
+      "normal_source_comparator": true,
+      "from_export": false,
+      "sandbox_bypass": false
+    }
+  ],
+  "optional_pilot": {
+    "configuration": "palomar/comparator-pilot.json",
+    "status": "PASS_LOCAL_COMPARATOR_NANODA_LEAN",
+    "paper_result": "A.2",
+    "counted_as_intended_config": false,
+    "reason": "Optional pilot overlaps the numbered Appendix configuration."
+  },
+  "pending_propositions": [
+    {
+      "paper_result": "5.9",
+      "source_declaration": "DirectedDistances.Paper.Section5.prop_uihbot_sym",
+      "proposed_configuration": "palomar/principal/half-plane-reflection.json",
+      "status": "PENDING_STANDALONE_CHALLENGE_AND_LOCAL_CHECKS"
+    },
+    {
+      "paper_result": "5.16",
+      "source_declaration": "DirectedDistances.Paper.Section5.prop_disk_bs_conv",
+      "proposed_configuration": "palomar/principal/disk-local-limit.json",
+      "status": "PENDING_STANDALONE_CHALLENGE_AND_LOCAL_CHECKS"
+    }
+  ],
+  "historical_official_preflight": {
+    "status": "PASS_AT_THEIR_LISTED_EXACT_COMMITS",
+    "configuration_count": 6,
+    "distinct_paper_result_count": 11,
+    "configurations": [
+      {
+        "configuration": "palomar/principal/cell-sdp.json",
+        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "pass",
+        "run_id": 43184093159,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184093159",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184093159/artifacts/13930280719",
+        "mechanical_report_sha256": "ad70ad66ab6b187adff2b91aaa95e5f8bf7326a6607ce6fa974cd937bd6ea132"
+      },
+      {
+        "configuration": "palomar/principal/cell-ldp.json",
+        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "pass",
+        "run_id": 43184086772,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184086772",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184086772/artifacts/13930296824",
+        "mechanical_report_sha256": "a35ede4f78bf1f458b5404d2d9b2b50f781da4c685d735e9a05a041fb57f491d"
+      },
+      {
+        "configuration": "palomar/principal/boltzmann-distances.json",
+        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "pass",
+        "run_id": 43184079849,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184079849",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184079849/artifacts/13929631929",
+        "mechanical_report_sha256": "c60d0d50d15e385b837c972d2f1910bfe9f506f044abf62ba8cc2f2b4a9abb76"
+      },
+      {
+        "configuration": "comparator.json",
+        "exact_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "pass",
+        "run_id": 43184073905,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184073905",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184073905/artifacts/13928655172",
+        "mechanical_report_sha256": "3b34fcdf66a159e554c01cb56d3fcd385abfc2ea980f44fe2fb7cf5b5c8b1b89"
+      },
+      {
+        "configuration": "palomar/principal/busemann.json",
+        "exact_commit": "2a368ad55f863be08051f8e0e138019d6228fc70",
+        "status": "pass",
+        "run_id": 43198552111,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43198552111/artifacts/13934718924",
+        "mechanical_report_sha256": "39c1679bfcd9aa9c351dcb1eeb97f38ec01def26bc1e8982ce63acdd20a54457"
+      },
+      {
+        "configuration": "palomar/principal/busemann-convergence.json",
+        "exact_commit": "66792ba592a0e263a9ccab5cad9774d21a40aae4",
+        "status": "pass",
+        "run_id": 43204652040,
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43204652040",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43204652040/artifacts/13940127120",
+        "mechanical_report_sha256": "5e83fc7435e09d5c4c088cb2846134275f48d7c4b73af595bed73d9f1207c476"
+      }
+    ],
+    "source_receipts": "Official workflow/report hashes and URLs from the corresponding exact-commit live status records."
+  },
+  "final_official_preflight": {
+    "status": "PENDING",
+    "exact_commit": null,
+    "required_configuration_count": 10,
+    "required_configurations": [
+      "comparator.json",
+      "palomar/principal/busemann.json",
+      "palomar/principal/busemann-convergence.json",
+      "palomar/principal/busemann-increments.json",
+      "palomar/principal/busemann-tails.json",
+      "palomar/principal/boltzmann-distances.json",
+      "palomar/principal/cell-ldp.json",
+      "palomar/principal/cell-sdp.json",
+      "palomar/principal/half-plane-reflection.json",
+      "palomar/principal/disk-local-limit.json"
+    ],
+    "reason": "The six prior official passes bind earlier commits. All ten intended configurations must pass on one exact final integration commit."
+  },
+  "challenge_holes": {
+    "production": 0,
+    "solutions": 0,
+    "definitions": 0,
+    "explicit_challenge_theorem_holes": 82,
+    "manifest": "verification/expected-challenge-holes.json"
+  },
+  "source_correspondence": {
+    "numbered_entries": 90,
+    "primary_exports": 97,
+    "unchanged": true
+  },
+  "intake_initiated": false,
+  "registration_performed": false,
+  "publication_authorized_for_this_preparation_snapshot": true,
+  "publication_authorization_scope": "Reviewed public preparation branch changes under the standing 12 November authorization; no intake or registration authorization."
+}
