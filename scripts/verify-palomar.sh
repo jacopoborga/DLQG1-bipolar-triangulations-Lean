@@ -12,10 +12,21 @@ printf 'Palomar evidence: %s\n' "$evidence_dir"
 python3 -B verification/test_lexer.py
 python3 -B verification/test_challenge_holes.py
 python3 -B scripts/check_release.py
-# Keep normal comparator sandboxing. Both configurations enable NanoDa.
+# Keep normal comparator sandboxing. Every configuration enables NanoDa.
 lake "${lake_args[@]}" comparator --config palomar/comparator-pilot.json > "$evidence_dir/pilot-comparator.log" 2>&1
 lake "${lake_args[@]}" comparator --config comparator.json > "$evidence_dir/appendix-comparator.log" 2>&1
+lake "${lake_args[@]}" comparator --config palomar/principal/boltzmann-distances.json > "$evidence_dir/boltzmann-comparator.log" 2>&1
 lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarPilotAxioms.lean > "$evidence_dir/pilot-axioms.log" 2>&1
 python3 -B scripts/check_release.py --axioms PalomarPilot --log "$evidence_dir/pilot-axioms.log"
 lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarAppendixAxioms.lean > "$evidence_dir/appendix-axioms.log" 2>&1
 python3 -B scripts/check_release.py --axioms PalomarAppendix --log "$evidence_dir/appendix-axioms.log"
+lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarBoltzmannDistancesAxioms.lean > "$evidence_dir/boltzmann-axioms.log" 2>&1
+python3 -B scripts/check_release.py --axioms PalomarBoltzmannDistances --log "$evidence_dir/boltzmann-axioms.log"
+
+# Both finite-cell configurations retain sandboxing and mandatory NanoDa.
+lake "${lake_args[@]}" comparator --config palomar/principal/cell-ldp.json > "$evidence_dir/cell-ldp-comparator.log" 2>&1
+lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarCellLDPAxioms.lean > "$evidence_dir/cell-ldp-axioms.log" 2>&1
+python3 -B scripts/check_release.py --axioms PalomarCellLDP --log "$evidence_dir/cell-ldp-axioms.log"
+lake "${lake_args[@]}" comparator --config palomar/principal/cell-sdp.json > "$evidence_dir/cell-sdp-comparator.log" 2>&1
+lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarCellSDPAxioms.lean > "$evidence_dir/cell-sdp-axioms.log" 2>&1
+python3 -B scripts/check_release.py --axioms PalomarCellSDP --log "$evidence_dir/cell-sdp-axioms.log"

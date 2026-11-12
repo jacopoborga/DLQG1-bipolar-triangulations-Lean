@@ -11,6 +11,12 @@ BAD=re.compile(r'github\.com/jacopoborga/DirectedDistances(?:[/\s]|$)|(?:/(?:hom
 FORBIDDEN_SUFFIXES={'.pdf','.tex','.zip','.tar','.gz','.tgz','.xz','.7z','.olean','.ilean','.pyc','.sqlite','.db','.pem'}
 PROBE_SOURCES={'Axioms':'Axioms','Providers':'Providers','ConstantWindow':'ConstantWindowCheck','SourceDomains':'SourceScopeCheck','PalomarPilot':'PalomarPilotAxioms','PalomarAppendix':'PalomarAppendixAxioms'}
 PALOMAR_AUDIT_IMPORTS={'verification/PalomarPilotAxioms.lean':'Palomar.Pilot.Solution','verification/PalomarAppendixAxioms.lean':'Palomar.AppendixA.Solution'}
+PRINCIPAL_NAMES=('Busemann', 'BusemannConvergence', 'BusemannIncrements', 'BusemannTails', 'BoltzmannDistances', 'CellLDP', 'CellSDP', 'HalfPlaneReflection', 'DiskLocalLimit')
+PRINCIPAL_CHALLENGES={'Palomar/Principal/'+n+'/Challenge.lean' for n in PRINCIPAL_NAMES}
+NAMED_PROVED_AUXILIARIES={'Palomar/Principal/BoltzmannDistances/Challenge.lean':{'DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase'},'Palomar/Principal/CellLDP/Challenge.lean':{'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'},'Palomar/Principal/CellSDP/Challenge.lean':{'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'}}
+PRINCIPAL_PROBES={'Palomar'+n:'Palomar'+n+'Axioms' for n in PRINCIPAL_NAMES}
+PROBE_SOURCES.update(PRINCIPAL_PROBES)
+PALOMAR_AUDIT_IMPORTS.update({'verification/Palomar'+n+'Axioms.lean':'Palomar.Principal.'+n+'.Solution' for n in PRINCIPAL_NAMES})
 COMPARATOR_KEYS={'challenge_module','solution_module','theorem_names','definition_names','permitted_axioms','enable_nanoda'}
 REQUIRED_COMPARATOR_KEYS={'challenge_module','solution_module','theorem_names','permitted_axioms'}
 DECL_COMMAND=re.compile(r'^[ \t]*(?:(?:public|protected|noncomputable)[ \t]+)*(namespace|end|theorem|lemma|def|abbrev|opaque|instance|example|axiom|constant|inductive|structure|class)\b([^\n]*)',re.M)
@@ -71,7 +77,12 @@ def check_challenge_config(spec,config):
   raise ValueError('Challenge/config module mismatch')
  if config['solution_module'].replace('.','/')+'.lean'!=spec['solution_path']:
   raise ValueError('Solution/config module mismatch')
- if config['theorem_names']!=spec['declarations'] or config.get('definition_names',[])!=[]:
+ auxiliaries=spec.get('proved_auxiliaries',[])
+ named=NAMED_PROVED_AUXILIARIES.get(spec['path'],set())
+ if not isinstance(auxiliaries,list) or len(auxiliaries)>12 or any(not isinstance(n,str) or (not re.fullmatch(r'DirectedDistances\.[\w.]+\._proof_[0-9]+',n) and n not in named) for n in auxiliaries):
+  raise ValueError('Unsupported proved typing auxiliary')
+ compared=spec['declarations']+auxiliaries
+ if len(compared)!=len(set(compared)) or config['theorem_names']!=compared or config.get('definition_names',[])!=[]:
   raise ValueError('Challenge/config declaration mismatch')
  if set(config['permitted_axioms'])!={'propext','Quot.sound','Classical.choice'} or config.get('enable_nanoda') is not True:
   raise ValueError('Comparator axiom/kernel policy mismatch')
@@ -79,7 +90,8 @@ def load_challenges():
  data=json.loads((ROOT/'verification/expected-challenge-holes.json').read_text())
  if data['schema_version']!=1:raise ValueError('Unknown challenge-hole schema')
  specs=data['challenges'];expected={'Palomar/Pilot/Challenge.lean','Palomar/AppendixA/Challenge.lean'}
- if len(specs)!=2 or {s['path'] for s in specs}!=expected:raise ValueError('Challenge allowlist mismatch')
+ actual={s['path'] for s in specs}
+ if len(specs)!=len(actual) or not expected<=actual or not actual<=expected|PRINCIPAL_CHALLENGES:raise ValueError('Challenge allowlist mismatch')
  for spec in specs:
   path=ROOT/spec['path'];text=path.read_text()
   if sha(path)!=spec['sha256']:raise ValueError('Changed approved challenge: '+spec['path'])
@@ -113,6 +125,9 @@ def check():
   text=p.read_text()
   if BAD.search(text):raise ValueError('Private/credential reference: '+n)
  challenges=load_challenges()
+ metadata=json.loads((ROOT/'formalization.yaml').read_text())['status']
+ holes=sum(len(s['declarations']) for s in challenges.values())
+ if any(metadata.get(k)!=v for k,v in {'sorry_count':0,'sorry_in_definitions':0,'production_sorry_count':0,'solution_sorry_count':0,'challenge_sorry_count':holes,'total_tree_sorry_count':holes}.items()):raise ValueError('Metadata proof-hole count mismatch')
  lean=[p for p in files if p.suffix=='.lean'];module_paths={str(p.relative_to(ROOT))[:-5].replace('/','.') for p in lean};graph={}
  for p in lean:
   rel=str(p.relative_to(ROOT));text=p.read_text();tokens=command_tokens(text)
@@ -126,7 +141,8 @@ def check():
     raise ValueError('Challenge import is forbidden: '+rel+':'+m)
    if (m.startswith(('DirectedDistances.','verification.','Palomar.')) or m=='DirectedDistances') and m not in module_paths:raise ValueError('Missing project import: '+m)
    if m.startswith('Palomar.'):
-    if PALOMAR_AUDIT_IMPORTS.get(rel)!=m:raise ValueError('Palomar import outside exact solution audit: '+rel+':'+m)
+    support=m.startswith('Palomar.Principal.Support.') and rel.startswith('Palomar/Principal/') and (rel.endswith('/Solution.lean') or rel.startswith('Palomar/Principal/Support/'))
+    if PALOMAR_AUDIT_IMPORTS.get(rel)!=m and not support:raise ValueError('Palomar import outside exact solution audit/support: '+rel+':'+m)
    elif not (m=='DirectedDistances' or m.startswith(('DirectedDistances.','Mathlib.','Init.','Lean.')) or m in {'Mathlib','Init','Lean','verification.ConstantWindow','verification.SourceBoundaryDomain','verification.SourceBoundaryChanneled'}):raise ValueError('Undeclared import root: '+m)
   graph[rel[:-5].replace('/','.')]=[m for m in im if m in module_paths]
  seen=set();todo=['DirectedDistances']
@@ -139,10 +155,15 @@ def check():
  if len(corr['entries'])!=90 or len({x['label'] for x in corr['entries']})!=90:raise ValueError('90-entry correspondence mismatch')
  if {d['declaration'] for r in corr['entries'] for d in r['exports']}!=set(exp['paper_exports']):raise ValueError('Paper export-set mismatch')
  for label,filename in PROBE_SOURCES.items():
+  if label in PRINCIPAL_PROBES and 'Palomar/Principal/'+label[len('Palomar'):]+'/Challenge.lean' not in challenges:
+   if label in exp['probes']:raise ValueError('Audit without frozen Challenge: '+label)
+   continue
   names=re.findall(r'^#print axioms (\S+)',(ROOT/'verification'/(filename+'.lean')).read_text(),re.M)
   if names!=exp['probes'][label]:raise ValueError('Probe source changed: '+label)
- for spec,label in [(challenges['Palomar/Pilot/Challenge.lean'],'PalomarPilot'),(challenges['Palomar/AppendixA/Challenge.lean'],'PalomarAppendix')]:
-  if exp['probes'][label]!=spec['declarations']:raise ValueError('Challenge/solution audit-set mismatch: '+label)
+ audits=[(challenges['Palomar/Pilot/Challenge.lean'],'PalomarPilot'),(challenges['Palomar/AppendixA/Challenge.lean'],'PalomarAppendix')]
+ audits.extend((challenges['Palomar/Principal/'+n+'/Challenge.lean'],'Palomar'+n) for n in PRINCIPAL_NAMES if 'Palomar/Principal/'+n+'/Challenge.lean' in challenges)
+ for spec,label in audits:
+  if exp['probes'][label]!=spec['declarations']+spec.get('proved_auxiliaries',[]):raise ValueError('Challenge/solution audit-set mismatch: '+label)
  print(json.dumps({'status':'PASS','files':len(files),'lean_files':len(lean),'project_modules_reachable':len(seen),'paper_entries':90,'paper_exports':len(exp['paper_exports']),'semantic_roots':len(imports((ROOT/'DirectedDistances/DeliveryVerificationRoot.lean').read_text())),'challenge_files':len(challenges),'deliberate_compared_holes':sum(len(s['declarations']) for s in challenges.values())}))
 def main():
  p=argparse.ArgumentParser();p.add_argument('--axioms',choices=list(PROBE_SOURCES));p.add_argument('--log');a=p.parse_args()

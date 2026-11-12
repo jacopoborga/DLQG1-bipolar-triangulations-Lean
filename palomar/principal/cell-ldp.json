@@ -1,0 +1,17 @@
+{
+  "challenge_module": "Palomar.Principal.CellLDP.Challenge",
+  "solution_module": "Palomar.Principal.CellLDP.Solution",
+  "theorem_names": [
+    "DLQG1.Palomar.Principal.cell_ldp",
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+    "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+    "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

@@ -1,0 +1,64 @@
+{
+  "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+  "paper_result": "1.12",
+  "source_label": "thm-cell-ldp",
+  "source_archive_sha256": "85306d3050f88727cbff01ea54ca3023f7c75a38ab770e49802108bf87ecc84b",
+  "config": "palomar/principal/cell-ldp.json",
+  "files": {
+    "Palomar/Principal/CellLDP/Challenge.lean": {
+      "sha256": "bf6eb98364240ce830cdb8bc92f01afe3abfca2fbbdd5d426a4789de1beb48e1",
+      "bytes": 10800
+    },
+    "Palomar/Principal/CellLDP/Solution.lean": {
+      "sha256": "a5b5e027cd82fec6a939fe150f282f25adadf182d2ba77bb0d64d5220b4a7e3e",
+      "bytes": 1138
+    },
+    "palomar/principal/cell-ldp.json": {
+      "sha256": "83031185e65e5089a0b8b6c8e138f713b2030a999bd1e6b0dfcebb004f2c2162",
+      "bytes": 526
+    }
+  },
+  "theorem_names": [
+    "DLQG1.Palomar.Principal.cell_ldp",
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+    "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+    "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure"
+  ],
+  "definition_names": [],
+  "explicit_challenge_holes": 1,
+  "proved_auxiliaries": 3,
+  "local_command": "lake comparator --config palomar/principal/cell-ldp.json",
+  "normal_source_build": true,
+  "sandbox_bypass": false,
+  "from_export": false,
+  "nanoda": "PASS",
+  "lean_default_kernel": "PASS",
+  "local_comparator": "PASS",
+  "elapsed_seconds": 284.45423385791946,
+  "peak_tree_rss_KiB": 5006892,
+  "finished_at_utc": "2026-11-12T07:25:43.526204+00:00",
+  "log_sha256": "27e1a266ca79fbb76a0adddff217a4887f9bbfc1874a71945bb3b5dc4def52fb",
+  "axioms": {
+    "DLQG1.Palomar.Principal.cell_ldp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1": [
+      "propext"
+    ],
+    "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4": [
+      "propext"
+    ],
+    "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "axiom_log_sha256": "e399fcda5f09070165f8fbafc6872072d2f7925560d3ae5d619e069d73828cf5",
+  "independent_fidelity_review": "PASS parent reviewer against current source, exact finite-stage/path/boundary identification and actual code law; separate cross-review retained privately.",
+  "official_preflight": "PENDING exact public integration commit; no official status inferred from local checks",
+  "intake": "NOT PERFORMED",
+  "registration": "NOT PERFORMED"
+}

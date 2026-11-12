@@ -1,0 +1,10 @@
+module
+import Palomar.Principal.BoltzmannDistances.Solution
+
+#print axioms DLQG1.Palomar.Principal.boltzmann_distances
+#print axioms DirectedDistances.PaperProofs.Section7.rightBoundaryVertex._proof_2
+#print axioms DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_8
+#print axioms DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_6
+#print axioms DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_4
+#print axioms DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_2
+#print axioms DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase

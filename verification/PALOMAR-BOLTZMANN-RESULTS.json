@@ -1,0 +1,67 @@
+{
+  "status": "PASS_LOCAL_NORMAL_SOURCE_AND_INDEPENDENT_FIDELITY_REVIEW",
+  "scope": "Theorem1.11 only, plus six already-proved comparison auxiliaries. No registration.",
+  "source": "Current revised manuscript, labels def-bipolar-bdy (Definition1.9), def-boltzmann-right (Definition1.10), thm-boltzmann-ldp (Theorem1.11).",
+  "source_archive_sha256": "85306d3050f88727cbff01ea54ca3023f7c75a38ab770e49802108bf87ecc84b",
+  "files": {
+    "Palomar/Principal/BoltzmannDistances/Challenge.lean": {
+      "sha256": "d65b5e3092f6b0e3e99546e555ccd084478450c7b37df9b132dc8b2214a7de18",
+      "bytes": 23868
+    },
+    "Palomar/Principal/BoltzmannDistances/Solution.lean": {
+      "sha256": "775cf45d6c9504da955793f7d61aeae52d59eafdf0748dbc275ac60fa92503fd",
+      "bytes": 1466
+    },
+    "palomar/principal/boltzmann-distances.json": {
+      "sha256": "5760f0a58369a551dd199727b6f10b32c314f144643e0942c96c8ab4f1c05b89",
+      "bytes": 765
+    }
+  },
+  "config": "palomar/principal/boltzmann-distances.json",
+  "theorem_names": [
+    "DLQG1.Palomar.Principal.boltzmann_distances",
+    "DirectedDistances.PaperProofs.Section7.rightBoundaryVertex._proof_2",
+    "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_8",
+    "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_6",
+    "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_4",
+    "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_2",
+    "DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase"
+  ],
+  "definition_names": [],
+  "explicit_challenge_holes": 1,
+  "proved_auxiliaries": 6,
+  "local_command": "lake comparator --config palomar/principal/boltzmann-distances.json",
+  "normal_source_build": true,
+  "sandbox_bypass": false,
+  "from_export": false,
+  "local_comparator": "PASS",
+  "nanoda": "PASS",
+  "lean_default_kernel": "PASS",
+  "finished_at_utc": "2026-11-12T06:45:29.690118+00:00",
+  "elapsed_seconds": 309.29321868601255,
+  "peak_tree_rss_KiB": 5126044,
+  "log_sha256": "efae9acb68ec93fd2c547bffff350fc4c48ba490a54660757939ee902d037aad",
+  "axioms": {
+    "targets": [
+      "DLQG1.Palomar.Principal.boltzmann_distances",
+      "DirectedDistances.PaperProofs.Section7.rightBoundaryVertex._proof_2",
+      "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_8",
+      "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_6",
+      "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_4",
+      "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_2",
+      "DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase"
+    ],
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "status": "PASS all7",
+    "log_sha256": "f3eb291a2443287aebfcfcc19a7ce0f1cc47879d99bafe251ae8a26eaf63819e"
+  },
+  "independent_fidelity_review": "PASS separate reviewer; exact shared constant/joint event, marked LEFT vertex, actual dart/rotation/map quotient and normalized3^-n law; no extra premise or definition body skip.",
+  "generated_helper_warning": "Snapshot-specific public auxiliary names; re-audit types, actual proofs and source mapping after any relevant refactor.",
+  "official_preflight": "PENDING exact integrated public commit; local PASS is not official approval",
+  "intake": "NOT PERFORMED",
+  "registration": "NOT PERFORMED"
+}

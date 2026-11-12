@@ -1,0 +1,20 @@
+{
+  "challenge_module": "Palomar.Principal.BoltzmannDistances.Challenge",
+  "solution_module": "Palomar.Principal.BoltzmannDistances.Solution",
+  "theorem_names": [
+    "DLQG1.Palomar.Principal.boltzmann_distances",
+    "DirectedDistances.PaperProofs.Section7.rightBoundaryVertex._proof_2",
+    "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_8",
+    "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_6",
+    "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_4",
+    "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_2",
+    "DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

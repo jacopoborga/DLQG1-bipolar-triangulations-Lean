@@ -1,10 +1,10 @@
 {
   "format_version": 1,
-  "scope": "Palomar preparation from public v0.1.0: unchanged accepted 90-item production formalization plus two explicitly compared Challenge/Solution configurations and release verification tools. No supplementary results, manuscript files, credentials or private history.",
+  "scope": "Accepted90-item public formalization plus pilot/Appendix and three locally validated finite principal configurations; six principal entries remain in preparation. No intake/registration. BaselineLean/pins/correspondence unchanged; no manuscript/supplementary/private records/history/credentials/build artifacts.",
   "files": {
     ".github/workflows/comparator.yml": {
-      "bytes": 606,
-      "sha256": "b3a662cfbdfa906ce95da82e26926fa4857c40c7b31112f3b24561ebebe8cacb"
+      "bytes": 1487,
+      "sha256": "c41da5e8a2a052ee98f983592d8277125b1eeddcfac15e78833373e3d1372a14"
     },
     ".github/workflows/lean.yml": {
       "bytes": 4405,
@@ -25,10 +25,6 @@
     "CORRESPONDENCE.md": {
       "bytes": 24026,
       "sha256": "bad34f215c24266500dbe683d6f2d7e5b725579d9b966680bc3306b6ead07bf3"
-    },
-    "DirectedDistances.lean": {
-      "bytes": 64,
-      "sha256": "acb717e9f2b471b9bc884c958a79606ce1c7d3e7dd1891e8d45267be54760d7d"
     },
     "DirectedDistances/DeliveryVerificationRoot.lean": {
       "bytes": 6628,
@@ -11098,6 +11094,10 @@
       "bytes": 11232,
       "sha256": "7bbd141519d5c64379188faeb909f5c9bc0e1346bc90037e66779f7555a63d94"
     },
+    "DirectedDistances.lean": {
+      "bytes": 64,
+      "sha256": "acb717e9f2b471b9bc884c958a79606ce1c7d3e7dd1891e8d45267be54760d7d"
+    },
     "ERRATA-AND-DEVIATIONS.md": {
       "bytes": 170,
       "sha256": "f87e0d6d54297e36f1e68b4fa3bf9983a267e549d09a0e4fb1786508daeede52"
@@ -11130,9 +11130,33 @@
       "bytes": 2192,
       "sha256": "ac57e244b47898074992f40dd5d19d330b403e91152f07183860b059443ad310"
     },
+    "Palomar/Principal/BoltzmannDistances/Challenge.lean": {
+      "bytes": 23868,
+      "sha256": "d65b5e3092f6b0e3e99546e555ccd084478450c7b37df9b132dc8b2214a7de18"
+    },
+    "Palomar/Principal/BoltzmannDistances/Solution.lean": {
+      "bytes": 1466,
+      "sha256": "775cf45d6c9504da955793f7d61aeae52d59eafdf0748dbc275ac60fa92503fd"
+    },
+    "Palomar/Principal/CellLDP/Challenge.lean": {
+      "bytes": 10800,
+      "sha256": "bf6eb98364240ce830cdb8bc92f01afe3abfca2fbbdd5d426a4789de1beb48e1"
+    },
+    "Palomar/Principal/CellLDP/Solution.lean": {
+      "bytes": 1138,
+      "sha256": "a5b5e027cd82fec6a939fe150f282f25adadf182d2ba77bb0d64d5220b4a7e3e"
+    },
+    "Palomar/Principal/CellSDP/Challenge.lean": {
+      "bytes": 14006,
+      "sha256": "3ca2a8095024b7e1de494a64b854bcfd78f7031cf8dd84c5d23b6f48725b3bd3"
+    },
+    "Palomar/Principal/CellSDP/Solution.lean": {
+      "bytes": 2105,
+      "sha256": "7ea771a5fbe9d80872a57935c692e10e209661b189bc9c96cf367bc0df03fcf5"
+    },
     "README.md": {
-      "bytes": 9453,
-      "sha256": "17f5700301a329c1f8735e27ecd22acea3200f073475c5392ab99c6a7e7ceff4"
+      "bytes": 10188,
+      "sha256": "5d258a16112dfaec6ce07d8ca10261d6f8772e077d94b80ac1bd679858bd96f0"
     },
     "VERIFICATION.md": {
       "bytes": 4545,
@@ -11146,21 +11170,33 @@
       "bytes": 8176,
       "sha256": "ab050246c74150b251e0068438261bcc8128ec68e8349045b8dfa112577895c6"
     },
+    "docs/PALOMAR-BOLTZMANN-DISTANCES.md": {
+      "bytes": 4068,
+      "sha256": "51739e2ed779bf6ca8a5bf74d5d0eef91448b3ffb807f01d646e8bd36a8036c4"
+    },
+    "docs/PALOMAR-CELLLDP.md": {
+      "bytes": 2769,
+      "sha256": "0f44dc3b13f9b7770caa3dccaa604576414c7aea96b2effa554c0ba0e677fbb1"
+    },
+    "docs/PALOMAR-CELLSDP.md": {
+      "bytes": 3009,
+      "sha256": "0b6605abce5bc72dd87a6ac602aafa90658e4470b24a0a1e2b1201d871f3ff6d"
+    },
     "docs/PALOMAR-PREPARATION.md": {
-      "bytes": 13510,
-      "sha256": "ca885524f08b1887465260ee3367b0d3c370d850efd3cb760dc6ab8a79cd110f"
+      "bytes": 15248,
+      "sha256": "bf74b1bca2310ba0a102cc0e5de45d3f72d594793b9f7e265aa17a1c1a9803d1"
     },
     "formalization.yaml": {
-      "bytes": 15630,
-      "sha256": "9ecf2866866ed003aa64fe9f45eda211a4539b9b6a53d92570a6975a0fb19b03"
+      "bytes": 19021,
+      "sha256": "ebf5c4aecaf50ac590bac3ab31640a1736434985e1383c300ca6aa1ce7e36ddf"
     },
     "lake-manifest.json": {
       "bytes": 3159,
       "sha256": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
     },
     "lakefile.toml": {
-      "bytes": 538,
-      "sha256": "fc584f814627e17c8368bc437d4f382b28085009b15f0eb9bf23a641fc49b219"
+      "bytes": 791,
+      "sha256": "5e3de18ce81a14346389fa36829b571806c9de35f97b044f78bf12094f7d4dc2"
     },
     "lean-toolchain": {
       "bytes": 29,
@@ -11170,17 +11206,29 @@
       "bytes": 275,
       "sha256": "6e5c37230839d1285343c179a0fbebbca2c359411f04acf167058f050cbb9062"
     },
+    "palomar/principal/boltzmann-distances.json": {
+      "bytes": 765,
+      "sha256": "5760f0a58369a551dd199727b6f10b32c314f144643e0942c96c8ab4f1c05b89"
+    },
+    "palomar/principal/cell-ldp.json": {
+      "bytes": 526,
+      "sha256": "83031185e65e5089a0b8b6c8e138f713b2030a999bd1e6b0dfcebb004f2c2162"
+    },
+    "palomar/principal/cell-sdp.json": {
+      "bytes": 636,
+      "sha256": "0fbbcf8b7828d55500aaf5d4cb500fe9a5716aabd6e40263872861ee81d712f6"
+    },
     "scripts/check_release.py": {
-      "bytes": 11089,
-      "sha256": "48b4e7b46f87ff51bd40ae7457bbf3c35da4d48247050a810291d351a1e4394d"
+      "bytes": 13537,
+      "sha256": "f95eb9b1ce1eb484a779b88c3a532d4d663821ed5047ade33102a4f1b8726cf4"
     },
     "scripts/lean_syntax.py": {
       "bytes": 1801,
       "sha256": "9451fdcc7131208be4b91e26b1939ab2eab00fec3d5c175f2b8663b3ea894e34"
     },
     "scripts/verify-palomar.sh": {
-      "bytes": 1416,
-      "sha256": "29cf129e00aec3905c2922c887bf361e94593947e179191aba69355b1bad44ce"
+      "bytes": 2713,
+      "sha256": "8510c782a7bc20a817177f02f0da41aba6c0d98a0af186f45076143060dbde31"
     },
     "scripts/verify.sh": {
       "bytes": 2478,
@@ -11202,6 +11250,22 @@
       "bytes": 1371,
       "sha256": "3954ea344fbff988aeb2fbda8af56103a55625f9f61a4d9bfa886c06692bb67a"
     },
+    "verification/PALOMAR-BOLTZMANN-RESULTS.json": {
+      "bytes": 3289,
+      "sha256": "d091b9b1b784563882a36b83435931c65356362ef5fbdaec325a6f162970f85e"
+    },
+    "verification/PALOMAR-CELLLDP-RESULTS.json": {
+      "bytes": 2480,
+      "sha256": "6aeb6a0715e888c3fa858ff6f78f3b8136681c4298172ae3af2d6a8085287155"
+    },
+    "verification/PALOMAR-CELLSDP-RESULTS.json": {
+      "bytes": 2790,
+      "sha256": "56a35da8f6feda78c9f302d62ad69d7b3718305a38452bc012de5653e30793a7"
+    },
+    "verification/PALOMAR-OFFICIAL-RESULTS.json": {
+      "bytes": 1780,
+      "sha256": "02e49d4e8f07823879c039cd2d4ace1f7d7c4a81789f0b7867b53152e9b0fdd9"
+    },
     "verification/PALOMAR-RESULTS.json": {
       "bytes": 4501,
       "sha256": "55eb5ef1a1d6f61affc51575dc4c20f0a5b7a3e701258fa5a6f08cfd27b2dc89"
@@ -11209,6 +11273,18 @@
     "verification/PalomarAppendixAxioms.lean": {
       "bytes": 357,
       "sha256": "d89e2875b542f29d352de80230d34ff4f3b94b0083d0560ce5a03296c232bffc"
+    },
+    "verification/PalomarBoltzmannDistancesAxioms.lean": {
+      "bytes": 569,
+      "sha256": "b9aa1cd5aeb111fcbd9cd2bc6598a68ce51ba09f4a40b7c766d9e9f5bfcac045"
+    },
+    "verification/PalomarCellLDPAxioms.lean": {
+      "bytes": 320,
+      "sha256": "ffa98df532899d542c2c19e299204123c3ec013462f6b89aa0b8762c7b31eced"
+    },
+    "verification/PalomarCellSDPAxioms.lean": {
+      "bytes": 444,
+      "sha256": "b378564d076241193c27f163df8c5b41d0e02dd51db67e149637d06fc8422299"
     },
     "verification/PalomarPilotAxioms.lean": {
       "bytes": 93,
@@ -11239,16 +11315,16 @@
       "sha256": "da4047d9a5977ba33b1c2cd7a62236429a707686d25a2929ec7b6f631b0e33cf"
     },
     "verification/expected-challenge-holes.json": {
-      "bytes": 931,
-      "sha256": "c03870e3a548c75d787a8a5803e37fc2f9c8be98d67803f140f8a1f7d82aa9b2"
+      "bytes": 3108,
+      "sha256": "9a231a38c7e6c5cb8777d6a264422e91ea2f8fb141ebd2c372f70192590a5420"
     },
     "verification/expected-exports.json": {
-      "bytes": 24822,
-      "sha256": "5750f05657dc889c48d2cf9504171e765fb29648c45caeb99415b92864685344"
+      "bytes": 26010,
+      "sha256": "514789bf2d349aef8a224355bc2f5ec1f9f6522a12acd1cad9befa2cd7dfd15e"
     },
     "verification/test_challenge_holes.py": {
-      "bytes": 3133,
-      "sha256": "109029bc013f2af6cae8839c87a4f7965f85f578b7433401b7759a6be7fdaf44"
+      "bytes": 8010,
+      "sha256": "7934c77096f3762040cc5b2c39226c3534105f5d3211d8dbfdea3f2cea429598"
     },
     "verification/test_lexer.py": {
       "bytes": 1129,
@@ -11260,8 +11336,8 @@
     "lakefile.toml": "fc584f814627e17c8368bc437d4f382b28085009b15f0eb9bf23a641fc49b219",
     "lake-manifest.json": "7b6d6252133a570419651f67cdc3608ed13a26aa6a9e24b18fd94aab51a83a57"
   },
-  "file_list_sha256": "31ceb248d634cb7fb5be17fb24673004d1e271feaeec171ec4b36430f9b9900c",
-  "content_tree_sha256": "05d7b3a75843b265c1325ceeff37d1ed7a773ecb7f004b60bebedb0be8060e7f",
+  "file_list_sha256": "16b4ea0aa474b0149b9d8e6d1cb4c7cfa422bf4b54517c3651a1612f78f9198c",
+  "content_tree_sha256": "63c6ce76060b7a5f1958513c42e26b512cb741d6136371c52d6fca1afbac1d3c",
   "base_release_commit": "e1cfdce8ee7882a728df85747040e6969544fcb8",
   "publication_authorized": false,
   "preparation_only": true

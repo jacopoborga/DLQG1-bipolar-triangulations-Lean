@@ -1,0 +1,74 @@
+{
+  "status": "PASS_LOCAL_NORMAL_SOURCE_COMPARATOR_AND_AXIOMS",
+  "paper_result": "1.13",
+  "source_label": "thm-cell-sdp",
+  "source_archive_sha256": "85306d3050f88727cbff01ea54ca3023f7c75a38ab770e49802108bf87ecc84b",
+  "config": "palomar/principal/cell-sdp.json",
+  "files": {
+    "Palomar/Principal/CellSDP/Challenge.lean": {
+      "sha256": "3ca2a8095024b7e1de494a64b854bcfd78f7031cf8dd84c5d23b6f48725b3bd3",
+      "bytes": 14006
+    },
+    "Palomar/Principal/CellSDP/Solution.lean": {
+      "sha256": "7ea771a5fbe9d80872a57935c692e10e209661b189bc9c96cf367bc0df03fcf5",
+      "bytes": 2105
+    },
+    "palomar/principal/cell-sdp.json": {
+      "sha256": "0fbbcf8b7828d55500aaf5d4cb500fe9a5716aabd6e40263872861ee81d712f6",
+      "bytes": 636
+    }
+  },
+  "theorem_names": [
+    "DLQG1.Palomar.Principal.cell_sdp",
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+    "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+    "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure",
+    "DirectedDistances.KMSW.boundaryHitTime._proof_4",
+    "DirectedDistances.KMSW.boundaryHitTime._proof_2"
+  ],
+  "definition_names": [],
+  "explicit_challenge_holes": 1,
+  "proved_auxiliaries": 5,
+  "local_command": "lake comparator --config palomar/principal/cell-sdp.json",
+  "normal_source_build": true,
+  "sandbox_bypass": false,
+  "from_export": false,
+  "nanoda": "PASS",
+  "lean_default_kernel": "PASS",
+  "local_comparator": "PASS",
+  "elapsed_seconds": 299.48101632203907,
+  "peak_tree_rss_KiB": 5073572,
+  "finished_at_utc": "2026-11-12T07:36:27.798851+00:00",
+  "log_sha256": "97fcc06650c9ca0444daa996cf8d7919c9d1ec3a64e3597964b57cdcdcd5d376",
+  "axioms": {
+    "DLQG1.Palomar.Principal.cell_sdp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.kmswCodeStep._proof_1": [
+      "propext"
+    ],
+    "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4": [
+      "propext"
+    ],
+    "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.boundaryHitTime._proof_4": [
+      "propext",
+      "Quot.sound"
+    ],
+    "DirectedDistances.KMSW.boundaryHitTime._proof_2": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "axiom_log_sha256": "d96254143ec9e501f9244908d785e1c6e06f936d910c41a2bea112cbb21ae574",
+  "independent_fidelity_review": "PASS parent reviewer against current source, exact finite-stage/path/boundary identification and actual code law; separate cross-review retained privately.",
+  "official_preflight": "PENDING exact public integration commit; no official status inferred from local checks",
+  "intake": "NOT PERFORMED",
+  "registration": "NOT PERFORMED"
+}

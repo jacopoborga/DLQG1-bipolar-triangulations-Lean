@@ -23,6 +23,53 @@
         "DLQG1.Palomar.AppendixA.abel",
         "DLQG1.Palomar.AppendixA.riemann"
       ]
+    },
+    {
+      "path": "Palomar/Principal/BoltzmannDistances/Challenge.lean",
+      "sha256": "d65b5e3092f6b0e3e99546e555ccd084478450c7b37df9b132dc8b2214a7de18",
+      "config": "palomar/principal/boltzmann-distances.json",
+      "solution_path": "Palomar/Principal/BoltzmannDistances/Solution.lean",
+      "declarations": [
+        "DLQG1.Palomar.Principal.boltzmann_distances"
+      ],
+      "proved_auxiliaries": [
+        "DirectedDistances.PaperProofs.Section7.rightBoundaryVertex._proof_2",
+        "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_8",
+        "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_6",
+        "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_4",
+        "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_2",
+        "DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase"
+      ]
+    },
+    {
+      "path": "Palomar/Principal/CellLDP/Challenge.lean",
+      "sha256": "bf6eb98364240ce830cdb8bc92f01afe3abfca2fbbdd5d426a4789de1beb48e1",
+      "config": "palomar/principal/cell-ldp.json",
+      "solution_path": "Palomar/Principal/CellLDP/Solution.lean",
+      "declarations": [
+        "DLQG1.Palomar.Principal.cell_ldp"
+      ],
+      "proved_auxiliaries": [
+        "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+        "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+        "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure"
+      ]
+    },
+    {
+      "path": "Palomar/Principal/CellSDP/Challenge.lean",
+      "sha256": "3ca2a8095024b7e1de494a64b854bcfd78f7031cf8dd84c5d23b6f48725b3bd3",
+      "config": "palomar/principal/cell-sdp.json",
+      "solution_path": "Palomar/Principal/CellSDP/Solution.lean",
+      "declarations": [
+        "DLQG1.Palomar.Principal.cell_sdp"
+      ],
+      "proved_auxiliaries": [
+        "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+        "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+        "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure",
+        "DirectedDistances.KMSW.boundaryHitTime._proof_4",
+        "DirectedDistances.KMSW.boundaryHitTime._proof_2"
+      ]
     }
   ]
 }

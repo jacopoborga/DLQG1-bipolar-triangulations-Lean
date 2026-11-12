@@ -2,7 +2,7 @@
 
 This is preparation for optional Palomar entries, starting from public v0.1.0
 (`e1cfdce8ee7882a728df85747040e6969544fcb8`). No Palomar intake,
-registration or public push is performed by this preparation. The complete
+or registration has been initiated. Reviewed preparation changes have been published; no entry has been registered. The complete
 [90-entry correspondence](../CORRESPONDENCE.md) and its 97 primary exports remain
 the manuscript catalogue; a Comparator configuration is a separate, smaller
 selection. One configuration corresponds to one potential Palomar entry.
@@ -43,11 +43,11 @@ No custom definitions or extra assumptions are used.
 The standalone real-valued generalization is not advertised as the numbered
 paper lemma.
 
-The two Challenge files deliberately contain seven theorem proof holes: one
-pilot and six Appendix holes. Production proofs and Solutions contain zero;
+The five Challenge files deliberately contain ten theorem proof holes: one
+pilot, six Appendix holes and one for each of the three finite principal results. Production proofs and Solutions contain zero;
 there are no definition holes. The pinned v0.4 metadata convention excludes
 deliberate Challenge holes from `status.sorry_count`; separate Challenge and
-total-tree counts explicitly record all seven. Integrity checks enforce the
+total-tree counts explicitly record all ten. Integrity checks enforce the
 exact Challenge allowlist.
 
 The pilot passed sandboxed Comparator, NanoDa and Lean kernel checks, and a
@@ -80,9 +80,9 @@ tail exponent. General real-valued companion theorems are outside this selection
 
 ## Planned principal entries
 
-All nine entries below are **PLANNED**. The config paths and new compared names
-are proposals, not existing completed configurations or registration records.
-Each would be a separate entry if implemented and submitted separately.
+Theorems 1.11, 1.12 and 1.13 are implemented and locally validated; six entries remain
+**PLANNED**. Their paths/names are proposals. No entry is registered.
+Each principal configuration would be a separate entry if submitted separately. The three finite theorems are locally validated; the remaining six are planned.
 The existing source exports are all under `DirectedDistances.Paper`.
 The new names are under `DLQG1.Palomar.Principal`.
 
@@ -92,15 +92,17 @@ The new names are under `DLQG1.Palomar.Principal`.
 | 1.6 | `palomar/principal/busemann-convergence.json` | `busemann_convergence` | `Section1.thm_busemann_conv` | The actual identified Busemann objects and their probability-one geometric identification, local-Skorokhod cadlag space, scaling laws, stable half/process laws, product law and whole-line glue with left-limit reversal. Both functional convergence claims must remain. |
 | 1.7 | `palomar/principal/busemann-increments.json` | `busemann_increments` | `Section1.thm_busemann_property` | Actual LDP/SDP Busemann functions and identification; both independent increment families, side-specific identical-distribution clauses, signs and symmetry. Arbitrary increments cannot replace these objects. |
 | 1.8 | `palomar/principal/busemann-tails.json` | `busemann_tails` | `Section1.thm_busemann_tail` | Actual identified functions and their geometric identification; both paired c/2c tail constants and exponents, plus SDP integrability and zero mean. |
-| 1.11 | `palomar/principal/boltzmann-distances.json` | `boltzmann_distances` | `Section1.thm_boltzmann_ldp` | Right-vertex-marked Boltzmann space and law, plane-map isoclasses with edge identity, directed LDP/SDP and right-boundary marking. Preserve one A(delta) for every size and all three bounds. |
+| 1.11 | `palomar/principal/boltzmann-distances.json` | `boltzmann_distances` | `Section1.thm_boltzmann_ldp` | Fixed right-boundary length and LEFT-vertex-marked Boltzmann space and law, plane-map isoclasses with edge identity, directed LDP/SDP and left-boundary vertex marking. Preserve one A(delta) for every size and all three bounds. |
 | 1.12 | `palomar/principal/cell-ldp.json` | `cell_ldp` | `Section1.thm_cell_ldp` | IID code law and exact KMSW finite stage, allocated/present vertices, directed paths and longest-path supremum, retaining existence and uniform upper bound with one A(delta). |
 | 1.13 | `palomar/principal/cell-sdp.json` | `cell_sdp` | `Section1.thm_cell_sdp` | The same finite-stage construction, ordered LL/LR/UL/UR boundary incidence, shortest-path semantics and boundary-hit witnesses; retain all three quantified clauses and the shared A(delta). |
 | 5.9 | `palomar/principal/half-plane-reflection.json` | `half_plane_reflection` | `Section5.prop_uihbot_sym` | Geometric rooted-map quotient and Borel structure, the actual half-plane law and geometric mirror, including the same missing geometric root with reversed ordered endpoints. |
 | 5.16 | `palomar/principal/disk-local-limit.json` | `disk_local_limit` | `Section5.prop_disk_bs_conv` | Geometric rooted-map quotient/local topology and probability-law convergence, actual uniform finite class with independent mark and partial-map observable, and actual half-plane law. Preserve every admissibility, congruence and uniform square-root bound. |
 
-Challenge definition extraction, complete characterization/identification
-transport, size measurement and mechanical comparison remain work for these
-planned entries. No failure of their existing Lean proofs is asserted.
+Theorem 1.11 passed normal source Comparator, Lean/NanoDa, axiom checks and
+independent fidelity review; its [exact coverage](PALOMAR-BOLTZMANN-DISTANCES.md)
+and [local receipt](../verification/PALOMAR-BOLTZMANN-RESULTS.json) are separate
+from official preflight. Definition extraction, identification transports and
+validation remain work for the six planned entries. No failure of their existing Lean proofs is asserted.
 No global equality of the broad implementation map classes and the restricted
 source views is claimed. The existing source-domain membership and sampling-law
 transport must remain available when those actual objects are presented.
@@ -118,8 +120,9 @@ identification lemmas can be reused in Solutions.
 A common project-specific definitions module cannot be imported by a Challenge
 under the current rule. Any source-level reuse on that surface must place the
 actual audited definitions within each standalone Challenge (or use an already
-permitted upstream definition), respecting the size cap. This preparation has
-not established compact geometric Challenges for those nine planned entries.
+permitted upstream definition), respecting the size cap. The finite Challenges have 498/252/324 lines for Theorems 1.11/1.12/1.13;
+the other six compact Challenges remain in preparation. See the coverage records for [1.11](PALOMAR-BOLTZMANN-DISTANCES.md),
+[1.12](PALOMAR-CELLLDP.md) and [1.13](PALOMAR-CELLSDP.md).
 
 ## Metadata and source scope
 
@@ -142,19 +145,19 @@ snapshots at the pinned pipeline revision.
 ## Local reproduction
 
 With the pinned dependencies available, `bash scripts/verify-palomar.sh` runs
-the exact Challenge-hole controls, both local Comparator configurations and
-the seven Solution axiom probes. It retains each run in a distinct
+the exact Challenge-hole controls, all five implemented local Comparator configurations
+and their exact Solution axiom probes. It retains each run in a distinct
 `.lake/palomar-evidence/verify-<UTC>-<pid>/` directory. It requires ordinary
 Comparator sandbox support and adds the submitted toolchain's real bin
 directory to PATH so the bundled `nanoda_bin` is visible. These generated
 local logs are separate from an official Palomar mechanical report.
 The full original 90-entry verification remains `bash scripts/verify.sh`.
 
-## Two manual workflow drafts
+## Manual verification workflows
 
 - `lean.yml` runs the existing source/integrity, full library, axiom and fresh
   Lean-kernel checks through `scripts/verify.sh`, followed by the exact
-  Challenge-hole controls and both Solution axiom probes (one pilot plus six
+  Challenge-hole controls and both Appendix/Pilot Solution axiom probes (one pilot plus six
   Appendix declarations). It runs no Comparator job. It installs pinned elan and
   the repository's unchanged toolchain, retrieves only explicitly imported
   Mathlib modules and their dependency closure using the inspected pinned cache
@@ -163,28 +166,44 @@ The full original 90-entry verification remains `bash scripts/verify.sh`.
   have not been validated.
 - `comparator.yml` calls the pinned official reusable workflow with
   `mode: full`, `execution_profile: palomar-standard-v1` and request ID
-  `dlqgprep0001`. It selects root `comparator.json`. The official workflow
+  a unique twelve-character lowercase alphanumeric value. Its manual selector
+  chooses root `comparator.json` or one of the nine explicitly allowlisted principal
+  configurations; only paths present at the checked commit can run. The official workflow
   performs its own disk cleanup, protected Challenge/provenance checks,
   mandatory NanoDa and Lean replay, and any recorded advisory checker attempt.
 
-Both workflows are manual-dispatch drafts with no push or pull-request trigger.
-No hosted workflow has been run for this preparation.
-**The complete official preflight is NOT RUN:** it needs an approved public push
-of the exact final snapshot. A local Comparator pass is not that report, does
-not run editorial review and does not register an entry.
+Both workflows are manual-dispatch checks with no push or pull-request trigger.
+The root six-Appendix configuration passed the complete official full preflight
+at `e2e3be75d8e7b39eaf0d8ce24b504287421c4a41` on 12 November 2026.
+The [workflow](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43154846070)
+and [mechanical artifact](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43154846070/artifacts/13915033934)
+are recorded in [portable receipts](../verification/PALOMAR-OFFICIAL-RESULTS.json).
+A PASS is bound to its exact commit and configuration; later changes require
+another successful official run. Local checks alone do not establish this gate.
+No Palomar editorial review, intake or registration has occurred.
 
-The official workflow contains the proposed authorization response
-`I am a responsible author or maintainer`. The responsible human must confirm
-that response is truthful before approval of a public push or any future intake;
-the draft text does not establish submission authorization.
-GitHub's [manual workflow rule](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)
-requires the workflow to exist on the repository's default branch. This public
-repository currently has no workflow caller on `main`; pushing only this new
-preparation branch is insufficient. The next approved public operation must
-also install the reviewed manual caller on the default branch, for example by
-merging the reviewed preparation changes. The v0.1.0 tag and all accepted proof
-sources remain unchanged. This preparation makes no default-branch change.
+The minimal pinned caller is on the default branch so GitHub permits manual
+dispatch. Its checked source is selected by the dispatch ref and passed as the
+exact `github.sha` to the official reusable workflow. The responsible human
+confirmed the authorization relationship "I am a responsible author or
+maintainer" when approving this preparation push and mechanical preflight.
+That approval does not authorize Palomar intake or registration.
 
-After that approved public push/merge, dispatch the manual workflow and inspect
-a successful complete official report for the exact commit and configuration. Any intake or later registration is a separate
-external action requiring its own authorization.
+For each intended configuration, select the preparation branch's exact final
+commit, run the pinned manual Comparator workflow in full mode, and retain its
+complete successful mechanical report and workflow URL. The required request
+ID is exactly twelve lowercase letters or digits. The final review report must
+list the source commit, configuration path, compared declarations and their
+source coverage, independent fidelity review, local kernel/axiom checks, and
+the official mechanical receipt. The separate pilot overlaps A.2 and is not an
+additional intended result. The nine principal configurations and the combined
+Appendix configuration cover fifteen results, not the whole 90-item catalogue.
+
+Final submission requires separate human authorization. Do not initiate intake
+or registration as part of preparation.
+
+The finite-cell coverage and all comparison auxiliaries are documented separately:
+[Theorem1.12](PALOMAR-CELLLDP.md), [Theorem1.13](PALOMAR-CELLSDP.md). Their local receipts are
+[CellLDP](../verification/PALOMAR-CELLLDP-RESULTS.json) and
+[CellSDP](../verification/PALOMAR-CELLSDP-RESULTS.json). No official or registration
+status is inferred from these local passes.

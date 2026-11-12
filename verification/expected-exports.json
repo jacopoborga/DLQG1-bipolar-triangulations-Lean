@@ -384,6 +384,29 @@
       "DLQG1.Palomar.AppendixA.positive_sine",
       "DLQG1.Palomar.AppendixA.abel",
       "DLQG1.Palomar.AppendixA.riemann"
+    ],
+    "PalomarBoltzmannDistances": [
+      "DLQG1.Palomar.Principal.boltzmann_distances",
+      "DirectedDistances.PaperProofs.Section7.rightBoundaryVertex._proof_2",
+      "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_8",
+      "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_6",
+      "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_4",
+      "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_2",
+      "DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase"
+    ],
+    "PalomarCellLDP": [
+      "DLQG1.Palomar.Principal.cell_ldp",
+      "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+      "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+      "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure"
+    ],
+    "PalomarCellSDP": [
+      "DLQG1.Palomar.Principal.cell_sdp",
+      "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+      "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+      "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure",
+      "DirectedDistances.KMSW.boundaryHitTime._proof_4",
+      "DirectedDistances.KMSW.boundaryHitTime._proof_2"
     ]
   },
   "allowed_axioms": [

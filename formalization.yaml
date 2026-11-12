@@ -2,7 +2,7 @@
   "version": "v0.4",
   "project": {
     "name": "DLQG1-bipolar-triangulations-Lean",
-    "description": "Lean formalization of 90 numbered definitions and results concerning directed distances in bipolar-oriented triangulations: geometric KMSW maps, Busemann functions and stable limits, Boltzmann and finite-cell distance estimates, half-plane symmetry and local limits, and six Appendix asymptotic/Tauberian lemmas. Explicit source-domain bindings and rendering conventions are recorded. Optional Palomar preparation selects the six Appendix lemmas; the A.2 pilot and six-lemma selection have separately passed local sandboxed Comparator, NanoDa and Lean checks; the complete official preflight remains unrun. Geometric principal-entry configurations are planned, not implemented; no Palomar registration is claimed.",
+    "description": "Lean formalization of 90 numbered definitions and results concerning directed distances in bipolar-oriented triangulations: geometric KMSW maps, Busemann functions and stable limits, Boltzmann and finite-cell distance estimates, half-plane symmetry and local limits, and six Appendix asymptotic/Tauberian lemmas. Explicit source-domain bindings and rendering conventions are recorded. Optional Palomar preparation selects the six Appendix lemmas; the A.2 pilot and six-lemma selection have separately passed local sandboxed Comparator, NanoDa and Lean checks; the root six-Appendix configuration passed the complete official preflight at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. Theorems1.11,1.12,1.13 have locally validated standalone configurations; six other principal configurations remain in preparation; no Palomar registration is claimed.",
     "authors": [
       "Jacopo Borga"
     ],
@@ -26,7 +26,7 @@
     }
   ],
   "status": {
-    "scope": "90 numbered entries and required definitions/proof dependencies, with 97 primary exports and proved current-source domain views. The 17 rendering/scope notes and four approved unprinted conventions remain in docs/ERRATA-AND-DEVIATIONS.md. Comparator selections are separately bounded: the implemented A.2 pilot and root comparator.json selection of six Appendix lemmas separately passed local sandboxed Comparator, NanoDa and Lean checks; nine geometric principal configurations remain planned. Complete official preflight and Palomar intake/registration have not occurred.",
+    "scope": "90 numbered entries and required definitions/proof dependencies, with 97 primary exports and proved current-source domain views. The 17 rendering/scope notes and four approved unprinted conventions remain in docs/ERRATA-AND-DEVIATIONS.md. Comparator selections are separately bounded: the implemented A.2 pilot and root comparator.json selection of six Appendix lemmas separately passed local sandboxed Comparator, NanoDa and Lean checks; Theorems1.11,1.12,1.13 are locally validated and independently reviewed; six other principal configurations remain in preparation. The root Appendix configuration passed official full preflight at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. No Palomar intake or registration has occurred; later commits require their own official checks.",
     "sorry_count": 0,
     "sorry_in_definitions": 0,
     "axioms": [
@@ -92,8 +92,19 @@
           "Classical.choice",
           "Quot.sound"
         ],
-        "palomar_status": "planned; standalone Challenge definition surface not implemented",
-        "proposed_compared_declaration": "DLQG1.Palomar.Principal.boltzmann_distances"
+        "palomar_status": "Locally validated and independently reviewed; official preflight pending exact integrated commit",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.boltzmann_distances",
+        "comparator_config": "palomar/principal/boltzmann-distances.json",
+        "compared_declaration": "DLQG1.Palomar.Principal.boltzmann_distances",
+        "proved_auxiliary_declarations": [
+          "DirectedDistances.PaperProofs.Section7.rightBoundaryVertex._proof_2",
+          "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_8",
+          "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_6",
+          "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_4",
+          "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_2",
+          "DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase"
+        ],
+        "comparison_receipt": "verification/PALOMAR-BOLTZMANN-RESULTS.json"
       },
       {
         "declaration": "DirectedDistances.Paper.Section1.thm_cell_ldp",
@@ -104,8 +115,16 @@
           "Classical.choice",
           "Quot.sound"
         ],
-        "palomar_status": "planned; standalone Challenge definition surface not implemented",
-        "proposed_compared_declaration": "DLQG1.Palomar.Principal.cell_ldp"
+        "palomar_status": "Locally validated and independently reviewed; official preflight pending exact integrated commit",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.cell_ldp",
+        "comparator_config": "palomar/principal/cell-ldp.json",
+        "compared_declaration": "DLQG1.Palomar.Principal.cell_ldp",
+        "proved_auxiliary_declarations": [
+          "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+          "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+          "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure"
+        ],
+        "comparison_receipt": "verification/PALOMAR-CELLLDP-RESULTS.json"
       },
       {
         "declaration": "DirectedDistances.Paper.Section1.thm_cell_sdp",
@@ -116,8 +135,18 @@
           "Classical.choice",
           "Quot.sound"
         ],
-        "palomar_status": "planned; standalone Challenge definition surface not implemented",
-        "proposed_compared_declaration": "DLQG1.Palomar.Principal.cell_sdp"
+        "palomar_status": "Locally validated and independently reviewed; official preflight pending exact integrated commit",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.cell_sdp",
+        "comparator_config": "palomar/principal/cell-sdp.json",
+        "compared_declaration": "DLQG1.Palomar.Principal.cell_sdp",
+        "proved_auxiliary_declarations": [
+          "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+          "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+          "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure",
+          "DirectedDistances.KMSW.boundaryHitTime._proof_4",
+          "DirectedDistances.KMSW.boundaryHitTime._proof_2"
+        ],
+        "comparison_receipt": "verification/PALOMAR-CELLSDP-RESULTS.json"
       },
       {
         "declaration": "DirectedDistances.Paper.Section5.prop_uihbot_sym",
@@ -154,7 +183,7 @@
         ],
         "comparator_config": "comparator.json",
         "compared_declaration": "DLQG1.Palomar.AppendixA.holomorphic_asymptotic",
-        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+        "comparison_status": "Local Comparator/Lean/NanoDa and independent statement review passed; official full preflight passed at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. A later commit requires its own run."
       },
       {
         "declaration": "DirectedDistances.Paper.AppendixA.tauberian",
@@ -167,7 +196,7 @@
         ],
         "comparator_config": "comparator.json",
         "compared_declaration": "DLQG1.Palomar.AppendixA.tauberian",
-        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+        "comparison_status": "Local Comparator/Lean/NanoDa and independent statement review passed; official full preflight passed at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. A later commit requires its own run."
       },
       {
         "declaration": "DirectedDistances.Paper.AppendixA.tauberian_above_one",
@@ -180,7 +209,7 @@
         ],
         "comparator_config": "comparator.json",
         "compared_declaration": "DLQG1.Palomar.AppendixA.tauberian_above_one",
-        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+        "comparison_status": "Local Comparator/Lean/NanoDa and independent statement review passed; official full preflight passed at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. A later commit requires its own run."
       },
       {
         "declaration": "DirectedDistances.Paper.AppendixA.positive_sine",
@@ -193,7 +222,7 @@
         ],
         "comparator_config": "comparator.json",
         "compared_declaration": "DLQG1.Palomar.AppendixA.positive_sine",
-        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+        "comparison_status": "Local Comparator/Lean/NanoDa and independent statement review passed; official full preflight passed at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. A later commit requires its own run."
       },
       {
         "declaration": "DirectedDistances.Paper.AppendixA.abel",
@@ -206,7 +235,7 @@
         ],
         "comparator_config": "comparator.json",
         "compared_declaration": "DLQG1.Palomar.AppendixA.abel",
-        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+        "comparison_status": "Local Comparator/Lean/NanoDa and independent statement review passed; official full preflight passed at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. A later commit requires its own run."
       },
       {
         "declaration": "DirectedDistances.Paper.AppendixA.riemann",
@@ -219,15 +248,15 @@
         ],
         "comparator_config": "comparator.json",
         "compared_declaration": "DLQG1.Palomar.AppendixA.riemann",
-        "comparison_status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run"
+        "comparison_status": "Local Comparator/Lean/NanoDa and independent statement review passed; official full preflight passed at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. A later commit requires its own run."
       }
     ],
-    "sorry_count_scope": "Unresolved proof-development and Solution sorries, excluding the seven deliberate Comparator Challenge theorem holes as required by the pinned v0.4 metadata convention.",
+    "sorry_count_scope": "Unresolved production/Solution proofs, excluding the ten explicitly compared Challenge theorem holes.",
     "production_sorry_count": 0,
     "solution_sorry_count": 0,
-    "challenge_sorry_count": 7,
-    "total_tree_sorry_count": 7,
-    "challenge_sorry_note": "One deliberate theorem hole in Palomar/Pilot/Challenge.lean and six in Palomar/AppendixA/Challenge.lean; no Challenge definition holes. The exact two-file allowlist and integrity checks enforce the separation."
+    "challenge_sorry_count": 10,
+    "total_tree_sorry_count": 10,
+    "challenge_sorry_note": "Seven original deliberate pilot/Appendix holes plus one main hole for each of Theorems1.11/1.12/1.13. All six/three/five auxiliary targets remain proved; no definition holes."
   },
   "automation": {
     "methods": [
@@ -264,7 +293,7 @@
     "reviewers": [
       "Independent coding-agent reviewers"
     ],
-    "notes": "The v0.1.0 release retains its source/proof reviews, source-domain bindings and author publication approval. The natural-valued A.2 pilot passed local Comparator, NanoDa and Lean checks; a separate source-fidelity review found no blocker. The six-Appendix comparison separately passed local sandboxed Comparator, NanoDa and Lean kernel checks, and a separate source-fidelity review found no blocker for all six statements. The complete hosted official preflight remains unrun. No external human peer review or Palomar editorial review/registration is asserted."
+    "notes": "The v0.1.0 release retains its source/proof reviews, source-domain bindings and author publication approval. The natural-valued A.2 pilot passed local Comparator, NanoDa and Lean checks; a separate source-fidelity review found no blocker. The six-Appendix comparison separately passed local sandboxed Comparator, NanoDa and Lean kernel checks, and a separate source-fidelity review found no blocker for all six statements. The root six-Appendix configuration passed official full preflight at exact commit e2e3be75d8e7b39eaf0d8ce24b504287421c4a41; see verification/PALOMAR-OFFICIAL-RESULTS.json. No external human peer review or Palomar editorial review/registration is asserted."
   },
   "fidelity": {
     "divergences": "See docs/ERRATA-AND-DEVIATIONS.md and CORRESPONDENCE.json: 17 designated rendering/scope notes, including four approved conventions still unprinted in the current manuscript, plus broader generic implementation carriers with proved restricted source views and actual-object/law bindings. The Appendix selection uses the natural-valued numbered A.2/A.3 statements, not their real-valued companion generalizations. No novelty is claimed."
@@ -319,16 +348,22 @@
         "DLQG1.Palomar.AppendixA.abel",
         "DLQG1.Palomar.AppendixA.riemann"
       ],
-      "status": "passed local sandboxed Comparator, NanoDa and Lean kernel checks; official preflight not run",
+      "status": "Local checks and independent source review passed; complete official mechanical preflight PASS at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41.",
       "independent_source_review": "no blocker found for all six statements",
       "elapsed_seconds": 100.49,
       "max_rss_kib": 729244,
       "exit_code": 0
     },
-    "official_preflight": "NOT RUN; requires approved public push of exact snapshot",
-    "principal_configs": "9 planned, not implemented",
+    "official_preflight": "Root comparator.json: PASS at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41; exact workflow and report hash in verification/PALOMAR-OFFICIAL-RESULTS.json. Every final intended config still requires PASS on the final submission commit.",
+    "principal_configs": "Three locally validated and independently reviewed (Theorems1.11,1.12,1.13); six remain in preparation.",
     "intake": "not performed",
     "registration": "not performed",
-    "portable_comparison_receipts": "verification/PALOMAR-RESULTS.json"
+    "portable_comparison_receipts": "verification/PALOMAR-RESULTS.json",
+    "official_receipts": "verification/PALOMAR-OFFICIAL-RESULTS.json",
+    "principal_comparison_receipts": {
+      "1.11": "verification/PALOMAR-BOLTZMANN-RESULTS.json",
+      "1.12": "verification/PALOMAR-CELLLDP-RESULTS.json",
+      "1.13": "verification/PALOMAR-CELLSDP-RESULTS.json"
+    }
   }
 }

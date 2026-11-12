@@ -3,7 +3,7 @@
 [![Lean verification](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/workflows/lean.yml/badge.svg)](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/workflows/lean.yml)
 [![Comparator official preflight](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/workflows/comparator.yml/badge.svg)](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/workflows/comparator.yml)
 
-Both workflows are manual-dispatch preparation drafts. Hosted checks have not run for these changes.
+Both workflows are manual-dispatch preparation checks. The Appendix configuration has an official PASS at the exact commit recorded below; newly integrated configurations require their own official runs.
 
 A Lean 4 / Mathlib development of **90 numbered definitions, theorems, propositions and lemmas**, including Appendix A, associated with *Directed distances in bipolar-oriented triangulations: exact exponents and scaling limits* by **Jacopo Borga and Ewain Gwynne** ([arXiv:2510.26123](https://arxiv.org/abs/2510.26123)).
 
@@ -58,12 +58,15 @@ A separate source-fidelity review found no blocker for all six statements.
 
 The seven introductory theorems, including Theorem 1.13, and Propositions 5.9
 and 5.16 have a [planned principal-entry map](docs/PALOMAR-PREPARATION.md).
-Their standalone Mathlib-only Challenge definitions and comparisons are not
-implemented. No configuration claims that all 90 entries have been compared
-or registered.
+The finite configurations for [Theorem 1.11](docs/PALOMAR-BOLTZMANN-DISTANCES.md),
+[Theorem 1.12](docs/PALOMAR-CELLLDP.md) and
+[Theorem 1.13](docs/PALOMAR-CELLSDP.md) pass normal local Comparator,
+NanoDa, default Lean and axiom checks, with independent fidelity review.
+Six other principal configurations remain in preparation.
+No configuration claims that all 90 entries have been compared or registered.
 
-Run `bash scripts/verify-palomar.sh` to reproduce both local configurations,
-Challenge-hole controls and all seven Solution axiom audits. The generated
+Run `bash scripts/verify-palomar.sh` to reproduce the pilot, Appendix and three finite principal configurations,
+Challenge-hole controls and their exact Solution axiom audits. The generated
 logs are below `.lake/palomar-evidence/verify-<UTC>-<pid>/`; the portable
 [comparison receipts](verification/PALOMAR-RESULTS.json) record the checked scope.
 
@@ -71,9 +74,14 @@ The [preparation record](docs/PALOMAR-PREPARATION.md) pins the policy, metadata
 schema and official verification pipeline, explains each selection and lists
 the remaining definition obligations. The two workflow badges above are draft
 manual checks: Lean source/axiom/kernel verification and the official reusable
-Comparator preflight. **The complete official preflight is NOT RUN** until an
-approved public push supplies the exact final commit. Preparation and local
-checks do not perform Palomar intake, editorial review or registration.
+Comparator preflight. The six-Appendix configuration passed the complete
+[official full preflight](https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43154846070)
+at commit `e2e3be75d8e7b39eaf0d8ce24b504287421c4a41`.
+[Portable official receipts](verification/PALOMAR-OFFICIAL-RESULTS.json) identify
+that exact checked commit and configuration. Subsequent commits require their
+own successful official runs; an earlier PASS does not certify later changes.
+Preparation and mechanical checks do not perform Palomar intake, editorial
+review or registration.
 
 ## How this was built
 

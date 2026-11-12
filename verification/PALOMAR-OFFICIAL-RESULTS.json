@@ -1,0 +1,40 @@
+{
+  "scope": "Historical official mechanical receipts; PASS applies only to its named exact source commit/configuration. Not editorial review, intake or registration.",
+  "reports": [
+    {
+      "status": "pass",
+      "exact_commit": "e2e3be75d8e7b39eaf0d8ce24b504287421c4a41",
+      "source_repository": "jacopoborga/DLQG1-bipolar-triangulations-Lean",
+      "checked_at": "2026-11-12T04:35:20Z",
+      "configuration": "comparator.json",
+      "theorems": [
+        "DLQG1.Palomar.AppendixA.holomorphic_asymptotic",
+        "DLQG1.Palomar.AppendixA.tauberian",
+        "DLQG1.Palomar.AppendixA.tauberian_above_one",
+        "DLQG1.Palomar.AppendixA.positive_sine",
+        "DLQG1.Palomar.AppendixA.abel",
+        "DLQG1.Palomar.AppendixA.riemann"
+      ],
+      "definition_names": [],
+      "lean_default_kernel": "accepted",
+      "nanoda": "accepted",
+      "advisory_con_ron": "accepted",
+      "advisory_con_ron_declarations": 49518,
+      "errors": [],
+      "warnings": [],
+      "challenge_lines": 142,
+      "challenge_bytes": 7254,
+      "source_files_checked": 2781,
+      "source_bytes": 39710528,
+      "toolchain": "leanprover/lean4:v4.36.0-rc2",
+      "toolchain_commit": "b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a",
+      "execution_profile": "palomar-standard-v1",
+      "pipeline_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+      "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43154846070",
+      "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43154846070/artifacts/13915033934",
+      "report_sha256": "8c04b0f306958c358357b95c6b4be9e993c43d4371b8ce5bd542a21226c89b49",
+      "intake_initiated": false,
+      "registration_performed": false
+    }
+  ]
+}
