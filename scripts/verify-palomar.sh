@@ -30,3 +30,8 @@ python3 -B scripts/check_release.py --axioms PalomarCellLDP --log "$evidence_dir
 lake "${lake_args[@]}" comparator --config palomar/principal/cell-sdp.json > "$evidence_dir/cell-sdp-comparator.log" 2>&1
 lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarCellSDPAxioms.lean > "$evidence_dir/cell-sdp-axioms.log" 2>&1
 python3 -B scripts/check_release.py --axioms PalomarCellSDP --log "$evidence_dir/cell-sdp-axioms.log"
+
+# Actual KMSW/M0 construction, both Busemann modes and all selected helpers.
+lake "${lake_args[@]}" comparator --config palomar/principal/busemann.json > "$evidence_dir/busemann-comparator.log" 2>&1
+lake "${lake_args[@]}" env lean -j1 -DrelaxedAutoImplicit=false -DmaxSynthPendingDepth=3 verification/PalomarBusemannAxioms.lean > "$evidence_dir/busemann-axioms.log" 2>&1
+python3 -B scripts/check_release.py --axioms PalomarBusemann --log "$evidence_dir/busemann-axioms.log"

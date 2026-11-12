@@ -1,40 +1,195 @@
 {
-  "scope": "Historical official mechanical receipts; PASS applies only to its named exact source commit/configuration. Not editorial review, intake or registration.",
-  "reports": [
-    {
-      "status": "pass",
-      "exact_commit": "e2e3be75d8e7b39eaf0d8ce24b504287421c4a41",
-      "source_repository": "jacopoborga/DLQG1-bipolar-triangulations-Lean",
-      "checked_at": "2026-11-12T04:35:20Z",
-      "configuration": "comparator.json",
-      "theorems": [
-        "DLQG1.Palomar.AppendixA.holomorphic_asymptotic",
-        "DLQG1.Palomar.AppendixA.tauberian",
-        "DLQG1.Palomar.AppendixA.tauberian_above_one",
-        "DLQG1.Palomar.AppendixA.positive_sine",
-        "DLQG1.Palomar.AppendixA.abel",
-        "DLQG1.Palomar.AppendixA.riemann"
-      ],
-      "definition_names": [],
-      "lean_default_kernel": "accepted",
-      "nanoda": "accepted",
-      "advisory_con_ron": "accepted",
-      "advisory_con_ron_declarations": 49518,
-      "errors": [],
-      "warnings": [],
-      "challenge_lines": 142,
-      "challenge_bytes": 7254,
-      "source_files_checked": 2781,
-      "source_bytes": 39710528,
-      "toolchain": "leanprover/lean4:v4.36.0-rc2",
-      "toolchain_commit": "b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a",
-      "execution_profile": "palomar-standard-v1",
-      "pipeline_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
-      "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43154846070",
-      "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43154846070/artifacts/13915033934",
-      "report_sha256": "8c04b0f306958c358357b95c6b4be9e993c43d4371b8ce5bd542a21226c89b49",
-      "intake_initiated": false,
-      "registration_performed": false
-    }
-  ]
+  "scope": "Historical exact-commit official mechanical receipts; a later commit requires its own checks. No intake/registration.",
+  "previous_appendix_receipt": {
+    "scope": "Historical official mechanical receipts; PASS applies only to its named exact source commit/configuration. Not editorial review, intake or registration.",
+    "reports": [
+      {
+        "status": "pass",
+        "exact_commit": "e2e3be75d8e7b39eaf0d8ce24b504287421c4a41",
+        "source_repository": "jacopoborga/DLQG1-bipolar-triangulations-Lean",
+        "checked_at": "2026-11-12T04:35:20Z",
+        "configuration": "comparator.json",
+        "theorems": [
+          "DLQG1.Palomar.AppendixA.holomorphic_asymptotic",
+          "DLQG1.Palomar.AppendixA.tauberian",
+          "DLQG1.Palomar.AppendixA.tauberian_above_one",
+          "DLQG1.Palomar.AppendixA.positive_sine",
+          "DLQG1.Palomar.AppendixA.abel",
+          "DLQG1.Palomar.AppendixA.riemann"
+        ],
+        "definition_names": [],
+        "lean_default_kernel": "accepted",
+        "nanoda": "accepted",
+        "advisory_con_ron": "accepted",
+        "advisory_con_ron_declarations": 49518,
+        "errors": [],
+        "warnings": [],
+        "challenge_lines": 142,
+        "challenge_bytes": 7254,
+        "source_files_checked": 2781,
+        "source_bytes": 39710528,
+        "toolchain": "leanprover/lean4:v4.36.0-rc2",
+        "toolchain_commit": "b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a",
+        "execution_profile": "palomar-standard-v1",
+        "pipeline_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43154846070",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43154846070/artifacts/13915033934",
+        "report_sha256": "8c04b0f306958c358357b95c6b4be9e993c43d4371b8ce5bd542a21226c89b49",
+        "intake_initiated": false,
+        "registration_performed": false
+      }
+    ]
+  },
+  "verified_configurations_at_22f3180": {
+    "utc": "2026-11-12T09:17:04.694104Z",
+    "commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+    "verified_pass_count": 4,
+    "paper_result_coverage": [
+      "A.1",
+      "A.2",
+      "A.3",
+      "A.4",
+      "A.5",
+      "A.6",
+      "1.11",
+      "1.12",
+      "1.13"
+    ],
+    "reports": [
+      {
+        "configuration": "palomar/principal/cell-sdp.json",
+        "source_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "PASS",
+        "checked_at": "2026-11-12T09:06:07Z",
+        "theorem_names": [
+          "DLQG1.Palomar.Principal.cell_sdp",
+          "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+          "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+          "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure",
+          "DirectedDistances.KMSW.boundaryHitTime._proof_4",
+          "DirectedDistances.KMSW.boundaryHitTime._proof_2"
+        ],
+        "definition_names": [],
+        "default_lean": "accepted",
+        "nanoda": "accepted",
+        "advisory_kernel_attempts": [
+          {
+            "budget_seconds": 1800,
+            "detail": "con-ron: accepted 88397 declarations (--verified)\n\ncon-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)",
+            "exit_code": 0,
+            "name": "con-ron",
+            "reason": "complete",
+            "status": "accepted"
+          }
+        ],
+        "errors": [],
+        "warnings": [
+          "configured Challenge source exceeds the preferred 32 KiB / 300-line review surface"
+        ],
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184093159",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184093159/artifacts/13930280719",
+        "mechanical_report_sha256": "ad70ad66ab6b187adff2b91aaa95e5f8bf7326a6607ce6fa974cd937bd6ea132"
+      },
+      {
+        "configuration": "palomar/principal/cell-ldp.json",
+        "source_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "PASS",
+        "checked_at": "2026-11-12T09:12:15Z",
+        "theorem_names": [
+          "DLQG1.Palomar.Principal.cell_ldp",
+          "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+          "DirectedDistances.RandomWalk.iidCodeMeasure._proof_4",
+          "DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure"
+        ],
+        "definition_names": [],
+        "default_lean": "accepted",
+        "nanoda": "accepted",
+        "advisory_kernel_attempts": [
+          {
+            "budget_seconds": 1800,
+            "detail": "con-ron: accepted 86531 declarations (--verified)\n\ncon-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)",
+            "exit_code": 0,
+            "name": "con-ron",
+            "reason": "complete",
+            "status": "accepted"
+          }
+        ],
+        "errors": [],
+        "warnings": [],
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184086772",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184086772/artifacts/13930296824",
+        "mechanical_report_sha256": "a35ede4f78bf1f458b5404d2d9b2b50f781da4c685d735e9a05a041fb57f491d"
+      },
+      {
+        "configuration": "palomar/principal/boltzmann-distances.json",
+        "source_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "PASS",
+        "checked_at": "2026-11-12T09:02:54Z",
+        "theorem_names": [
+          "DLQG1.Palomar.Principal.boltzmann_distances",
+          "DirectedDistances.PaperProofs.Section7.rightBoundaryVertex._proof_2",
+          "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_8",
+          "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_6",
+          "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_4",
+          "DirectedDistances.PlanarMap.SimpleDirectedDartPath._proof_2",
+          "DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase"
+        ],
+        "definition_names": [],
+        "default_lean": "accepted",
+        "nanoda": "accepted",
+        "advisory_kernel_attempts": [
+          {
+            "budget_seconds": 1800,
+            "detail": "con-ron: accepted 91276 declarations (--verified)\n\ncon-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)",
+            "exit_code": 0,
+            "name": "con-ron",
+            "reason": "complete",
+            "status": "accepted"
+          }
+        ],
+        "errors": [],
+        "warnings": [
+          "configured Challenge source exceeds the preferred 32 KiB / 300-line review surface"
+        ],
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184079849",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184079849/artifacts/13929631929",
+        "mechanical_report_sha256": "c60d0d50d15e385b837c972d2f1910bfe9f506f044abf62ba8cc2f2b4a9abb76"
+      },
+      {
+        "configuration": "comparator.json",
+        "source_commit": "22f3180dd5febbe3086ba7398780140af22048cb",
+        "status": "PASS",
+        "checked_at": "2026-11-12T08:43:10Z",
+        "theorem_names": [
+          "DLQG1.Palomar.AppendixA.holomorphic_asymptotic",
+          "DLQG1.Palomar.AppendixA.tauberian",
+          "DLQG1.Palomar.AppendixA.tauberian_above_one",
+          "DLQG1.Palomar.AppendixA.positive_sine",
+          "DLQG1.Palomar.AppendixA.abel",
+          "DLQG1.Palomar.AppendixA.riemann"
+        ],
+        "definition_names": [],
+        "default_lean": "accepted",
+        "nanoda": "accepted",
+        "advisory_kernel_attempts": [
+          {
+            "budget_seconds": 1800,
+            "detail": "con-ron: accepted 49518 declarations (--verified)\n\ncon-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)",
+            "exit_code": 0,
+            "name": "con-ron",
+            "reason": "complete",
+            "status": "accepted"
+          }
+        ],
+        "errors": [],
+        "warnings": [],
+        "workflow_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184073905",
+        "artifact_url": "https://github.com/jacopoborga/DLQG1-bipolar-triangulations-Lean/actions/runs/43184073905/artifacts/13928655172",
+        "mechanical_report_sha256": "3b34fcdf66a159e554c01cb56d3fcd385abfc2ea980f44fe2fb7cf5b5c8b1b89"
+      }
+    ],
+    "pending": [],
+    "intake": false,
+    "registration": false
+  }
 }

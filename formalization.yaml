@@ -2,7 +2,7 @@
   "version": "v0.4",
   "project": {
     "name": "DLQG1-bipolar-triangulations-Lean",
-    "description": "Lean formalization of 90 numbered definitions and results concerning directed distances in bipolar-oriented triangulations: geometric KMSW maps, Busemann functions and stable limits, Boltzmann and finite-cell distance estimates, half-plane symmetry and local limits, and six Appendix asymptotic/Tauberian lemmas. Explicit source-domain bindings and rendering conventions are recorded. Optional Palomar preparation selects the six Appendix lemmas; the A.2 pilot and six-lemma selection have separately passed local sandboxed Comparator, NanoDa and Lean checks; the root six-Appendix configuration passed the complete official preflight at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. Theorems1.11,1.12,1.13 have locally validated standalone configurations; six other principal configurations remain in preparation; no Palomar registration is claimed.",
+    "description": "Lean formalization of 90 numbered definitions and results concerning directed distances in bipolar-oriented triangulations: geometric KMSW maps, Busemann functions and stable limits, Boltzmann and finite-cell distance estimates, half-plane symmetry and local limits, and six Appendix asymptotic/Tauberian lemmas. Explicit source-domain bindings and rendering conventions are recorded. Optional Palomar preparation selects the six Appendix lemmas; the A.2 pilot and six-lemma selection have separately passed local sandboxed Comparator, NanoDa and Lean checks; the root six-Appendix configuration passed the complete official preflight at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. Theorems 1.4, 1.11, 1.12 and 1.13 have locally validated standalone configurations; five other principal configurations remain in preparation; no Palomar registration is claimed.",
     "authors": [
       "Jacopo Borga"
     ],
@@ -26,7 +26,7 @@
     }
   ],
   "status": {
-    "scope": "90 numbered entries and required definitions/proof dependencies, with 97 primary exports and proved current-source domain views. The 17 rendering/scope notes and four approved unprinted conventions remain in docs/ERRATA-AND-DEVIATIONS.md. Comparator selections are separately bounded: the implemented A.2 pilot and root comparator.json selection of six Appendix lemmas separately passed local sandboxed Comparator, NanoDa and Lean checks; Theorems1.11,1.12,1.13 are locally validated and independently reviewed; six other principal configurations remain in preparation. The root Appendix configuration passed official full preflight at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. No Palomar intake or registration has occurred; later commits require their own official checks.",
+    "scope": "90 numbered entries and required definitions/proof dependencies, with 97 primary exports and proved current-source domain views. The 17 rendering/scope notes and four approved unprinted conventions remain in docs/ERRATA-AND-DEVIATIONS.md. Comparator selections are separately bounded: the implemented A.2 pilot and root comparator.json selection of six Appendix lemmas separately passed local sandboxed Comparator, NanoDa and Lean checks; Theorems 1.4, 1.11, 1.12 and 1.13 are locally validated and independently reviewed; five other principal configurations remain in preparation. The root Appendix configuration passed official full preflight at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. No Palomar intake or registration has occurred; later commits require their own official checks.",
     "sorry_count": 0,
     "sorry_in_definitions": 0,
     "axioms": [
@@ -44,8 +44,41 @@
           "Classical.choice",
           "Quot.sound"
         ],
-        "palomar_status": "planned; standalone Challenge definition surface not implemented",
-        "proposed_compared_declaration": "DLQG1.Palomar.Principal.busemann"
+        "palomar_status": "Locally validated and independently reviewed; official preflight must bind the exact integrated commit",
+        "proposed_compared_declaration": "DLQG1.Palomar.Principal.busemann",
+        "comparator_config": "palomar/principal/busemann.json",
+        "compared_declaration": "DLQG1.Palomar.Principal.busemann",
+        "compared_construction_declarations": [
+          "DirectedDistances.KMSW.act_lt_nextEdge",
+          "DirectedDistances.KMSW.stageRotation_UL_bound",
+          "DLQG1.Palomar.Model.KMSW.kmswInfRot_existsUnique",
+          "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_equivalence",
+          "DLQG1.Palomar.Model.KMSW.wholePlaneVertexRel_equivalence",
+          "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_west",
+          "DLQG1.Palomar.Model.KMSW.wholePlaneEdgeRel_east",
+          "DLQG1.Palomar.Model.KMSW.eventualValue_existsUnique",
+          "DLQG1.Palomar.Model.KMSW.value_rel",
+          "DLQG1.Palomar.Model.KMSW.wholePlaneRot_comp_inv",
+          "DLQG1.Palomar.Model.KMSW.wholePlaneRotInv_comp_rot",
+          "DLQG1.Palomar.Model.KMSW.eventualPresence_rel",
+          "DLQG1.Palomar.Model.KMSW.m0CutData_nonempty"
+        ],
+        "proved_auxiliary_declarations": [
+          "DirectedDistances.KMSW.kmswCodeStep._proof_1",
+          "DirectedDistances.KMSW.StageRotation.step._proof_5",
+          "DirectedDistances.KMSW.StageRotation.step._proof_6",
+          "DirectedDistances.KMSW.StageRotation.step._proof_7",
+          "DirectedDistances.KMSW.StageRotation.step._proof_9",
+          "DirectedDistances.KMSW.StageRotation.step._proof_10",
+          "DirectedDistances.KMSW.StageRotation.allocation._proof_13",
+          "DirectedDistances.KMSW.StageRotation.allocation._proof_4",
+          "DirectedDistances.KMSW.StageRotation.allocation._proof_6",
+          "DirectedDistances.KMSW.StageRotation.allocation._proof_8",
+          "DirectedDistances.KMSW.StageRotation.allocation._proof_11",
+          "DirectedDistances.KMSW.boundaryHitTime._proof_2",
+          "DirectedDistances.KMSW.boundaryHitTime._proof_4"
+        ],
+        "comparison_receipt": "verification/PALOMAR-BUSEMANN-RESULTS.json"
       },
       {
         "declaration": "DirectedDistances.Paper.Section1.thm_busemann_conv",
@@ -251,12 +284,12 @@
         "comparison_status": "Local Comparator/Lean/NanoDa and independent statement review passed; official full preflight passed at e2e3be75d8e7b39eaf0d8ce24b504287421c4a41. A later commit requires its own run."
       }
     ],
-    "sorry_count_scope": "Unresolved production/Solution proofs, excluding the ten explicitly compared Challenge theorem holes.",
+    "sorry_count_scope": "Production and Solution declarations only; deliberate holes confined to exactly compared Challenge theorem declarations are counted separately in challenge_sorry_count and total_tree_sorry_count.",
     "production_sorry_count": 0,
     "solution_sorry_count": 0,
-    "challenge_sorry_count": 10,
-    "total_tree_sorry_count": 10,
-    "challenge_sorry_note": "Seven original deliberate pilot/Appendix holes plus one main hole for each of Theorems1.11/1.12/1.13. All six/three/five auxiliary targets remain proved; no definition holes."
+    "challenge_sorry_count": 24,
+    "total_tree_sorry_count": 24,
+    "challenge_sorry_note": "Each Challenge hole and its exact compared declaration is frozen in verification/expected-challenge-holes.json. Proved construction/typing certificates remain proved and are selected separately for exact type comparison; they are not additional holes. No definition, production or Solution holes are permitted."
   },
   "automation": {
     "methods": [

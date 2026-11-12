@@ -14,12 +14,13 @@ PALOMAR_AUDIT_IMPORTS={'verification/PalomarPilotAxioms.lean':'Palomar.Pilot.Sol
 PRINCIPAL_NAMES=('Busemann', 'BusemannConvergence', 'BusemannIncrements', 'BusemannTails', 'BoltzmannDistances', 'CellLDP', 'CellSDP', 'HalfPlaneReflection', 'DiskLocalLimit')
 PRINCIPAL_CHALLENGES={'Palomar/Principal/'+n+'/Challenge.lean' for n in PRINCIPAL_NAMES}
 NAMED_PROVED_AUXILIARIES={'Palomar/Principal/BoltzmannDistances/Challenge.lean':{'DirectedDistances.PlanarMap.mem_sourceSinkPathLengthsBase'},'Palomar/Principal/CellLDP/Challenge.lean':{'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'},'Palomar/Principal/CellSDP/Challenge.lean':{'DirectedDistances.RandomWalk.instIsProbabilityMeasureFinOfNatNatUniformCodeMeasure'}}
+BUSEMANN_TYPING_AUXILIARIES=frozenset(('DirectedDistances.KMSW.kmswCodeStep._proof_1', 'DirectedDistances.KMSW.StageRotation.step._proof_5', 'DirectedDistances.KMSW.StageRotation.step._proof_6', 'DirectedDistances.KMSW.StageRotation.step._proof_7', 'DirectedDistances.KMSW.StageRotation.step._proof_9', 'DirectedDistances.KMSW.StageRotation.step._proof_10', 'DirectedDistances.KMSW.StageRotation.allocation._proof_4', 'DirectedDistances.KMSW.StageRotation.allocation._proof_6', 'DirectedDistances.KMSW.StageRotation.allocation._proof_8', 'DirectedDistances.KMSW.StageRotation.allocation._proof_11', 'DirectedDistances.KMSW.StageRotation.allocation._proof_13', 'DirectedDistances.KMSW.boundaryHitTime._proof_2', 'DirectedDistances.KMSW.boundaryHitTime._proof_4'))
 PRINCIPAL_PROBES={'Palomar'+n:'Palomar'+n+'Axioms' for n in PRINCIPAL_NAMES}
 PROBE_SOURCES.update(PRINCIPAL_PROBES)
 PALOMAR_AUDIT_IMPORTS.update({'verification/Palomar'+n+'Axioms.lean':'Palomar.Principal.'+n+'.Solution' for n in PRINCIPAL_NAMES})
 COMPARATOR_KEYS={'challenge_module','solution_module','theorem_names','definition_names','permitted_axioms','enable_nanoda'}
 REQUIRED_COMPARATOR_KEYS={'challenge_module','solution_module','theorem_names','permitted_axioms'}
-DECL_COMMAND=re.compile(r'^[ \t]*(?:(?:public|protected|noncomputable)[ \t]+)*(namespace|end|theorem|lemma|def|abbrev|opaque|instance|example|axiom|constant|inductive|structure|class)\b([^\n]*)',re.M)
+DECL_COMMAND=re.compile(r'^[ \t]*(?:@\[[^\]\n]*\][ \t]*)*(?:(?:public|protected|noncomputable)[ \t]+)*(namespace|end|theorem|lemma|def|abbrev|opaque|instance|example|axiom|constant|inductive|structure|class)\b([^\n]*)',re.M)
 def sha(p):
  h=hashlib.sha256()
  with p.open('rb') as f:
@@ -79,7 +80,7 @@ def check_challenge_config(spec,config):
   raise ValueError('Solution/config module mismatch')
  auxiliaries=spec.get('proved_auxiliaries',[])
  named=NAMED_PROVED_AUXILIARIES.get(spec['path'],set())
- if not isinstance(auxiliaries,list) or len(auxiliaries)>12 or any(not isinstance(n,str) or (not re.fullmatch(r'DirectedDistances\.[\w.]+\._proof_[0-9]+',n) and n not in named) for n in auxiliaries):
+ if not isinstance(auxiliaries,list) or (len(auxiliaries)>12 and not (spec['path']=='Palomar/Principal/Busemann/Challenge.lean' and len(auxiliaries)==13 and set(auxiliaries)==BUSEMANN_TYPING_AUXILIARIES)) or any(not isinstance(n,str) or (not re.fullmatch(r'DirectedDistances\.[\w.]+\._proof_[0-9]+',n) and n not in named) for n in auxiliaries):
   raise ValueError('Unsupported proved typing auxiliary')
  compared=spec['declarations']+auxiliaries
  if len(compared)!=len(set(compared)) or config['theorem_names']!=compared or config.get('definition_names',[])!=[]:
